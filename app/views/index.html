@@ -1,0 +1,42 @@
+{% extends 'layout.html' %} {% block pageTitle %} Cohort Manager {% endblock %}
+
+<!-- For adding a breadcrumb -->
+<!-- Code examples can be found at https://service-manual.nhs.uk/design-system/components/breadcrumbs -->
+{% block beforeContent %} {% endblock %}
+
+<!-- For adding a back link -->
+<!-- Code examples can be found at https://service-manual.nhs.uk/design-system/components/back-link -->
+{% block outerContent %} {% endblock %}
+
+<!-- For adding page content -->
+<!-- Page layout code can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
+{% block content %}
+<div class="nhsuk-grid-row">
+  <div class="nhsuk-grid-column-two-thirds">
+    <!-- Change the page title here -->
+    <h1>DToS Screening - Cohort Manager prototype</h1>
+
+    <hr />
+
+    <h2>Versions</h2>
+
+    <ul>
+      <li>
+        <a href="/v1">Version 1 - Figma</a>
+      </li>
+      <li>
+        <a href="/v2">Version 2 - Proposed design changes</a>
+      </li>
+    </ul>
+
+    <hr />
+
+    <p>
+      <a
+        href="https://www.figma.com/proto/dy44EhcuXvCFjBWgCJPw6X/ExceptionVisualisation?node-id=462-1211&t=PB9AHqLRgwSxftto-1&starting-point-node-id=462%3A1211"
+        >View prototype on Figma</a
+      >
+    </p>
+  </div>
+</div>
+{% endblock %}

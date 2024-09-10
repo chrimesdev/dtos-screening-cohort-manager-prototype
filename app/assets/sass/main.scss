@@ -1,0 +1,55 @@
+// Import NHS.UK frontend library
+@import "node_modules/nhsuk-frontend/packages/nhsuk";
+
+// Components that are not in the NHS.UK frontend library
+@import "components/list-border";
+@import "components/related-nav";
+
+///////////////////////////////////////////
+// Add your custom CSS/Sass styles below...
+///////////////////////////////////////////
+
+.app-mini-profile-header {
+  align-items: start;
+  display: flex;
+  flex-direction: row;
+}
+
+.app-mini-profile-header dl {
+  margin: 0;
+  margin-right: 32px;
+}
+
+.app-mini-profile-header dl:last-child {
+  margin-right: 0;
+}
+
+.app-mini-profile-header dd {
+  margin-bottom: 0;
+  margin-left: 0;
+}
+
+.app-mini-profile-header dt,
+.app-mini-profile-header dd {
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+}
+
+@include mq($until: tablet) {
+  .app-mini-profile-header {
+    display: block;
+  }
+
+  .app-mini-profile-header dl {
+    margin-right: 0;
+  }
+
+  .app-mini-profile-header dl:last-child {
+    margin-bottom: 0;
+  }
+
+  .app-mini-profile-header dl:last-child dd {
+    margin-bottom: 0;
+  }
+}
