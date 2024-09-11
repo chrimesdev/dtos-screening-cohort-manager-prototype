@@ -13,6 +13,8 @@
   align-items: start;
   display: flex;
   flex-direction: row;
+  @include nhsuk-font(19);
+  color: $nhsuk-secondary-text-color;
 }
 
 .app-mini-profile-header dl {
@@ -34,6 +36,10 @@
   display: inline-block;
   margin: 0;
   padding: 0;
+}
+
+.app-mini-profile-header dt {
+  font-weight: bold;
 }
 
 @include mq($until: tablet) {
