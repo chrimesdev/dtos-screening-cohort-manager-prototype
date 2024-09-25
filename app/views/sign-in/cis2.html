@@ -1,0 +1,77 @@
+{% extends 'layout.html' %} {% block pageTitle %}Select your login method - CIS2
+- Care Identity Authentication{% endblock %} {% block beforeContent %} {%
+endblock %} {% block outerContent %} {% endblock %} {% block header %} {{
+header({ "service": { "name": "CIS2 - Care Identity Authentication", "href": "/"
+}, "showNav": "false", "showSearch": "false" }) }} {% endblock %}
+
+<!-- For adding page content -->
+<!-- Page layout code can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
+{% block content %}
+<div class="nhsuk-grid-row">
+  <div class="nhsuk-grid-column-two-thirds">
+    <form action="/sign-in/cis2-role" method="post" class="form">
+      <div class="nhsuk-form-group">
+        <fieldset class="nhsuk-fieldset" aria-describedby="cis2-hint">
+          <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--l">
+            <h1 class="nhsuk-fieldset__heading">Select your login method</h1>
+          </legend>
+
+          <div class="nhsuk-hint" id="cis2-hint">
+            <p class="nhsuk-u-margin-bottom-2">
+              Your choice will be saved as your preferred login method for this
+              browser.
+            </p>
+            <p>
+              You may have to repeat this step if you clear your browser's
+              cookies.
+            </p>
+          </div>
+
+          <div class="nhsuk-radios">
+            <div class="nhsuk-radios__item">
+              <input
+                class="nhsuk-radios__input"
+                id="cis2-1"
+                name="cis2"
+                type="radio"
+                value="smartcard"
+              />
+              <label class="nhsuk-label nhsuk-radios__label" for="cis2-1">
+                Smartcard
+              </label>
+            </div>
+
+            <div class="nhsuk-radios__item">
+              <input
+                class="nhsuk-radios__input"
+                id="cis2-2"
+                name="cis2"
+                type="radio"
+                value="windowsHello"
+              />
+              <label class="nhsuk-label nhsuk-radios__label" for="cis2-2">
+                Windows Hello for Business
+              </label>
+            </div>
+
+            <div class="nhsuk-radios__item">
+              <input
+                class="nhsuk-radios__input"
+                id="cis2-3"
+                name="cis2"
+                type="radio"
+                value="securityKey"
+              />
+              <label class="nhsuk-label nhsuk-radios__label" for="cis2-3">
+                Security key
+              </label>
+            </div>
+          </div>
+        </fieldset>
+      </div>
+
+      <button class="nhsuk-button" type="submit">Continue</button>
+    </form>
+  </div>
+</div>
+{% endblock %}

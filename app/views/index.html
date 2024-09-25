@@ -1,5 +1,7 @@
-{% extends 'layout.html' %} {% block pageTitle %} Service planning - Cohort
-Manager prototype {% endblock %}
+{% extends 'layout.html' %} {% block pageTitle %}Sign in with your Care Identity
+account - Screening{% endblock %} {% block header %} {{ header({ "service": {
+"name": "Screening", "href": "/" }, "showNav": "false", "showSearch": "false" })
+}} {% endblock %}
 
 <!-- For adding a breadcrumb -->
 <!-- Code examples can be found at https://service-manual.nhs.uk/design-system/components/breadcrumbs -->
@@ -15,11 +17,11 @@ Manager prototype {% endblock %}
 <div class="nhsuk-grid-row">
   <div class="nhsuk-grid-column-two-thirds">
     <!-- Change the page title here -->
-    <h1>Service planning - Cohort Manager prototype</h1>
+    <h1>Screening prototype</h1>
 
     <hr />
 
-    <h2>Versions</h2>
+    <h2>Cohort Manager</h2>
 
     <ul>
       <li>
@@ -38,6 +40,14 @@ Manager prototype {% endblock %}
         >View prototype on Figma</a
       >
     </p>
+
+    <h2>Sign in</h2>
+
+    <ul>
+      <li>
+        <a href="/sign-in">Sign in with your Care Identity account </a>
+      </li>
+    </ul>
   </div>
 </div>
 {% endblock %}

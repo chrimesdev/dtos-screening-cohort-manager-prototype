@@ -1,0 +1,66 @@
+{% extends 'layout.html' %} {% block pageTitle %}Choose a role to login with -
+CIS2 - Care Identity Authentication{% endblock %} {% block beforeContent %} {%
+endblock %} {% block outerContent %} {% endblock %} {% block header %} {{
+header({ "service": { "name": "CIS2 - Care Identity Authentication", "href": "/"
+}, "showNav": "false", "showSearch": "false" }) }} {% endblock %}
+
+<!-- For adding page content -->
+<!-- Page layout code can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
+{% block content %}
+<div class="nhsuk-grid-row">
+  <div class="nhsuk-grid-column-two-thirds">
+    <form action="/v2/index" method="post" class="form">
+      <div class="nhsuk-form-group">
+        <fieldset class="nhsuk-fieldset">
+          <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--l">
+            <h1 class="nhsuk-fieldset__heading">Choose a role to login with</h1>
+          </legend>
+
+          <div class="nhsuk-radios">
+            <div class="nhsuk-radios__item">
+              <input
+                class="nhsuk-radios__input"
+                id="role-1"
+                name="role"
+                type="radio"
+                value="role1"
+              />
+              <label class="nhsuk-label nhsuk-radios__label" for="role-1">
+                Role 1 - Viewer
+              </label>
+            </div>
+
+            <div class="nhsuk-radios__item">
+              <input
+                class="nhsuk-radios__input"
+                id="role-2"
+                name="role"
+                type="radio"
+                value="role2"
+              />
+              <label class="nhsuk-label nhsuk-radios__label" for="role-2">
+                Role 2 - Editor
+              </label>
+            </div>
+
+            <div class="nhsuk-radios__item">
+              <input
+                class="nhsuk-radios__input"
+                id="role-3"
+                name="role"
+                type="radio"
+                value="securityKey"
+              />
+              <label class="nhsuk-label nhsuk-radios__label" for="role-3">
+                Role 3 - Admin
+              </label>
+            </div>
+          </div>
+        </fieldset>
+      </div>
+
+      <button class="nhsuk-button" type="submit">Continue</button>
+    </form>
+  </div>
+</div>
+{% endblock %}
