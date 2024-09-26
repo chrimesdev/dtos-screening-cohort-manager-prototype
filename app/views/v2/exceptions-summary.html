@@ -1,5 +1,6 @@
 {% extends 'layout.html' %} {% block pageTitle %}Exceptions summary - Cohort
 Manager{% endblock %} {% block beforeContent %}
+
 <nav class="nhsuk-breadcrumb" aria-label="Breadcrumb">
   <div class="nhsuk-width-container">
     <ol class="nhsuk-breadcrumb__list">
@@ -21,7 +22,7 @@ Manager{% endblock %} {% block beforeContent %}
   <div class="nhsuk-grid-column-full">
     <h1>Exceptions summary</h1>
 
-    <table role="table" class="nhsuk-table-responsive">
+    <table role="table" class="nhsuk-table-responsive" id="exceptionsTable">
       <thead role="rowgroup" class="nhsuk-table__head">
         <tr role="row">
           <th role="columnheader" scope="col">NHS number</th>
@@ -63,7 +64,40 @@ Manager{% endblock %} {% block beforeContent %}
             <span class="nhsuk-table-responsive__heading" aria-hidden="true"
               >Status
             </span>
-            <strong class="nhsuk-tag"> Active </strong>
+            <strong class="nhsuk-tag">Open</strong>
+          </td>
+        </tr>
+        <tr role="row" class="nhsuk-table__row">
+          <td role="cell" class="nhsuk-table__cell app-u-no-wrap">
+            <span class="nhsuk-table-responsive__heading" aria-hidden="true"
+              >NHS number </span
+            ><a href="#">623 4444 8972</a>
+          </td>
+          <td role="cell" class="nhsuk-table__cell">
+            <span class="nhsuk-table-responsive__heading" aria-hidden="true"
+              >Exception ID </span
+            >10001768
+          </td>
+          <td role="cell" class="nhsuk-table__cell">
+            <span class="nhsuk-table-responsive__heading" aria-hidden="true"
+              >Date exceptions created </span
+            >26 September 2024
+          </td>
+          <td>
+            <span class="nhsuk-table-responsive__heading" aria-hidden="true"
+              >Short description </span
+            >NHS number not reporting
+          </td>
+          <td>
+            <span class="nhsuk-table-responsive__heading" aria-hidden="true"
+              >Screening service </span
+            >Breast screening
+          </td>
+          <td>
+            <span class="nhsuk-table-responsive__heading" aria-hidden="true"
+              >Status
+            </span>
+            <strong class="nhsuk-tag">Open</strong>
           </td>
         </tr>
       </tbody>
