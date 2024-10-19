@@ -1,0 +1,62 @@
+{% extends 'layout.html' %} {% block pageTitle %}Overview - Cohort Manager {%
+endblock %} {% block content %}
+<div class="nhsuk-grid-row">
+  <div class="nhsuk-grid-column-two-thirds">
+    <h1>Overview</h1>
+  </div>
+</div>
+
+<ul class="nhsuk-grid-row nhsuk-card-group">
+  <li class="nhsuk-grid-column-one-third nhsuk-card-group__item">
+    <div class="nhsuk-card nhsuk-card--clickable">
+      <div class="nhsuk-card__content">
+        <p
+          class="nhsuk-heading-xl nhsuk-u-font-size-64 nhsuk-u-margin-bottom-1"
+        >
+          72
+          <span class="nhsuk-u-visually-hidden"
+            >Breast screening exceptions</span
+          >
+        </p>
+        <a
+          href="/v3/exceptions-summary"
+          class="nhsuk-card__link nhsuk-u-font-weight-normal nhsuk-u-font-size-19 nhsuk-link--no-visited-state"
+          >Breast screening exceptions</a
+        >
+      </div>
+    </div>
+  </li>
+  <li class="nhsuk-grid-column-one-third nhsuk-card-group__item">
+    <div class="nhsuk-card nhsuk-card--clickable">
+      <div class="nhsuk-card__content">
+        <p
+          class="nhsuk-heading-xl nhsuk-u-font-size-64 nhsuk-u-margin-bottom-1"
+        >
+          23 <span class="nhsuk-u-visually-hidden">Duplicate NHS numbers</span>
+        </p>
+        <a
+          href="#"
+          class="nhsuk-card__link nhsuk-u-font-weight-normal nhsuk-u-font-size-19 nhsuk-link--no-visited-state"
+          >Duplicate NHS numbers</a
+        >
+      </div>
+    </div>
+  </li>
+  <li class="nhsuk-grid-column-one-third nhsuk-card-group__item">
+    <div class="nhsuk-card nhsuk-card--clickable">
+      <div class="nhsuk-card__content">
+        <p
+          class="nhsuk-heading-xl nhsuk-u-font-size-64 nhsuk-u-margin-bottom-1"
+        >
+          22 <span class="nhsuk-u-visually-hidden">Confused NHS numbers</span>
+        </p>
+        <a
+          href="#"
+          class="nhsuk-card__link nhsuk-u-font-weight-normal nhsuk-u-font-size-19 nhsuk-link--no-visited-state"
+          >Confused NHS numbers</a
+        >
+      </div>
+    </div>
+  </li>
+</ul>
+{% endblock %}

@@ -5,11 +5,11 @@ Manager{% endblock %} {% block beforeContent %}
   <div class="nhsuk-width-container">
     <ol class="nhsuk-breadcrumb__list">
       <li class="nhsuk-breadcrumb__item">
-        <a class="nhsuk-breadcrumb__link" href="/v2">Overview</a>
+        <a class="nhsuk-breadcrumb__link" href="/v3">Overview</a>
       </li>
     </ol>
     <p class="nhsuk-breadcrumb__back">
-      <a class="nhsuk-breadcrumb__backlink" href="/v2">
+      <a class="nhsuk-breadcrumb__backlink" href="/v3">
         <span class="nhsuk-u-visually-hidden">Back to &nbsp;</span>
         Overview
       </a>
@@ -25,8 +25,8 @@ Manager{% endblock %} {% block beforeContent %}
     <table role="table" class="nhsuk-table-responsive">
       <thead role="rowgroup" class="nhsuk-table__head">
         <tr role="row">
-          <th role="columnheader" scope="col">NHS number</th>
           <th role="columnheader" scope="col">Exception ID</th>
+          <th role="columnheader" scope="col">NHS number</th>
           <th role="columnheader" scope="col">Date created</th>
           <th role="columnheader" scope="col">Short description</th>
           <th role="columnheader" scope="col">Screening service</th>
@@ -35,15 +35,15 @@ Manager{% endblock %} {% block beforeContent %}
       </thead>
       <tbody class="nhsuk-table__body">
         <tr role="row" class="nhsuk-table__row">
-          <td role="cell" class="nhsuk-table__cell app-u-no-wrap">
-            <span class="nhsuk-table-responsive__heading" aria-hidden="true"
-              >NHS number </span
-            ><a href="/v2/participant-information">723 333 6897</a>
-          </td>
           <td role="cell" class="nhsuk-table__cell">
             <span class="nhsuk-table-responsive__heading" aria-hidden="true"
               >Exception ID </span
-            >10001767
+            ><a href="/v3/exception-information">10001767</a>
+          </td>
+          <td role="cell" class="nhsuk-table__cell app-u-no-wrap">
+            <span class="nhsuk-table-responsive__heading" aria-hidden="true"
+              >NHS number </span
+            >723 333 6897
           </td>
           <td role="cell" class="nhsuk-table__cell">
             <span class="nhsuk-table-responsive__heading" aria-hidden="true"
@@ -68,15 +68,15 @@ Manager{% endblock %} {% block beforeContent %}
           </td>
         </tr>
         <tr role="row" class="nhsuk-table__row">
-          <td role="cell" class="nhsuk-table__cell app-u-no-wrap">
-            <span class="nhsuk-table-responsive__heading" aria-hidden="true"
-              >NHS number </span
-            ><a href="#">623 444 8972</a>
-          </td>
           <td role="cell" class="nhsuk-table__cell">
             <span class="nhsuk-table-responsive__heading" aria-hidden="true"
               >Exception ID </span
-            >10001768
+            ><a href="#">10001768</a>
+          </td>
+          <td role="cell" class="nhsuk-table__cell app-u-no-wrap">
+            <span class="nhsuk-table-responsive__heading" aria-hidden="true"
+              >NHS number </span
+            >623 444 8972
           </td>
           <td role="cell" class="nhsuk-table__cell">
             <span class="nhsuk-table-responsive__heading" aria-hidden="true"
