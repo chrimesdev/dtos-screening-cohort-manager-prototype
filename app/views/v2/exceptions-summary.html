@@ -25,8 +25,8 @@ Manager{% endblock %} {% block beforeContent %}
     <table role="table" class="nhsuk-table-responsive">
       <thead role="rowgroup" class="nhsuk-table__head">
         <tr role="row">
-          <th role="columnheader" scope="col">NHS number</th>
           <th role="columnheader" scope="col">Exception ID</th>
+          <th role="columnheader" scope="col">NHS number</th>
           <th role="columnheader" scope="col">Date created</th>
           <th role="columnheader" scope="col">Short description</th>
           <th role="columnheader" scope="col">Screening service</th>
@@ -35,15 +35,15 @@ Manager{% endblock %} {% block beforeContent %}
       </thead>
       <tbody class="nhsuk-table__body">
         <tr role="row" class="nhsuk-table__row">
-          <td role="cell" class="nhsuk-table__cell app-u-no-wrap">
-            <span class="nhsuk-table-responsive__heading" aria-hidden="true"
-              >NHS number </span
-            ><a href="/v2/participant-information">723 333 6897</a>
-          </td>
           <td role="cell" class="nhsuk-table__cell">
             <span class="nhsuk-table-responsive__heading" aria-hidden="true"
               >Exception ID </span
-            >10001767
+            ><a href="/v2/participant-information">10001767</a>
+          </td>
+          <td role="cell" class="nhsuk-table__cell app-u-no-wrap">
+            <span class="nhsuk-table-responsive__heading" aria-hidden="true"
+              >NHS number </span
+            >723 333 6897
           </td>
           <td role="cell" class="nhsuk-table__cell">
             <span class="nhsuk-table-responsive__heading" aria-hidden="true"
@@ -53,7 +53,7 @@ Manager{% endblock %} {% block beforeContent %}
           <td>
             <span class="nhsuk-table-responsive__heading" aria-hidden="true"
               >Short description </span
-            >NHS number not reporting
+            >Technical error - NHS number was not supplied in a valid format
           </td>
           <td>
             <span class="nhsuk-table-responsive__heading" aria-hidden="true"
@@ -68,17 +68,17 @@ Manager{% endblock %} {% block beforeContent %}
           </td>
         </tr>
         <tr role="row" class="nhsuk-table__row">
-          <td role="cell" class="nhsuk-table__cell app-u-no-wrap">
-            <span class="nhsuk-table-responsive__heading" aria-hidden="true"
-              >NHS number </span
-            ><a href="#">623 444 8972</a>
-          </td>
           <td role="cell" class="nhsuk-table__cell">
             <span class="nhsuk-table-responsive__heading" aria-hidden="true"
               >Exception ID </span
-            >10001768
+            ><a href="/v2/participant-information">10001768</a>
           </td>
-          <td role="cell" class="nhsuk-table__cell">
+          <td role="cell" class="nhsuk-table__cell app-u-no-wrap">
+            <span class="nhsuk-table-responsive__heading" aria-hidden="true"
+              >NHS number </span
+            >623 444 8972
+          </td>
+          <td role="cell" class="nhsuk-table__cell app-u-no-wrap">
             <span class="nhsuk-table-responsive__heading" aria-hidden="true"
               >Date exceptions created </span
             >26 September 2024
@@ -86,7 +86,140 @@ Manager{% endblock %} {% block beforeContent %}
           <td>
             <span class="nhsuk-table-responsive__heading" aria-hidden="true"
               >Short description </span
-            >NHS number not reporting
+            >Technical error - Invalid Gender for this cohort
+          </td>
+          <td>
+            <span class="nhsuk-table-responsive__heading" aria-hidden="true"
+              >Screening service </span
+            >Breast screening
+          </td>
+          <td>
+            <span class="nhsuk-table-responsive__heading" aria-hidden="true"
+              >Status
+            </span>
+            <strong class="nhsuk-tag nhsuk-tag--blue">Open</strong>
+          </td>
+        </tr>
+        <tr role="row" class="nhsuk-table__row">
+          <td role="cell" class="nhsuk-table__cell">
+            <span class="nhsuk-table-responsive__heading" aria-hidden="true"
+              >Exception ID </span
+            ><a href="/v2/participant-information">10001769</a>
+          </td>
+          <td role="cell" class="nhsuk-table__cell app-u-no-wrap">
+            <span class="nhsuk-table-responsive__heading" aria-hidden="true"
+              >NHS number </span
+            >543 555 9087
+          </td>
+          <td role="cell" class="nhsuk-table__cell app-u-no-wrap">
+            <span class="nhsuk-table-responsive__heading" aria-hidden="true"
+              >Date exceptions created </span
+            >21 September 2024
+          </td>
+          <td>
+            <span class="nhsuk-table-responsive__heading" aria-hidden="true"
+              >Short description </span
+            >Technical error - Invalid postcode
+          </td>
+          <td>
+            <span class="nhsuk-table-responsive__heading" aria-hidden="true"
+              >Screening service </span
+            >Breast screening
+          </td>
+          <td>
+            <span class="nhsuk-table-responsive__heading" aria-hidden="true"
+              >Status
+            </span>
+            <strong class="nhsuk-tag nhsuk-tag--blue">Open</strong>
+          </td>
+        </tr>
+        <tr role="row" class="nhsuk-table__row">
+          <td role="cell" class="nhsuk-table__cell">
+            <span class="nhsuk-table-responsive__heading" aria-hidden="true"
+              >Exception ID </span
+            ><a href="/v2/participant-information">10001771</a>
+          </td>
+          <td role="cell" class="nhsuk-table__cell app-u-no-wrap">
+            <span class="nhsuk-table-responsive__heading" aria-hidden="true"
+              >NHS number </span
+            >643 634 1243
+          </td>
+          <td role="cell" class="nhsuk-table__cell app-u-no-wrap">
+            <span class="nhsuk-table-responsive__heading" aria-hidden="true"
+              >Date exceptions created </span
+            >5 September 2024
+          </td>
+          <td>
+            <span class="nhsuk-table-responsive__heading" aria-hidden="true"
+              >Short description </span
+            >Technical error - GP practice code (primary card provider) is
+            mandatory for this update and was not supplied
+          </td>
+          <td>
+            <span class="nhsuk-table-responsive__heading" aria-hidden="true"
+              >Screening service </span
+            >Breast screening
+          </td>
+          <td>
+            <span class="nhsuk-table-responsive__heading" aria-hidden="true"
+              >Status
+            </span>
+            <strong class="nhsuk-tag nhsuk-tag--blue">Open</strong>
+          </td>
+        </tr>
+        <tr role="row" class="nhsuk-table__row">
+          <td role="cell" class="nhsuk-table__cell">
+            <span class="nhsuk-table-responsive__heading" aria-hidden="true"
+              >Exception ID </span
+            ><a href="/v2/participant-information">10001772</a>
+          </td>
+          <td role="cell" class="nhsuk-table__cell app-u-no-wrap">
+            <span class="nhsuk-table-responsive__heading" aria-hidden="true"
+              >NHS number </span
+            >653 542 4353
+          </td>
+          <td role="cell" class="nhsuk-table__cell app-u-no-wrap">
+            <span class="nhsuk-table-responsive__heading" aria-hidden="true"
+              >Date exceptions created </span
+            >4 September 2024
+          </td>
+          <td>
+            <span class="nhsuk-table-responsive__heading" aria-hidden="true"
+              >Short description </span
+            >Technical error - Missing or invalid record type
+          </td>
+          <td>
+            <span class="nhsuk-table-responsive__heading" aria-hidden="true"
+              >Screening service </span
+            >Breast screening
+          </td>
+          <td>
+            <span class="nhsuk-table-responsive__heading" aria-hidden="true"
+              >Status
+            </span>
+            <strong class="nhsuk-tag nhsuk-tag--blue">Open</strong>
+          </td>
+        </tr>
+        <tr role="row" class="nhsuk-table__row">
+          <td role="cell" class="nhsuk-table__cell">
+            <span class="nhsuk-table-responsive__heading" aria-hidden="true"
+              >Exception ID </span
+            ><a href="/v2/participant-information">10001773</a>
+          </td>
+          <td role="cell" class="nhsuk-table__cell app-u-no-wrap">
+            <span class="nhsuk-table-responsive__heading" aria-hidden="true"
+              >NHS number </span
+            >542 565 5493
+          </td>
+          <td role="cell" class="nhsuk-table__cell app-u-no-wrap">
+            <span class="nhsuk-table-responsive__heading" aria-hidden="true"
+              >Date exceptions created </span
+            >1 September 2024
+          </td>
+          <td>
+            <span class="nhsuk-table-responsive__heading" aria-hidden="true"
+              >Short description </span
+            >Technical error - Received NHS number is on the PI blocked list
           </td>
           <td>
             <span class="nhsuk-table-responsive__heading" aria-hidden="true"
