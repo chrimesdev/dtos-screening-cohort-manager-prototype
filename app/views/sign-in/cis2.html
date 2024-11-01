@@ -1,8 +1,8 @@
 {% extends 'layout.html' %} {% block pageTitle %}Select your login method - CIS2
 - Care Identity Authentication{% endblock %} {% block beforeContent %} {%
 endblock %} {% block outerContent %} {% endblock %} {% block header %} {{
-header({ "service": { "name": "CIS2 - Care Identity Authentication", "href": "/"
-}, "showNav": "false", "showSearch": "false" }) }} {% endblock %}
+header({ "service": { "name": "CIS2 Authentication", "href": "/" }, "showNav":
+"false", "showSearch": "false" }) }} {% endblock %}
 
 <!-- For adding page content -->
 <!-- Page layout code can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
@@ -64,6 +64,19 @@ header({ "service": { "name": "CIS2 - Care Identity Authentication", "href": "/"
               />
               <label class="nhsuk-label nhsuk-radios__label" for="cis2-3">
                 Security key
+              </label>
+            </div>
+
+            <div class="nhsuk-radios__item">
+              <input
+                class="nhsuk-radios__input"
+                id="cis2-4"
+                name="cis2"
+                type="radio"
+                value="securityKey"
+              />
+              <label class="nhsuk-label nhsuk-radios__label" for="cis2-4">
+                iPad app
               </label>
             </div>
           </div>
