@@ -1,0 +1,84 @@
+{% extends 'layout.html' %} {% block pageTitle %}Participant information -
+Cohort Manager{% endblock %} {% block beforeContent %}
+<nav class="nhsuk-breadcrumb" aria-label="Breadcrumb">
+  <div class="nhsuk-width-container">
+    <ol class="nhsuk-breadcrumb__list">
+      <li class="nhsuk-breadcrumb__item">
+        <a class="nhsuk-breadcrumb__link" href="/v3">Overview</a>
+      </li>
+      <li class="nhsuk-breadcrumb__item">
+        <a class="nhsuk-breadcrumb__link" href="/v3/exceptions-summary"
+          >Exceptions summary</a
+        >
+      </li>
+    </ol>
+    <p class="nhsuk-breadcrumb__back">
+      <a class="nhsuk-breadcrumb__backlink" href="/v3">
+        <span class="nhsuk-u-visually-hidden">Back to &nbsp;</span>
+        Overview
+      </a>
+    </p>
+  </div>
+</nav>
+
+{% endblock %} {% block content %}
+<div class="nhsuk-grid-row">
+  <div class="nhsuk-grid-column-two-thirds">
+    <h1>Participant information</h1>
+    <h2>Personal details</h2>
+    <dl class="nhsuk-summary-list">
+      <div class="nhsuk-summary-list__row">
+        <dt class="nhsuk-summary-list__key">Name</dt>
+        <dd class="nhsuk-summary-list__value">Sandra Lewis</dd>
+      </div>
+
+      <div class="nhsuk-summary-list__row">
+        <dt class="nhsuk-summary-list__key">Date of birth</dt>
+        <dd class="nhsuk-summary-list__value">15 March 1984</dd>
+      </div>
+
+      <div class="nhsuk-summary-list__row">
+        <dt class="nhsuk-summary-list__key">NHS number</dt>
+        <dd class="nhsuk-summary-list__value">723 333 6897</dd>
+      </div>
+
+      <div class="nhsuk-summary-list__row">
+        <dt class="nhsuk-summary-list__key">Contact information</dt>
+        <dd class="nhsuk-summary-list__value">
+          73 Roman Rd<br />Leeds<br />
+          LS2 5ZN
+        </dd>
+      </div>
+
+      <div class="nhsuk-summary-list__row">
+        <dt class="nhsuk-summary-list__key">Contact details</dt>
+        <dd class="nhsuk-summary-list__value">
+          <p>07700 900362</p>
+          <p>sandra.lewis@example.com</p>
+        </dd>
+      </div>
+
+      <div class="nhsuk-summary-list__row">
+        <dt class="nhsuk-summary-list__key">GP practice code</dt>
+        <dd class="nhsuk-summary-list__value">B86110</dd>
+      </div>
+    </dl>
+
+    <h2>Exception details</h2>
+
+    <dl class="nhsuk-summary-list">
+      <div class="nhsuk-summary-list__row">
+        <dt class="nhsuk-summary-list__key">Date created</dt>
+        <dd class="nhsuk-summary-list__value">10 August 2024</dd>
+      </div>
+
+      <div class="nhsuk-summary-list__row">
+        <dt class="nhsuk-summary-list__key">Short description</dt>
+        <dd class="nhsuk-summary-list__value">
+          Technical error - NHS number was not supplied in a valid format
+        </dd>
+      </div>
+    </dl>
+  </div>
+  {% endblock %}
+</div>
