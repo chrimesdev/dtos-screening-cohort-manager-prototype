@@ -51,7 +51,7 @@ Manager{% endblock %} {% block beforeContent %}
           <td>
             <span class="nhsuk-table-responsive__heading" aria-hidden="true"
               >Short description </span
-            >NHS number was not supplied in a valid format
+            >Invalid primary care provider GP practice code
           </td>
         </tr>
         <tr role="row" class="nhsuk-table__row">
@@ -73,7 +73,7 @@ Manager{% endblock %} {% block beforeContent %}
           <td>
             <span class="nhsuk-table-responsive__heading" aria-hidden="true"
               >Short description </span
-            >Invalid Gender for this cohort
+            >CurrentPostingAndPrimaryProvider
           </td>
         </tr>
         <tr role="row" class="nhsuk-table__row">
@@ -95,7 +95,7 @@ Manager{% endblock %} {% block beforeContent %}
           <td>
             <span class="nhsuk-table-responsive__heading" aria-hidden="true"
               >Short description </span
-            >Invalid postcode
+            >Missing or invalid Posting
           </td>
         </tr>
         <tr role="row" class="nhsuk-table__row">
@@ -117,8 +117,7 @@ Manager{% endblock %} {% block beforeContent %}
           <td>
             <span class="nhsuk-table-responsive__heading" aria-hidden="true"
               >Short description </span
-            >GP practice code (primary card provider) is mandatory for this
-            update and was not supplied
+            >Postcode
           </td>
         </tr>
         <tr role="row" class="nhsuk-table__row">
@@ -140,7 +139,8 @@ Manager{% endblock %} {% block beforeContent %}
           <td>
             <span class="nhsuk-table-responsive__heading" aria-hidden="true"
               >Short description </span
-            >Missing or invalid record type
+            >Unable to add to cohort distribution. As participant with
+            ParticipantId: 33. Has an Exception against it
           </td>
         </tr>
         <tr role="row" class="nhsuk-table__row">
@@ -162,7 +162,51 @@ Manager{% endblock %} {% block beforeContent %}
           <td>
             <span class="nhsuk-table-responsive__heading" aria-hidden="true"
               >Short description </span
-            >Received NHS number is on the PI blocked list
+            >Invalid primary care provider GP practice code
+          </td>
+        </tr>
+        <tr role="row" class="nhsuk-table__row">
+          <td role="cell" class="nhsuk-table__cell">
+            <span class="nhsuk-table-responsive__heading" aria-hidden="true"
+              >Exception ID </span
+            ><a href="/v3/participant-information">10001773</a>
+          </td>
+          <td role="cell" class="nhsuk-table__cell app-u-no-wrap">
+            <span class="nhsuk-table-responsive__heading" aria-hidden="true"
+              >NHS number </span
+            >542 345 5423
+          </td>
+          <td role="cell" class="nhsuk-table__cell app-u-no-wrap">
+            <span class="nhsuk-table-responsive__heading" aria-hidden="true"
+              >Date exceptions created </span
+            >1 September 2024
+          </td>
+          <td>
+            <span class="nhsuk-table-responsive__heading" aria-hidden="true"
+              >Short description </span
+            >Truncate
+          </td>
+        </tr>
+        <tr role="row" class="nhsuk-table__row">
+          <td role="cell" class="nhsuk-table__cell">
+            <span class="nhsuk-table-responsive__heading" aria-hidden="true"
+              >Exception ID </span
+            ><a href="/v3/participant-information">10001773</a>
+          </td>
+          <td role="cell" class="nhsuk-table__cell app-u-no-wrap">
+            <span class="nhsuk-table-responsive__heading" aria-hidden="true"
+              >NHS number </span
+            >435 543 432
+          </td>
+          <td role="cell" class="nhsuk-table__cell app-u-no-wrap">
+            <span class="nhsuk-table-responsive__heading" aria-hidden="true"
+              >Date exceptions created </span
+            >1 September 2024
+          </td>
+          <td>
+            <span class="nhsuk-table-responsive__heading" aria-hidden="true"
+              >Short description </span
+            >TransformDate
           </td>
         </tr>
       </tbody>
