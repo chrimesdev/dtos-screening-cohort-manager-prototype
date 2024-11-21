@@ -187,3 +187,30 @@ $button-shadow-size: 4px;
     }
   }
 }
+
+.nhsuk-pagination {
+box-sizing: border-box;
+color: rgb(33, 43, 50);
+display: block;
+font-family: "Frutiger W01", Arial, sans-serif;
+font-size: 16px;
+height: 38.400002px;
+line-height: 24px;
+margin-bottom: 35px;
+margin-top: 35px;
+width: 300px;
+float: right;
+-webkit-font-smoothing: antialiased;
+}
+
+.nhsuk-table-responsive{
+  background-color: #ffffff;
+}
+
+.nhsuk-panel{
+  background-color: #ffffff;
+  border: 1px solid #d8dde0;
+  border-top: 0;
+  padding: 40px 24px;
+
+}

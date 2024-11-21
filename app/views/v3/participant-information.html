@@ -4,16 +4,16 @@ Cohort Manager{% endblock %} {% block beforeContent %}
   <div class="nhsuk-width-container">
     <ol class="nhsuk-breadcrumb__list">
       <li class="nhsuk-breadcrumb__item">
-        <a class="nhsuk-breadcrumb__link" href="/v2">Overview</a>
+        <a class="nhsuk-breadcrumb__link" href="/v3">Overview</a>
       </li>
       <li class="nhsuk-breadcrumb__item">
-        <a class="nhsuk-breadcrumb__link" href="/v2/exceptions-summary"
+        <a class="nhsuk-breadcrumb__link" href="/v3/exceptions-summary"
           >Exceptions summary</a
         >
       </li>
     </ol>
     <p class="nhsuk-breadcrumb__back">
-      <a class="nhsuk-breadcrumb__backlink" href="/v2">
+      <a class="nhsuk-breadcrumb__backlink" href="/v3">
         <span class="nhsuk-u-visually-hidden">Back to &nbsp;</span>
         Overview
       </a>
@@ -25,38 +25,13 @@ Cohort Manager{% endblock %} {% block beforeContent %}
 <div class="nhsuk-grid-row">
   <div class="nhsuk-grid-column-two-thirds">
     <h1>Participant information</h1>
-    <div class="app-mini-profile-header nhsuk-u-margin-bottom-7">
-      <dl>
-        <dt>Participant:</dt>
-        <dd>Sandra Lewis</dd>
-      </dl>
-      <dl>
-        <dt>NHS number:</dt>
-        <dd>723 333 6897</dd>
-      </dl>
-    </div>
+
   </div>
 </div>
 <div class="nhsuk-grid-row">
   <div class="nhsuk-grid-column-full">
-    <div class="nhsuk-tabs" data-module="nhsuk-tabs">
-      <h2 class="nhsuk-tabs__title">Contents</h2>
 
-      <ul class="nhsuk-tabs__list">
-        <li class="nhsuk-tabs__list-item nhsuk-tabs__list-item--selected">
-          <a class="nhsuk-tabs__tab" href="#personal-details"
-            >Personal details</a
-          >
-        </li>
-
-        <li class="nhsuk-tabs__list-item">
-          <a class="nhsuk-tabs__tab" href="#exception-details"
-            >Exception details</a
-          >
-        </li>
-      </ul>
-
-      <div class="nhsuk-tabs__panel" id="personal-details">
+      <div class="nhsuk-panel" id="personal-details">
         <h3>Personal details</h3>
         <dl class="nhsuk-summary-list">
           <div class="nhsuk-summary-list__row">
@@ -95,12 +70,8 @@ Cohort Manager{% endblock %} {% block beforeContent %}
             <dd class="nhsuk-summary-list__value">B86110</dd>
           </div>
         </dl>
-      </div>
 
-      <div
-        class="nhsuk-tabs__panel nhsuk-tabs__panel--hidden"
-        id="exception-details"
-      >
+
         <h3>Exception details</h3>
 
         <dl class="nhsuk-summary-list">
@@ -115,9 +86,44 @@ Cohort Manager{% endblock %} {% block beforeContent %}
               Technical error - NHS number was not supplied in a valid format
             </dd>
           </div>
+
+          <div class="nhsuk-summary-list__row">
+            <dt class="nhsuk-summary-list__key">Date raised with NBO</dt>
+            <dd class="nhsuk-summary-list__value">15 August 2024</dd>
+          </div>
+
+          <div class="nhsuk-summary-list__row">
+            <dt class="nhsuk-summary-list__key">Status</dt>
+            <dd class="nhsuk-summary-list__value">
+              <td class="nhsuk-table__cell">
+                <strong class="nhsuk-tag nhsuk-tag--blue">Status</strong>
+              </td>
+            </dd>
+          </div>
+
         </dl>
-      </div>
-    </div>
+
+<!---previous history--->
+
+<details class="nhsuk-details nhsuk-expander">
+  <summary class="nhsuk-details__summary">
+    <span class="nhsuk-details__summary-text">
+      View previous history
+    </span>
+  </summary>
+  <div class="nhsuk-details__text">
+    <p>You can see your GP records by:</p>
+    <ul>
+      <li>asking for them at your GP surgery </li>
+      <li>going online to see them (if you have signed up for <a href="/using-the-nhs/nhs-services/gps/gp-online-services/">GP online services</a>) </li>
+    </ul>
+  </div>
+</details>
+
+<!---end history--->
+
+  </div>
+
   </div>
 </div>
 {% endblock %}
