@@ -33,7 +33,7 @@ Manager{% endblock %} {% block beforeContent %}
 <select class="nhsuk-select" id="select-1" name="select-1">
   <option value="1">Exception ID</option>
   <option value="2" selected>NHS number</option>
-  <option value="3">Date created</option>
+  <option value="3">Date created on</option>
   <option value="4">Short description</option>
   <!---option value="3" disabled>Short description</option--->
 </select>
@@ -48,9 +48,9 @@ Manager{% endblock %} {% block beforeContent %}
         <tr role="row">
           <th role="columnheader" scope="col">Exception ID</th>
           <th role="columnheader" scope="col">NHS number</th>
-          <th role="columnheader" scope="col">Date created</th>
+          <th role="columnheader" scope="col">Date created on</th>
           <th role="columnheader" scope="col">Short description</th>
-          <th role="columnheader" scope="col">Status</th>
+          <!---th role="columnheader" scope="col">Status</th--->
         </tr>
       </thead>
       <tbody class="nhsuk-table__body">
@@ -63,7 +63,7 @@ Manager{% endblock %} {% block beforeContent %}
           <td role="cell" class="nhsuk-table__cell app-u-no-wrap">
             <span class="nhsuk-table-responsive__heading" aria-hidden="true"
               >NHS number </span
-            >723 333 6897
+            >723 333 689
           </td>
           <td role="cell" class="nhsuk-table__cell">
             <span class="nhsuk-table-responsive__heading" aria-hidden="true"
@@ -74,15 +74,17 @@ Manager{% endblock %} {% block beforeContent %}
             <span class="nhsuk-table-responsive__heading" aria-hidden="true">Short description </span>
             Technical error - NHS number was not supplied in a valid format
           </td>
+          <!---
           <td class="nhsuk-table__cell">
             <strong class="nhsuk-tag nhsuk-tag--blue">Status</strong>
           </td>
+          --->
         </tr>
         <tr role="row" class="nhsuk-table__row">
           <td role="cell" class="nhsuk-table__cell">
             <span class="nhsuk-table-responsive__heading" aria-hidden="true"
               >Exception ID </span
-            ><a href="/v2/participant-information">11768</a>
+            ><a href="#">1768</a>
           </td>
           <td role="cell" class="nhsuk-table__cell app-u-no-wrap">
             <span class="nhsuk-table-responsive__heading" aria-hidden="true"
@@ -99,15 +101,17 @@ Manager{% endblock %} {% block beforeContent %}
               >Short description </span
             >Technical error - Invalid Gender for this cohort
           </td>
+          <!---
           <td class="nhsuk-table__cell">
             <strong class="nhsuk-tag nhsuk-tag--blue">Status</strong>
           </td>
+          --->
         </tr>
         <tr role="row" class="nhsuk-table__row">
           <td role="cell" class="nhsuk-table__cell">
             <span class="nhsuk-table-responsive__heading" aria-hidden="true"
               >Exception ID </span
-            ><a href="/v2/participant-information">10769</a>
+            ><a href="#">1069</a>
           </td>
           <td role="cell" class="nhsuk-table__cell app-u-no-wrap">
             <span class="nhsuk-table-responsive__heading" aria-hidden="true"
@@ -124,15 +128,17 @@ Manager{% endblock %} {% block beforeContent %}
               >Short description </span
             >Technical error - Invalid postcode
           </td>
+          <!---
           <td class="nhsuk-table__cell">
             <strong class="nhsuk-tag nhsuk-tag--green">Status</strong>
           </td>
+          --->
         </tr>
         <tr role="row" class="nhsuk-table__row">
           <td role="cell" class="nhsuk-table__cell">
             <span class="nhsuk-table-responsive__heading" aria-hidden="true"
               >Exception ID </span
-            ><a href="/v2/participant-information">1771</a>
+            ><a href="#">1771</a>
           </td>
           <td role="cell" class="nhsuk-table__cell app-u-no-wrap">
             <span class="nhsuk-table-responsive__heading" aria-hidden="true"
@@ -150,15 +156,17 @@ Manager{% endblock %} {% block beforeContent %}
             >Technical error - GP practice code (primary card provider) is
             mandatory for this update and was not supplied
           </td>
+          <!---
           <td class="nhsuk-table__cell">
             <strong class="nhsuk-tag nhsuk-tag--blue">Status</strong>
           </td>
+          --->
         </tr>
         <tr role="row" class="nhsuk-table__row">
           <td role="cell" class="nhsuk-table__cell">
             <span class="nhsuk-table-responsive__heading" aria-hidden="true"
               >Exception ID </span
-            ><a href="/v2/participant-information">1772</a>
+            ><a href="#">1772</a>
           </td>
           <td role="cell" class="nhsuk-table__cell app-u-no-wrap">
             <span class="nhsuk-table-responsive__heading" aria-hidden="true"
@@ -175,15 +183,17 @@ Manager{% endblock %} {% block beforeContent %}
               >Short description </span
             >Technical error - Missing or invalid record type
           </td>
+          <!---
           <td class="nhsuk-table__cell">
             <strong class="nhsuk-tag nhsuk-tag--blue">Status</strong>
           </td>
+          --->
         </tr>
         <tr role="row" class="nhsuk-table__row">
           <td role="cell" class="nhsuk-table__cell">
             <span class="nhsuk-table-responsive__heading" aria-hidden="true"
               >Exception ID </span
-            ><a href="/v2/participant-information">10773</a>
+            ><a href="#">10773</a>
           </td>
           <td role="cell" class="nhsuk-table__cell app-u-no-wrap">
             <span class="nhsuk-table-responsive__heading" aria-hidden="true"
@@ -200,15 +210,17 @@ Manager{% endblock %} {% block beforeContent %}
               >Short description </span
             >Technical error - Received NHS number is on the PI blocked list
           </td>
+          <!---
           <td class="nhsuk-table__cell">
             <strong class="nhsuk-tag nhsuk-tag--red">Status</strong>
           </td>
+          --->
         </tr>
         <tr role="row" class="nhsuk-table__row">
           <td role="cell" class="nhsuk-table__cell">
             <span class="nhsuk-table-responsive__heading" aria-hidden="true"
               >Exception ID </span
-            ><a href="/v2/participant-information">1769</a>
+            ><a href="#">1769</a>
           </td>
           <td role="cell" class="nhsuk-table__cell app-u-no-wrap">
             <span class="nhsuk-table-responsive__heading" aria-hidden="true"
@@ -225,9 +237,11 @@ Manager{% endblock %} {% block beforeContent %}
               >Short description </span
             >Technical error - Invalid NHS number
           </td>
+          <!---
           <td class="nhsuk-table__cell">
             <strong class="nhsuk-tag nhsuk-tag--green">Status</strong>
           </td>
+          --->
         </tr>
 
 
@@ -254,15 +268,17 @@ Manager{% endblock %} {% block beforeContent %}
             <span class="nhsuk-table-responsive__heading" aria-hidden="true">Short description </span>
             Technical error - NHS number was not supplied in a valid format
           </td>
+          <!---
           <td class="nhsuk-table__cell">
             <strong class="nhsuk-tag nhsuk-tag--blue">Status</strong>
           </td>
+          --->
         </tr>
         <tr role="row" class="nhsuk-table__row">
           <td role="cell" class="nhsuk-table__cell">
             <span class="nhsuk-table-responsive__heading" aria-hidden="true"
               >Exception ID </span
-            ><a href="/v2/participant-information">1945</a>
+            ><a href="#">1945</a>
           </td>
           <td role="cell" class="nhsuk-table__cell app-u-no-wrap">
             <span class="nhsuk-table-responsive__heading" aria-hidden="true"
@@ -279,15 +295,17 @@ Manager{% endblock %} {% block beforeContent %}
               >Short description </span
             >Technical error - Invalid Gender for this cohort
           </td>
+          <!---
           <td class="nhsuk-table__cell">
             <strong class="nhsuk-tag nhsuk-tag--blue">Status</strong>
           </td>
+          --->
         </tr>
         <tr role="row" class="nhsuk-table__row">
           <td role="cell" class="nhsuk-table__cell">
             <span class="nhsuk-table-responsive__heading" aria-hidden="true"
               >Exception ID </span
-            ><a href="/v2/participant-information">1875</a>
+            ><a href="#">1875</a>
           </td>
           <td role="cell" class="nhsuk-table__cell app-u-no-wrap">
             <span class="nhsuk-table-responsive__heading" aria-hidden="true"
@@ -304,15 +322,17 @@ Manager{% endblock %} {% block beforeContent %}
               >Short description </span
             >Technical error - Invalid postcode
           </td>
+          <!---
           <td class="nhsuk-table__cell">
             <strong class="nhsuk-tag nhsuk-tag--green">Status</strong>
           </td>
+          --->
         </tr>
         <tr role="row" class="nhsuk-table__row">
           <td role="cell" class="nhsuk-table__cell">
             <span class="nhsuk-table-responsive__heading" aria-hidden="true"
               >Exception ID </span
-            ><a href="/v2/participant-information">2005</a>
+            ><a href="#">2005</a>
           </td>
           <td role="cell" class="nhsuk-table__cell app-u-no-wrap">
             <span class="nhsuk-table-responsive__heading" aria-hidden="true"
@@ -330,20 +350,22 @@ Manager{% endblock %} {% block beforeContent %}
             >Technical error - GP practice code (primary card provider) is
             mandatory for this update and was not supplied
           </td>
+          <!---
           <td class="nhsuk-table__cell">
             <strong class="nhsuk-tag nhsuk-tag--blue">Status</strong>
           </td>
+          --->
         </tr>
         <tr role="row" class="nhsuk-table__row">
           <td role="cell" class="nhsuk-table__cell">
-            <span class="nhsuk-table-responsive__heading" aria-hidden="true"
+            <span class="nhsuk-table-responsive__heading" aria-hidden="true">
               >Exception ID </span
-            ><a href="/v2/participant-information">2143</a>
+            <a href="#">2143</a>
           </td>
           <td role="cell" class="nhsuk-table__cell app-u-no-wrap">
-            <span class="nhsuk-table-responsive__heading" aria-hidden="true"
-              >NHS number </span
-            >653 542 4353
+            <span class="nhsuk-table-responsive__heading" aria-hidden="true">
+              NHS number </span>
+              653 542 4353
           </td>
           <td role="cell" class="nhsuk-table__cell app-u-no-wrap">
             <span class="nhsuk-table-responsive__heading" aria-hidden="true"
@@ -355,15 +377,17 @@ Manager{% endblock %} {% block beforeContent %}
               >Short description </span
             >Technical error - Missing or invalid record type
           </td>
+          <!---
           <td class="nhsuk-table__cell">
             <strong class="nhsuk-tag nhsuk-tag--blue">Status</strong>
           </td>
+          --->
         </tr>
         <tr role="row" class="nhsuk-table__row">
           <td role="cell" class="nhsuk-table__cell">
             <span class="nhsuk-table-responsive__heading" aria-hidden="true"
               >Exception ID </span
-            ><a href="/v2/participant-information">10698</a>
+            ><a href="">10698</a>
           </td>
           <td role="cell" class="nhsuk-table__cell app-u-no-wrap">
             <span class="nhsuk-table-responsive__heading" aria-hidden="true"
@@ -380,15 +404,17 @@ Manager{% endblock %} {% block beforeContent %}
               >Short description </span
             >Technical error - Received NHS number is on the PI blocked list
           </td>
+          <!---
           <td class="nhsuk-table__cell">
             <strong class="nhsuk-tag nhsuk-tag--red">Status</strong>
           </td>
+          --->
         </tr>
         <tr role="row" class="nhsuk-table__row">
           <td role="cell" class="nhsuk-table__cell">
             <span class="nhsuk-table-responsive__heading" aria-hidden="true"
               >Exception ID </span
-            ><a href="/v2/participant-information">9890</a>
+            ><a href="#">9890</a>
           </td>
           <td role="cell" class="nhsuk-table__cell app-u-no-wrap">
             <span class="nhsuk-table-responsive__heading" aria-hidden="true"
@@ -405,9 +431,11 @@ Manager{% endblock %} {% block beforeContent %}
               >Short description </span
             >Technical error - Invalid NHS number
           </td>
+          <!---
           <td class="nhsuk-table__cell">
-            <strong class="nhsuk-tag nhsuk-tag--green">Status</strong>
+            <strong class="nhsuk-tag nhsuk-tag--blue">Status</strong>
           </td>
+          --->
         </tr>
       </tbody>
 
@@ -477,10 +505,8 @@ Manager{% endblock %} {% block beforeContent %}
   <p class="nhsuk-body" style="margin-top:52px;margin-bottom:0px; float:right;">Showing 20 of 72 results</p>
   </div>
 
-
 </div>
+
+{% endblock %}
 
     <!---end pagination--->
-  </div>
-</div>
-{% endblock %}
