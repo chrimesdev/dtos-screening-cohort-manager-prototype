@@ -25,13 +25,12 @@ Cohort Manager{% endblock %} {% block beforeContent %}
 <div class="nhsuk-grid-row">
   <div class="nhsuk-grid-column-two-thirds">
     <h1>Participant information</h1>
-
   </div>
 </div>
 <div class="nhsuk-grid-row">
   <div class="nhsuk-grid-column-full">
-
-      <div class="nhsuk-panel" id="personal-details">
+    <div class="nhsuk-card nhsuk-u-margin-bottom-4">
+      <div class="nhsuk-card__content">
         <h3>Personal details</h3>
         <dl class="nhsuk-summary-list">
           <div class="nhsuk-summary-list__row">
@@ -80,10 +79,11 @@ Cohort Manager{% endblock %} {% block beforeContent %}
             <dd class="nhsuk-summary-list__value">B86110</dd>
           </div>
         </dl>
-</div>
+      </div>
+    </div>
 
-<div class="nhsuk-panel" id="exceptions-details">
-
+    <div class="nhsuk-card nhsuk-u-margin-bottom-2">
+      <div class="nhsuk-card__content">
         <h3>Exception details</h3>
 
         <dl class="nhsuk-summary-list">
@@ -113,11 +113,10 @@ Cohort Manager{% endblock %} {% block beforeContent %}
               </td>
             </dd>
           </div>--->
-
         </dl>
-
+      </div>
+    </div>
+    </div>
   </div>
-
-  </div>
+  {% endblock %}
 </div>
-{% endblock %}
