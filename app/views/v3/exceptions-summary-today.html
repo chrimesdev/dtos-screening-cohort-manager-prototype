@@ -17,20 +17,18 @@ Manager{% endblock %} {% block beforeContent %}
   </div>
 </nav>
 
-{% endblock %}
-
-{% block content %}
+{% endblock %} {% block content %}
 <div class="nhsuk-grid-row">
   <div class="nhsuk-grid-column-full">
     <h1>Exceptions created today</h1>
   </div>
 </div>
 
-<div style="float: right;">
+<div style="float: right">
   <label for="select-1" style="font-size: 1.1875rem"> Sort by </label>
   <select class="nhsuk-select" id="select-1" name="select-1">
     <option value="1">Exception ID</option>
-    <option value="2" >NHS number</option>
+    <option value="2">NHS number</option>
     <option value="3" selected>Date created on</option>
     <option value="4">Short description</option>
     <!---option value="3" disabled>Short description</option--->
@@ -39,7 +37,7 @@ Manager{% endblock %} {% block beforeContent %}
     class="nhsuk-button"
     data-module="nhsuk-button"
     type="submit"
-    style="padding: 4px 16px; font-size: 16px;"
+    style="padding: 4px 16px; font-size: 16px"
   >
     Apply
   </button>
@@ -81,7 +79,8 @@ Manager{% endblock %} {% block beforeContent %}
                 <span class="nhsuk-table-responsive__heading" aria-hidden="true"
                   >Short description
                 </span>
-                Technical error - NHS number was not supplied in a valid format
+                Technical error - GP practice code and Reason for Removal fields
+                contain incompatible values
               </td>
               <!---
           <td class="nhsuk-table__cell">
@@ -110,7 +109,7 @@ Manager{% endblock %} {% block beforeContent %}
               <td>
                 <span class="nhsuk-table-responsive__heading" aria-hidden="true"
                   >Short description </span
-                >Technical error - Invalid Gender for this cohort
+                >Technical error - Given Name is missing
               </td>
               <!---
           <td class="nhsuk-table__cell">
@@ -138,7 +137,7 @@ Manager{% endblock %} {% block beforeContent %}
               <td>
                 <span class="nhsuk-table-responsive__heading" aria-hidden="true"
                   >Short description </span
-                >Technical error - Invalid postcode
+                >Technical error - all 5 address lines are missing
               </td>
               <!---
           <td class="nhsuk-table__cell">
@@ -166,8 +165,8 @@ Manager{% endblock %} {% block beforeContent %}
               <td>
                 <span class="nhsuk-table-responsive__heading" aria-hidden="true"
                   >Short description </span
-                >Technical error - GP practice code (primary card provider) is
-                mandatory for this update and was not supplied
+                >Technical error - Formal Death Status is supplied for a non
+                death Reason for Removal reason
               </td>
               <!---
           <td class="nhsuk-table__cell">
@@ -195,7 +194,8 @@ Manager{% endblock %} {% block beforeContent %}
               <td>
                 <span class="nhsuk-table-responsive__heading" aria-hidden="true"
                   >Short description </span
-                >Technical error - Missing or invalid record type
+                >It was not possible to determine the BSO dummy practice code
+                for this subject
               </td>
               <!---
           <td class="nhsuk-table__cell">
@@ -223,7 +223,7 @@ Manager{% endblock %} {% block beforeContent %}
               <td>
                 <span class="nhsuk-table-responsive__heading" aria-hidden="true"
                   >Short description </span
-                >Technical error - Received NHS number is on the PI blocked list
+                >The supplied demographics do not match the subjects PI record
               </td>
               <!---
           <td class="nhsuk-table__cell">
@@ -251,7 +251,8 @@ Manager{% endblock %} {% block beforeContent %}
               <td>
                 <span class="nhsuk-table-responsive__heading" aria-hidden="true"
                   >Short description </span
-                >Technical error - Invalid NHS number
+                >Technical error - Formal Death Status is supplied for a non
+                death Reason for Removal reason
               </td>
               <!---
           <td class="nhsuk-table__cell">
@@ -275,15 +276,16 @@ Manager{% endblock %} {% block beforeContent %}
               </td>
               <td role="cell" class="nhsuk-table__cell">
                 <span class="nhsuk-table-responsive__heading" aria-hidden="true"
-                  >Exceptions created on </span
-                >
+                  >Exceptions created on
+                </span>
                 <p class="date" id="date"></p>
               </td>
               <td>
                 <span class="nhsuk-table-responsive__heading" aria-hidden="true"
                   >Short description
                 </span>
-                Technical error - NHS number was not supplied in a valid format
+                Technical error - GP practice code and Reason for Removal fields
+                contain incompatible values
               </td>
               <!---
           <td class="nhsuk-table__cell">
@@ -311,7 +313,7 @@ Manager{% endblock %} {% block beforeContent %}
               <td>
                 <span class="nhsuk-table-responsive__heading" aria-hidden="true"
                   >Short description </span
-                >Technical error - Invalid Gender for this cohort
+                >The supplied demographics do not match the subjects PI record
               </td>
               <!---
           <td class="nhsuk-table__cell">
@@ -319,35 +321,10 @@ Manager{% endblock %} {% block beforeContent %}
           </td>
           --->
             </tr>
-
           </tbody>
-
-          <!---2nd table end--->
         </table>
       </div>
     </div>
-
-      <!---<div class="nhsuk-grid-row">
-        <div class="nhsuk-grid-column-two-thirds">
-          {{ appPagination({ nextUrl: "/exceptions-summary?page=2", previousUrl:
-          "/exceptions-summary?page=1", items: [ { number: 1, href:
-          "/exceptions-summary?page=1" }, { number: 2, href:
-          "/exceptions-summary?page=2", current: true }, { number: 3, href:
-          "/exceptions-summary?page=3" }, { number: 4, href:
-          "/exceptions-summary?page=4" }, { ellipsis: true }, { number: 10,
-          href: "/exceptions-summary?page=10" } ] }) }}
-        </div>
-
-        <div class="nhsuk-grid-column-one-third">
-          <p
-            class="nhsuk-body"
-            style="margin-top: 52px; margin-bottom: 0px; float: right"
-          >
-            Showing 20 of 72 results
-          </p>
-        </div>
-      </div>--->
-
-    </div>
   </div>
-  {% endblock %}
+</div>
+{% endblock %}
