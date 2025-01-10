@@ -20,7 +20,9 @@ Manager{% endblock %} {% block beforeContent %}
 {% endblock %} {% block content %}
 <div class="nhsuk-grid-row">
   <div class="nhsuk-grid-column-full">
-    <h1>Exceptions summary</h1>
+    <h1>Breast screening exceptions
+      <span class="nhsuk-caption-xl">Complete exceptions list</span>
+    </h1>
   </div>
 </div>
 
@@ -31,7 +33,7 @@ Manager{% endblock %} {% block beforeContent %}
     <option value="2" >NHS number</option>
     <option value="3">Date created on</option>
     <option value="4">Short description</option>
-    <option value="5">Raised with NBO</option>
+    <option value="5">Raised with NBO?</option>
   </select>
   <button
     class="nhsuk-button"
@@ -48,6 +50,7 @@ Manager{% endblock %} {% block beforeContent %}
     <div class="nhsuk-card nhsuk-u-margin-bottom-2">
       <div class="nhsuk-card__content">
         <table role="table" class="nhsuk-table-responsive">
+          <caption class="nhsuk-table__caption">Total breast screening exceptions</caption>
           <thead role="rowgroup" class="nhsuk-table__head">
             <tr role="row">
               <th role="columnheader" scope="col">Exception ID</th>
@@ -62,7 +65,7 @@ Manager{% endblock %} {% block beforeContent %}
               <td role="cell" class="nhsuk-table__cell">
                 <span class="nhsuk-table-responsive__heading" aria-hidden="true"
                   >Exception ID </span
-                ><a href="/v4/participant-information">1001</a>
+                ><a href="/v4/participant-information-raised">1001</a>
               </td>
               <td role="cell" class="nhsuk-table__cell app-u-no-wrap">
                 <span class="nhsuk-table-responsive__heading" aria-hidden="true"
@@ -72,7 +75,7 @@ Manager{% endblock %} {% block beforeContent %}
               <td role="cell" class="nhsuk-table__cell">
                 <span class="nhsuk-table-responsive__heading" aria-hidden="true"
                   >Date exceptions created </span
-                >18 December 2024
+                >18 Dec 2024
               </td>
               <td>
                 <span class="nhsuk-table-responsive__heading" aria-hidden="true"
@@ -81,14 +84,14 @@ Manager{% endblock %} {% block beforeContent %}
                 Technical error - GP practice code and Reason for Removal fields contain incompatible values
               </td>
               <td class="nhsuk-table__cell">
-                Yes
+                <strong class="nhsuk-tag nhsuk-tag--red">Raised</strong>
               </td>
             </tr>
             <tr role="row" class="nhsuk-table__row">
               <td role="cell" class="nhsuk-table__cell">
                 <span class="nhsuk-table-responsive__heading" aria-hidden="true"
                   >Exception ID </span
-                ><a href="#">1002</a>
+                ><a href="/v4/participant-information-not-raised">1002</a>
               </td>
               <td role="cell" class="nhsuk-table__cell app-u-no-wrap">
                 <span class="nhsuk-table-responsive__heading" aria-hidden="true"
@@ -98,7 +101,7 @@ Manager{% endblock %} {% block beforeContent %}
               <td role="cell" class="nhsuk-table__cell app-u-no-wrap">
                 <span class="nhsuk-table-responsive__heading" aria-hidden="true"
                   >Date exceptions created </span
-                >18 December 2024
+                >18 Dec 2024
               </td>
               <td>
                 <span class="nhsuk-table-responsive__heading" aria-hidden="true"
@@ -106,7 +109,7 @@ Manager{% endblock %} {% block beforeContent %}
                 >The supplied demographics do not match the subjects record
               </td>
               <td class="nhsuk-table__cell">
-                No
+                <strong class="nhsuk-tag nhsuk-tag--blue">Not raised</strong>
               </tr>
             <tr role="row" class="nhsuk-table__row">
               <td role="cell" class="nhsuk-table__cell">
@@ -122,7 +125,7 @@ Manager{% endblock %} {% block beforeContent %}
               <td role="cell" class="nhsuk-table__cell app-u-no-wrap">
                 <span class="nhsuk-table-responsive__heading" aria-hidden="true"
                   >Date exceptions created </span
-                >18 December 2024
+                >18 Dec 2024
               </td>
               <td>
                 <span class="nhsuk-table-responsive__heading" aria-hidden="true"
@@ -130,7 +133,7 @@ Manager{% endblock %} {% block beforeContent %}
                 >Technical error - all 5 address lines are missing
               </td>
               <td class="nhsuk-table__cell">
-                No
+                <strong class="nhsuk-tag nhsuk-tag--blue">Not raised</strong>
               </tr>
             </tr>
             <tr role="row" class="nhsuk-table__row">
@@ -147,7 +150,7 @@ Manager{% endblock %} {% block beforeContent %}
               <td role="cell" class="nhsuk-table__cell app-u-no-wrap">
                 <span class="nhsuk-table-responsive__heading" aria-hidden="true"
                   >Date exceptions created </span
-                >18 December 2024
+                >18 Dec 2024
               </td>
               <td>
                 <span class="nhsuk-table-responsive__heading" aria-hidden="true"
@@ -155,7 +158,7 @@ Manager{% endblock %} {% block beforeContent %}
                 >Technical error - Formal Death Status is supplied for a non death Reason for Removal reason
               </td>
               <td class="nhsuk-table__cell">
-                No
+                <strong class="nhsuk-tag nhsuk-tag--blue">Not raised</strong>
               </tr>
             </tr>
             <tr role="row" class="nhsuk-table__row">
@@ -172,7 +175,7 @@ Manager{% endblock %} {% block beforeContent %}
               <td role="cell" class="nhsuk-table__cell app-u-no-wrap">
                 <span class="nhsuk-table-responsive__heading" aria-hidden="true"
                   >Date exceptions created </span
-                >18 December 2024
+                >18 Dec 2024
               </td>
               <td>
                 <span class="nhsuk-table-responsive__heading" aria-hidden="true"
@@ -180,7 +183,7 @@ Manager{% endblock %} {% block beforeContent %}
                 >It was not possible to determine the BSO dummy practice code for this subject
               </td>
               <td class="nhsuk-table__cell">
-                No
+                <strong class="nhsuk-tag nhsuk-tag--blue">Not raised</strong>
               </tr>
             </tr>
             <tr role="row" class="nhsuk-table__row">
@@ -197,7 +200,7 @@ Manager{% endblock %} {% block beforeContent %}
               <td role="cell" class="nhsuk-table__cell app-u-no-wrap">
                 <span class="nhsuk-table-responsive__heading" aria-hidden="true"
                   >Date exceptions created </span
-                >18 December 2024
+                >18 Dec 2024
               </td>
               <td>
                 <span class="nhsuk-table-responsive__heading" aria-hidden="true"
@@ -205,7 +208,7 @@ Manager{% endblock %} {% block beforeContent %}
                 >The supplied demographics do not match the subjects record
               </td>
               <td class="nhsuk-table__cell">
-                No
+                <strong class="nhsuk-tag nhsuk-tag--blue">Not raised</strong>
               </tr>
             </tr>
             <tr role="row" class="nhsuk-table__row">
@@ -222,7 +225,7 @@ Manager{% endblock %} {% block beforeContent %}
               <td role="cell" class="nhsuk-table__cell app-u-no-wrap">
                 <span class="nhsuk-table-responsive__heading" aria-hidden="true"
                   >Date exceptions created </span
-                >18 December 2024
+                >18 Dec 2024
               </td>
               <td>
                 <span class="nhsuk-table-responsive__heading" aria-hidden="true"
@@ -230,7 +233,7 @@ Manager{% endblock %} {% block beforeContent %}
                 >Technical error - Formal Death Status is supplied for a non death Reason for Removal reason
               </td>
               <td class="nhsuk-table__cell">
-                No
+                <strong class="nhsuk-tag nhsuk-tag--blue">Not raised</strong>
               </tr>
             </tr>
 
@@ -250,7 +253,7 @@ Manager{% endblock %} {% block beforeContent %}
               <td role="cell" class="nhsuk-table__cell">
                 <span class="nhsuk-table-responsive__heading" aria-hidden="true"
                   >Date exceptions created </span
-                >18 December 2024
+                >18 Dec 2024
               </td>
               <td>
                 <span class="nhsuk-table-responsive__heading" aria-hidden="true"
@@ -259,7 +262,7 @@ Manager{% endblock %} {% block beforeContent %}
                 It was not possible to determine the BSO dummy practice code for this subject
               </td>
               <td class="nhsuk-table__cell">
-                No
+                <strong class="nhsuk-tag nhsuk-tag--blue">Not raised</strong>
               </tr>
             </tr>
             <tr role="row" class="nhsuk-table__row">
@@ -276,7 +279,7 @@ Manager{% endblock %} {% block beforeContent %}
               <td role="cell" class="nhsuk-table__cell app-u-no-wrap">
                 <span class="nhsuk-table-responsive__heading" aria-hidden="true"
                   >Date exceptions created </span
-                >18 December 2024
+                >18 Dec 2024
               </td>
               <td>
                 <span class="nhsuk-table-responsive__heading" aria-hidden="true"
@@ -284,7 +287,7 @@ Manager{% endblock %} {% block beforeContent %}
                 >Technical error - GP practice code and Reason for Removal fields contain incompatible values
               </td>
               <td class="nhsuk-table__cell">
-                No
+                <strong class="nhsuk-tag nhsuk-tag--blue">Not raised</strong>
               </tr>
             </tr>
             <tr role="row" class="nhsuk-table__row">
@@ -301,7 +304,7 @@ Manager{% endblock %} {% block beforeContent %}
               <td role="cell" class="nhsuk-table__cell app-u-no-wrap">
                 <span class="nhsuk-table-responsive__heading" aria-hidden="true"
                   >Date exceptions created </span
-                >18 December 2024
+                >18 Dec 2024
               </td>
               <td>
                 <span class="nhsuk-table-responsive__heading" aria-hidden="true"
@@ -309,7 +312,7 @@ Manager{% endblock %} {% block beforeContent %}
                 >Technical error - Formal Death Status is supplied for a non death Reason for Removal reason
               </td>
               <td class="nhsuk-table__cell">
-                No
+                <strong class="nhsuk-tag nhsuk-tag--blue">Not raised</strong>
               </tr>
             </tr>
             <tr role="row" class="nhsuk-table__row">
@@ -326,7 +329,7 @@ Manager{% endblock %} {% block beforeContent %}
               <td role="cell" class="nhsuk-table__cell app-u-no-wrap">
                 <span class="nhsuk-table-responsive__heading" aria-hidden="true"
                   >Date exceptions created </span
-                >16 December 2024
+                >16 Dec 2024
               </td>
               <td>
                 <span class="nhsuk-table-responsive__heading" aria-hidden="true"
@@ -334,7 +337,7 @@ Manager{% endblock %} {% block beforeContent %}
                 >It was not possible to determine the BSO dummy practice code for this subject
               </td>
               <td class="nhsuk-table__cell">
-                No
+                <strong class="nhsuk-tag nhsuk-tag--blue">Not raised</strong>
               </tr>
             </tr>
             <tr role="row" class="nhsuk-table__row">
@@ -359,7 +362,7 @@ Manager{% endblock %} {% block beforeContent %}
               <td role="cell" class="nhsuk-table__cell app-u-no-wrap">
                 <span class="nhsuk-table-responsive__heading" aria-hidden="true"
                   >Date exceptions created </span
-                >16 December 2024
+                >16 Dec 2024
               </td>
               <td>
                 <span class="nhsuk-table-responsive__heading" aria-hidden="true"
@@ -367,7 +370,7 @@ Manager{% endblock %} {% block beforeContent %}
                 >Technical error - all 5 address lines are missing
               </td>
               <td class="nhsuk-table__cell">
-                No
+                <strong class="nhsuk-tag nhsuk-tag--blue">Not raised</strong>
               </tr>
             </tr>
             <tr role="row" class="nhsuk-table__row">
@@ -384,7 +387,7 @@ Manager{% endblock %} {% block beforeContent %}
               <td role="cell" class="nhsuk-table__cell app-u-no-wrap">
                 <span class="nhsuk-table-responsive__heading" aria-hidden="true"
                   >Date exceptions created </span
-                >16 December 2024
+                >16 Dec 2024
               </td>
               <td>
                 <span class="nhsuk-table-responsive__heading" aria-hidden="true"
@@ -392,7 +395,7 @@ Manager{% endblock %} {% block beforeContent %}
                 >It was not possible to determine the BSO dummy practice code for this subject
               </td>
               <td class="nhsuk-table__cell">
-                No
+                <strong class="nhsuk-tag nhsuk-tag--blue">Not raised</strong>
               </tr>
             </tr>
             <tr role="row" class="nhsuk-table__row">
@@ -409,7 +412,7 @@ Manager{% endblock %} {% block beforeContent %}
               <td role="cell" class="nhsuk-table__cell app-u-no-wrap">
                 <span class="nhsuk-table-responsive__heading" aria-hidden="true"
                   >Date exceptions created </span
-                >15 December 2024
+                >15 Dec 2024
               </td>
               <td>
                 <span class="nhsuk-table-responsive__heading" aria-hidden="true"
@@ -417,7 +420,7 @@ Manager{% endblock %} {% block beforeContent %}
                 >The supplied demographics do not match the subjects record
               </td>
               <td class="nhsuk-table__cell">
-                No
+                <strong class="nhsuk-tag nhsuk-tag--blue">Not raised</strong>
               </tr>
             </tr>
             <tr role="row" class="nhsuk-table__row">
@@ -434,7 +437,7 @@ Manager{% endblock %} {% block beforeContent %}
               <td role="cell" class="nhsuk-table__cell app-u-no-wrap">
                 <span class="nhsuk-table-responsive__heading" aria-hidden="true"
                   >Date exceptions created </span
-                >15 December 2024
+                >15 Dec 2024
               </td>
               <td>
                 <span class="nhsuk-table-responsive__heading" aria-hidden="true"
@@ -442,7 +445,7 @@ Manager{% endblock %} {% block beforeContent %}
                 >Technical error - Given Name is missing
               </td>
               <td class="nhsuk-table__cell">
-                No
+                <strong class="nhsuk-tag nhsuk-tag--blue">Not raised</strong>
               </tr>
             </tr>
             <tr role="row" class="nhsuk-table__row">
@@ -459,7 +462,7 @@ Manager{% endblock %} {% block beforeContent %}
               <td role="cell" class="nhsuk-table__cell app-u-no-wrap">
                 <span class="nhsuk-table-responsive__heading" aria-hidden="true"
                   >Date exceptions created </span
-                >15 December 2024
+                >15 Dec 2024
               </td>
               <td>
                 <span class="nhsuk-table-responsive__heading" aria-hidden="true"
@@ -467,7 +470,7 @@ Manager{% endblock %} {% block beforeContent %}
                 >The supplied demographics do not match the subjects record
               </td>
               <td class="nhsuk-table__cell">
-                No
+                <strong class="nhsuk-tag nhsuk-tag--blue">Not raised</strong>
               </tr>
             </tr>
             <tr role="row" class="nhsuk-table__row">
@@ -484,7 +487,7 @@ Manager{% endblock %} {% block beforeContent %}
               <td role="cell" class="nhsuk-table__cell app-u-no-wrap">
                 <span class="nhsuk-table-responsive__heading" aria-hidden="true"
                   >Date exceptions created </span
-                >15 December 2024
+                >15 Dec 2024
               </td>
               <td>
                 <span class="nhsuk-table-responsive__heading" aria-hidden="true"
@@ -492,7 +495,7 @@ Manager{% endblock %} {% block beforeContent %}
                 >Technical error - Given Name is missing
               </td>
               <td class="nhsuk-table__cell">
-                No
+                <strong class="nhsuk-tag nhsuk-tag--blue">Not raised</strong>
               </tr>
             </tr>
             <tr role="row" class="nhsuk-table__row">
@@ -509,7 +512,7 @@ Manager{% endblock %} {% block beforeContent %}
               <td role="cell" class="nhsuk-table__cell app-u-no-wrap">
                 <span class="nhsuk-table-responsive__heading" aria-hidden="true"
                   >Date exceptions created </span
-                >12 December 2024
+                >12 Dec 2024
               </td>
               <td>
                 <span class="nhsuk-table-responsive__heading" aria-hidden="true"
@@ -517,7 +520,7 @@ Manager{% endblock %} {% block beforeContent %}
                 >Technical error - Given Name is missing
               </td>
               <td class="nhsuk-table__cell">
-                No
+                <strong class="nhsuk-tag nhsuk-tag--blue">Not raised</strong>
               </tr>
             </tr>
             <tr role="row" class="nhsuk-table__row">
@@ -534,7 +537,7 @@ Manager{% endblock %} {% block beforeContent %}
               <td role="cell" class="nhsuk-table__cell app-u-no-wrap">
                 <span class="nhsuk-table-responsive__heading" aria-hidden="true"
                   >Date exceptions created </span
-                >12 December 2024
+                >12 Dec 2024
               </td>
               <td>
                 <span class="nhsuk-table-responsive__heading" aria-hidden="true"
@@ -543,7 +546,7 @@ Manager{% endblock %} {% block beforeContent %}
 
               </td>
               <td class="nhsuk-table__cell">
-                No
+                <strong class="nhsuk-tag nhsuk-tag--blue">Not raised</strong>
               </tr>
             </tr>
             <tr role="row" class="nhsuk-table__row">
@@ -560,7 +563,7 @@ Manager{% endblock %} {% block beforeContent %}
               <td role="cell" class="nhsuk-table__cell app-u-no-wrap">
                 <span class="nhsuk-table-responsive__heading" aria-hidden="true"
                   >Date exceptions created </span
-                >12 December 2024
+                >12 Dec 2024
               </td>
               <td>
                 <span class="nhsuk-table-responsive__heading" aria-hidden="true"
@@ -569,7 +572,7 @@ Manager{% endblock %} {% block beforeContent %}
 
               </td>
               <td class="nhsuk-table__cell">
-                No
+                <strong class="nhsuk-tag nhsuk-tag--blue">Not raised</strong>
               </tr>
             </tr>
           </tbody>
@@ -601,5 +604,6 @@ Manager{% endblock %} {% block beforeContent %}
       </div>
     </div>
   </div>
+</div>
   {% endblock %}
 </div>
