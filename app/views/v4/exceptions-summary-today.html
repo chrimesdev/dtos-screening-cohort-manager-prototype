@@ -1,0 +1,341 @@
+{% extends 'layout.html' %} {% block pageTitle %}Exceptions summary - Cohort
+Manager{% endblock %} {% block beforeContent %}
+
+<nav class="nhsuk-breadcrumb" aria-label="Breadcrumb">
+  <div class="nhsuk-width-container">
+    <ol class="nhsuk-breadcrumb__list">
+      <li class="nhsuk-breadcrumb__item">
+        <a class="nhsuk-breadcrumb__link" href="/v4">Overview</a>
+      </li>
+    </ol>
+    <p class="nhsuk-breadcrumb__back">
+      <a class="nhsuk-breadcrumb__backlink" href="/v4">
+        <span class="nhsuk-u-visually-hidden">Back to &nbsp;</span>
+        Overview
+      </a>
+    </p>
+  </div>
+</nav>
+
+{% endblock %} {% block content %}
+<div class="nhsuk-grid-row">
+  <div class="nhsuk-grid-column-full">
+    <h1>Exceptions created today</h1>
+  </div>
+</div>
+
+<div style="float: right">
+  <label for="select-1" style="font-size: 1.1875rem"> Sort by </label>
+  <select class="nhsuk-select" id="select-1" name="select-1">
+    <option value="1">Exception ID</option>
+    <option value="2">NHS number</option>
+    <option value="3" selected>Date created on</option>
+    <option value="4">Short description</option>
+    <option value="5">Raised with NBO</option>
+    <!---option value="3" disabled>Short description</option--->
+  </select>
+  <button
+    class="nhsuk-button"
+    data-module="nhsuk-button"
+    type="submit"
+    style="padding: 4px 16px; font-size: 16px"
+  >
+    Apply
+  </button>
+</div>
+
+<div class="nhsuk-grid-row">
+  <div class="nhsuk-grid-column-full">
+    <div class="nhsuk-card nhsuk-u-margin-bottom-2">
+      <div class="nhsuk-card__content">
+        <table role="table" class="nhsuk-table-responsive">
+          <thead role="rowgroup" class="nhsuk-table__head">
+            <tr role="row">
+              <th role="columnheader" scope="col">Exception ID</th>
+              <th role="columnheader" scope="col">NHS number</th>
+              <th role="columnheader" scope="col">Date created on</th>
+              <th role="columnheader" scope="col">Short description</th>
+              <!---th role="columnheader" scope="col">Status</th--->
+            </tr>
+          </thead>
+          <tbody class="nhsuk-table__body">
+            <tr role="row" class="nhsuk-table__row">
+              <td role="cell" class="nhsuk-table__cell">
+                <span class="nhsuk-table-responsive__heading" aria-hidden="true"
+                  >Exception ID </span
+                ><a href="/v4/participant-information-nhs-number">7968</a>
+              </td>
+              <td role="cell" class="nhsuk-table__cell app-u-no-wrap">
+                <span class="nhsuk-table-responsive__heading" aria-hidden="true"
+                  >NHS number </span
+                >777 432 123
+              </td>
+              <td role="cell" class="nhsuk-table__cell">
+                <span class="nhsuk-table-responsive__heading" aria-hidden="true"
+                  >Exceptions created on</span
+                >
+                <p class="date" id="date"></p>
+              </td>
+              <td>
+                <span class="nhsuk-table-responsive__heading" aria-hidden="true"
+                  >Short description
+                </span>
+                Technical error - GP practice code and Reason for Removal fields
+                contain incompatible values
+              </td>
+              <!---
+          <td class="nhsuk-table__cell">
+            <strong class="nhsuk-tag nhsuk-tag--blue">Status</strong>
+          </td>
+          --->
+            </tr>
+
+            <tr role="row" class="nhsuk-table__row">
+              <td role="cell" class="nhsuk-table__cell">
+                <span class="nhsuk-table-responsive__heading" aria-hidden="true"
+                  >Exception ID </span
+                ><a href="#">8100</a>
+              </td>
+              <td role="cell" class="nhsuk-table__cell app-u-no-wrap">
+                <span class="nhsuk-table-responsive__heading" aria-hidden="true"
+                  >NHS number </span
+                >623 444 8972
+              </td>
+              <td role="cell" class="nhsuk-table__cell">
+                <span class="nhsuk-table-responsive__heading" aria-hidden="true"
+                  >Exceptions created on</span
+                >
+                <p class="date" id="date"></p>
+              </td>
+              <td>
+                <span class="nhsuk-table-responsive__heading" aria-hidden="true"
+                  >Short description </span
+                >Technical error - Given Name is missing
+              </td>
+              <!---
+          <td class="nhsuk-table__cell">
+            <strong class="nhsuk-tag nhsuk-tag--blue">Status</strong>
+          </td>
+          --->
+            </tr>
+            <tr role="row" class="nhsuk-table__row">
+              <td role="cell" class="nhsuk-table__cell">
+                <span class="nhsuk-table-responsive__heading" aria-hidden="true"
+                  >Exception ID </span
+                ><a href="#">8112</a>
+              </td>
+              <td role="cell" class="nhsuk-table__cell app-u-no-wrap">
+                <span class="nhsuk-table-responsive__heading" aria-hidden="true"
+                  >NHS number </span
+                >676 789 9565
+              </td>
+              <td role="cell" class="nhsuk-table__cell app-u-no-wrap">
+                <span class="nhsuk-table-responsive__heading" aria-hidden="true"
+                  >Exceptions created on</span
+                >
+                <p class="date" id="date"></p>
+              </td>
+              <td>
+                <span class="nhsuk-table-responsive__heading" aria-hidden="true"
+                  >Short description </span
+                >Technical error - all 5 address lines are missing
+              </td>
+              <!---
+          <td class="nhsuk-table__cell">
+            <strong class="nhsuk-tag nhsuk-tag--green">Status</strong>
+          </td>
+          --->
+            </tr>
+            <tr role="row" class="nhsuk-table__row">
+              <td role="cell" class="nhsuk-table__cell">
+                <span class="nhsuk-table-responsive__heading" aria-hidden="true"
+                  >Exception ID </span
+                ><a href="#">8115</a>
+              </td>
+              <td role="cell" class="nhsuk-table__cell app-u-no-wrap">
+                <span class="nhsuk-table-responsive__heading" aria-hidden="true"
+                  >NHS number </span
+                >95 687 7979
+              </td>
+              <td role="cell" class="nhsuk-table__cell app-u-no-wrap">
+                <span class="nhsuk-table-responsive__heading" aria-hidden="true"
+                  >Exceptions created on</span
+                >
+                <p class="date" id="date"></p>
+              </td>
+              <td>
+                <span class="nhsuk-table-responsive__heading" aria-hidden="true"
+                  >Short description </span
+                >Technical error - Formal Death Status is supplied for a non
+                death Reason for Removal reason
+              </td>
+              <!---
+          <td class="nhsuk-table__cell">
+            <strong class="nhsuk-tag nhsuk-tag--blue">Status</strong>
+          </td>
+          --->
+            </tr>
+            <tr role="row" class="nhsuk-table__row">
+              <td role="cell" class="nhsuk-table__cell">
+                <span class="nhsuk-table-responsive__heading" aria-hidden="true"
+                  >Exception ID </span
+                ><a href="#">8220</a>
+              </td>
+              <td role="cell" class="nhsuk-table__cell app-u-no-wrap">
+                <span class="nhsuk-table-responsive__heading" aria-hidden="true"
+                  >NHS number </span
+                >798 777 6464
+              </td>
+              <td role="cell" class="nhsuk-table__cell app-u-no-wrap">
+                <span class="nhsuk-table-responsive__heading" aria-hidden="true"
+                  >Exceptions created on</span
+                >
+                <p class="date" id="date"></p>
+              </td>
+              <td>
+                <span class="nhsuk-table-responsive__heading" aria-hidden="true"
+                  >Short description </span
+                >It was not possible to determine the BSO dummy practice code
+                for this subject
+              </td>
+              <!---
+          <td class="nhsuk-table__cell">
+            <strong class="nhsuk-tag nhsuk-tag--blue">Status</strong>
+          </td>
+          --->
+            </tr>
+            <tr role="row" class="nhsuk-table__row">
+              <td role="cell" class="nhsuk-table__cell">
+                <span class="nhsuk-table-responsive__heading" aria-hidden="true"
+                  >Exception ID </span
+                ><a href="#">8500</a>
+              </td>
+              <td role="cell" class="nhsuk-table__cell app-u-no-wrap">
+                <span class="nhsuk-table-responsive__heading" aria-hidden="true"
+                  >NHS number </span
+                >568 390 2768
+              </td>
+              <td role="cell" class="nhsuk-table__cell app-u-no-wrap">
+                <span class="nhsuk-table-responsive__heading" aria-hidden="true"
+                  >Exceptions created on</span
+                >
+                <p class="date" id="date"></p>
+              </td>
+              <td>
+                <span class="nhsuk-table-responsive__heading" aria-hidden="true"
+                  >Short description </span
+                >The supplied demographics do not match the subjects record
+              </td>
+              <!---
+          <td class="nhsuk-table__cell">
+            <strong class="nhsuk-tag nhsuk-tag--red">Status</strong>
+          </td>
+          --->
+            </tr>
+            <tr role="row" class="nhsuk-table__row">
+              <td role="cell" class="nhsuk-table__cell">
+                <span class="nhsuk-table-responsive__heading" aria-hidden="true"
+                  >Exception ID </span
+                ><a href="#">8610</a>
+              </td>
+              <td role="cell" class="nhsuk-table__cell app-u-no-wrap">
+                <span class="nhsuk-table-responsive__heading" aria-hidden="true"
+                  >NHS number </span
+                >543 012 8065
+              </td>
+              <td role="cell" class="nhsuk-table__cell app-u-no-wrap">
+                <span class="nhsuk-table-responsive__heading" aria-hidden="true"
+                  >Exceptions created on</span
+                >
+                <p class="date" id="date"></p>
+              </td>
+              <td>
+                <span class="nhsuk-table-responsive__heading" aria-hidden="true"
+                  >Short description </span
+                >Technical error - Formal Death Status is supplied for a non
+                death Reason for Removal reason
+              </td>
+              <!---
+          <td class="nhsuk-table__cell">
+            <strong class="nhsuk-tag nhsuk-tag--green">Status</strong>
+          </td>
+          --->
+            </tr>
+
+            <!---table repeat--->
+
+            <tr role="row" class="nhsuk-table__row">
+              <td role="cell" class="nhsuk-table__cell">
+                <span class="nhsuk-table-responsive__heading" aria-hidden="true"
+                  >Exception ID </span
+                ><a href="/v4/participant-information">8619</a>
+              </td>
+              <td role="cell" class="nhsuk-table__cell app-u-no-wrap">
+                <span class="nhsuk-table-responsive__heading" aria-hidden="true"
+                  >NHS number </span
+                >6897 543 1890
+              </td>
+              <td role="cell" class="nhsuk-table__cell">
+                <span class="nhsuk-table-responsive__heading" aria-hidden="true"
+                  >Exceptions created on
+                </span>
+                <p class="date" id="date"></p>
+              </td>
+              <td>
+                <span class="nhsuk-table-responsive__heading" aria-hidden="true"
+                  >Short description
+                </span>
+                Technical error - GP practice code and Reason for Removal fields
+                contain incompatible values
+              </td>
+              <!---
+          <td class="nhsuk-table__cell">
+            <strong class="nhsuk-tag nhsuk-tag--blue">Status</strong>
+          </td>
+          --->
+            </tr>
+            <tr role="row" class="nhsuk-table__row">
+              <td role="cell" class="nhsuk-table__cell">
+                <span class="nhsuk-table-responsive__heading" aria-hidden="true"
+                  >Exception ID </span
+                ><a href="#">8625</a>
+              </td>
+              <td role="cell" class="nhsuk-table__cell app-u-no-wrap">
+                <span class="nhsuk-table-responsive__heading" aria-hidden="true"
+                  >NHS number </span
+                >4082 889 2120
+              </td>
+              <td role="cell" class="nhsuk-table__cell app-u-no-wrap">
+                <span class="nhsuk-table-responsive__heading" aria-hidden="true"
+                  >Exceptions created on</span
+                >
+                <p class="date" id="date"></p>
+              </td>
+              <td>
+                <span class="nhsuk-table-responsive__heading" aria-hidden="true"
+                  >Short description </span
+                >The supplied demographics do not match the subjects record
+              </td>
+              <!---
+          <td class="nhsuk-table__cell">
+            <strong class="nhsuk-tag nhsuk-tag--blue">Status</strong>
+          </td>
+          --->
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <div class="nhsuk-grid-row">
+      <div class="nhsuk-grid-column-full">
+        <p
+          class="nhsuk-body"
+          style="margin-top: 52px; margin-bottom: 0px; float: right"
+        >
+          Showing 9 of 9 results
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}

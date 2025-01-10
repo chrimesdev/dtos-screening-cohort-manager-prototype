@@ -1,0 +1,167 @@
+{% extends 'layout.html' %} {% block pageTitle %}Participant information -
+Cohort Manager{% endblock %} {% block beforeContent %}
+<nav class="nhsuk-breadcrumb" aria-label="Breadcrumb">
+  <div class="nhsuk-width-container">
+    <ol class="nhsuk-breadcrumb__list">
+      <li class="nhsuk-breadcrumb__item">
+        <a class="nhsuk-breadcrumb__link" href="/v4">Overview</a>
+      </li>
+      <li class="nhsuk-breadcrumb__item">
+        <a class="nhsuk-breadcrumb__link" href="/v4/exceptions-summary"
+          >Exceptions summary</a
+        >
+      </li>
+    </ol>
+    <p class="nhsuk-breadcrumb__back">
+      <a class="nhsuk-breadcrumb__backlink" href="/v4">
+        <span class="nhsuk-u-visually-hidden">Back to &nbsp;</span>
+        Overview
+      </a>
+    </p>
+  </div>
+</nav>
+
+{% endblock %} {% block content %}
+<div class="nhsuk-grid-row">
+  <div class="nhsuk-grid-column-two-thirds">
+    <h1>Participant information</h1>
+  </div>
+</div>
+<div class="nhsuk-grid-row">
+  <div class="nhsuk-grid-column-full">
+
+
+
+    <form>
+      <div class="nhsuk-form-group">
+        <fieldset class="nhsuk-fieldset" aria-describedby="example-hint">
+          <div class="nhsuk-checkboxes">
+    
+            <div class="nhsuk-checkboxes__item">
+              <input class="nhsuk-checkboxes__input" id="example-1" name="example" type="checkbox" value="email">
+              <label class="nhsuk-label nhsuk-checkboxes__label" for="example-1">
+                Raised with NBO?
+              </label>
+            </div>
+          </div>
+        </fieldset>
+      </div>
+      <button
+        class="nhsuk-button"
+        data-module="nhsuk-button"
+        type="submit"
+        style="padding: 4px 16px; font-size: 16px;"
+      >
+        Apply
+      </button>
+    
+    </form>
+
+    <div class="nhsuk-card nhsuk-u-margin-bottom-4">
+      <div class="nhsuk-card__content">
+        <h3>Personal details</h3>
+        <dl class="nhsuk-summary-list">
+
+          <div class="nhsuk-summary-list__row">
+            <dt class="nhsuk-summary-list__key">NHS number</dt>
+            <dd class="nhsuk-summary-list__value">723 333 6891</dd>
+          </div>
+
+          <div class="nhsuk-summary-list__row">
+            <dt class="nhsuk-summary-list__key">Surname</dt>
+            <dd class="nhsuk-summary-list__value">Lewis</dd>
+          </div>
+
+          <div class="nhsuk-summary-list__row">
+            <dt class="nhsuk-summary-list__key">Forename</dt>
+            <dd class="nhsuk-summary-list__value">Sandra</dd>
+          </div>
+
+
+          <div class="nhsuk-summary-list__row">
+            <dt class="nhsuk-summary-list__key">Date of birth</dt>
+            <dd class="nhsuk-summary-list__value">18 November 1993</dd>
+          </div>
+
+          <div class="nhsuk-summary-list__row">
+            <dt class="nhsuk-summary-list__key">Gender</dt>
+            <dd class="nhsuk-summary-list__value">Female</dd>
+          </div>
+
+          <div class="nhsuk-summary-list__row">
+            <dt class="nhsuk-summary-list__key">Current address</dt>
+            <dd class="nhsuk-summary-list__value">
+              73 Roman Rd<br />Leeds<br />
+              LS2 5ZN
+            </dd>
+          </div>
+
+          <!---div class="nhsuk-summary-list__row">
+            <dt class="nhsuk-summary-list__key">NHS number 2</dt>
+            <dd class="nhsuk-summary-list__value">631 567 4444</dd>
+          </div--->
+
+          <div class="nhsuk-summary-list__row">
+            <dt class="nhsuk-summary-list__key">Contact details</dt>
+            <dd class="nhsuk-summary-list__value">
+              <p>07700 900362</p>
+              <p>sandra.lewis@example.com</p>
+            </dd>
+          </div>
+
+          <div class="nhsuk-summary-list__row">
+            <dt class="nhsuk-summary-list__key">GP practice code</dt>
+            <dd class="nhsuk-summary-list__value">B86110</dd>
+          </div>
+
+          <div class="nhsuk-summary-list__row">
+            <dt class="nhsuk-summary-list__key">GP practice address</dt>
+            <dd class="nhsuk-summary-list__value">
+              Anytown Medical Centre<br>
+              Anywhere<br>
+              Anytown<br>
+              AT1 1AA
+          </div>
+
+        </dl>
+      </div>
+    </div>
+
+    <div class="nhsuk-card nhsuk-u-margin-bottom-2">
+      <div class="nhsuk-card__content">
+        <h3>Exception details</h3>
+
+        <dl class="nhsuk-summary-list">
+          <div class="nhsuk-summary-list__row">
+            <dt class="nhsuk-summary-list__key">Date created on</dt>
+            <dd class="nhsuk-summary-list__value">10 August 2024</dd>
+          </div>
+
+          <div class="nhsuk-summary-list__row">
+            <dt class="nhsuk-summary-list__key">Short description</dt>
+            <dd class="nhsuk-summary-list__value">
+              Technical error - GP practice code and Reason for Removal fields contain incompatible values
+            </dd>
+          </div>
+
+          <!---
+          <div class="nhsuk-summary-list__row">
+            <dt class="nhsuk-summary-list__key">Date raised with NBO</dt>
+            <dd class="nhsuk-summary-list__value">15 August 2024</dd>
+          </div>
+
+          <div class="nhsuk-summary-list__row">
+            <dt class="nhsuk-summary-list__key">Status</dt>
+            <dd class="nhsuk-summary-list__value">
+              <td class="nhsuk-table__cell">
+                <strong class="nhsuk-tag nhsuk-tag--blue">Status</strong>
+              </td>
+            </dd>
+          </div>--->
+        </dl>
+      </div>
+    </div>
+    </div>
+  </div>
+  {% endblock %}
+</div>
