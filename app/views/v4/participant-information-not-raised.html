@@ -32,46 +32,6 @@ Cohort Manager{% endblock %} {% block beforeContent %}
 
     <div class="nhsuk-card nhsuk-u-margin-bottom-4">
       <div class="nhsuk-card__content">
-        <h2 class="nhsuk-card__heading">Exception details</h3>
-
-        <dl class="nhsuk-summary-list">
-          <div class="nhsuk-summary-list__row">
-            <dt class="nhsuk-summary-list__key">Date created on</dt>
-            <dd class="nhsuk-summary-list__value">10 August 2024</dd>
-          </div>
-
-          <div class="nhsuk-summary-list__row">
-            <dt class="nhsuk-summary-list__key">Short description</dt>
-            <dd class="nhsuk-summary-list__value">
-              Technical error - GP practice code and Reason for Removal fields contain incompatible values
-            </dd>
-          </div>
-
-          <div class="nhsuk-summary-list__row">
-            <dt class="nhsuk-summary-list__key">Raised with NBO?</dt>
-            <dd class="nhsuk-summary-list__value"><strong class="nhsuk-tag nhsuk-tag--blue">Not raised</strong></dd>
-          </div>
-
-          <!---
-          <div class="nhsuk-summary-list__row">
-            <dt class="nhsuk-summary-list__key">Date raised with NBO</dt>
-            <dd class="nhsuk-summary-list__value">15 August 2024</dd>
-          </div>
-
-          <div class="nhsuk-summary-list__row">
-            <dt class="nhsuk-summary-list__key">Status</dt>
-            <dd class="nhsuk-summary-list__value">
-              <td class="nhsuk-table__cell">
-                <strong class="nhsuk-tag nhsuk-tag--blue">Status</strong>
-              </td>
-            </dd>
-          </div>--->
-        </dl>
-      </div>
-    </div>
-
-    <div class="nhsuk-card nhsuk-u-margin-bottom-4">
-      <div class="nhsuk-card__content">
         <h2 class="nhsuk-card__heading">Participant details</h3>
         
         <dl class="nhsuk-summary-list">
@@ -143,7 +103,33 @@ Cohort Manager{% endblock %} {% block beforeContent %}
 
     <div class="nhsuk-card nhsuk-u-margin-bottom-4">
       <div class="nhsuk-card__content">
-        <h2 class="nhsuk-card__heading">Status details</h3>
+        <h2 class="nhsuk-card__heading">Exception details</h3>
+
+        <dl class="nhsuk-summary-list">
+          <div class="nhsuk-summary-list__row">
+            <dt class="nhsuk-summary-list__key">Date exception created</dt>
+            <dd class="nhsuk-summary-list__value">18 December 2024</dd>
+          </div>
+
+          <div class="nhsuk-summary-list__row">
+            <dt class="nhsuk-summary-list__key">Short description</dt>
+            <dd class="nhsuk-summary-list__value">
+              Technical error - GP practice code and Reason for Removal fields contain incompatible values
+            </dd>
+          </div>
+
+          <div class="nhsuk-summary-list__row">
+            <dt class="nhsuk-summary-list__key">Exception status</dt>
+            <dd class="nhsuk-summary-list__value"><strong class="nhsuk-tag nhsuk-tag--grey">Not raised</strong></dd>
+          </div>
+
+        </dl>
+      </div>
+    </div>
+
+    <div class="nhsuk-card nhsuk-u-margin-bottom-4">
+      <div class="nhsuk-card__content">
+        <h2 class="nhsuk-card__heading">Exception status</h3>
         
         <div class="nhsuk-form-group">
 
@@ -152,34 +138,30 @@ Cohort Manager{% endblock %} {% block beforeContent %}
             <fieldset class="nhsuk-fieldset">
               <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--s">
                 <h1 class="nhsuk-fieldset__heading">
-                  Has this exception been raised for correction with NBO?
+                  Update the status of this exception when it has been raised with National Back Office (NBO):
                 </h1>
               </legend>
-
-              <div class="nhsuk-hint" id="exception-status-hint">
-                <p>Please ensure nobody else has processed this exception before making changes to its status.</p>
-              </div>
           
               <div class="nhsuk-radios nhsuk-u-margin-bottom-4">
-          
+
                 <div class="nhsuk-radios__item">
-                  <input class="nhsuk-radios__input" id="exception-status-1" name="exception-status" type="radio" value="yes">
-                  <label class="nhsuk-label nhsuk-radios__label" for="exception-status-1">
-                    Yes, it has been raised
+                  <input class="nhsuk-radios__input" id="exception-status-2" name="exception-status" type="radio" value="no" checked>
+                  <label class="nhsuk-label nhsuk-radios__label" for="exception-status-2" selected>
+                    Not raised
                   </label>
                 </div>
           
                 <div class="nhsuk-radios__item">
-                  <input class="nhsuk-radios__input" id="exception-status-2" name="exception-status" type="radio" value="no" checked>
-                  <label class="nhsuk-label nhsuk-radios__label" for="exception-status-2" selected>
-                    No, it has not been raised
+                  <input class="nhsuk-radios__input" id="exception-status-1" name="exception-status" type="radio" value="yes">
+                  <label class="nhsuk-label nhsuk-radios__label" for="exception-status-1">
+                    Raised
                   </label>
                 </div>
           
               </div>
 
                 <button class="nhsuk-button" data-module="nhsuk-button" type="submit">
-                  Update exception status
+                  Update
                 </button>
 
             </fieldset>
@@ -190,6 +172,10 @@ Cohort Manager{% endblock %} {% block beforeContent %}
 
       </div>
     </div>
+
+    <p><strong>Exception last updated:</strong> 18 December 2024</p>
+    <p class="nhsuk-u-reading-width">Please ensure this exception has not been processed by another user before making changes to its status.</p>
+
   </div>
   {% endblock %}
 </div>
