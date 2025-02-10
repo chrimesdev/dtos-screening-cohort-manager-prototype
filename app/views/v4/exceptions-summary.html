@@ -77,10 +77,8 @@ Manager{% endblock %} {% block beforeContent %}
                   >NHS number </span
                 >723 333 6891
               </td>
-              <td role="cell" class="nhsuk-table__cell">
-                <span class="nhsuk-table-responsive__heading" aria-hidden="true"
-                  >Date exceptions created </span
-                >18 December 2024
+              <td role="cell" class="nhsuk-table__cell app-u-no-wrap date">
+                <span class="nhsuk-table-responsive__heading" aria-hidden="true">Date exceptions created </span>
               </td>
               <td>
                 <span class="nhsuk-table-responsive__heading" aria-hidden="true"
@@ -105,8 +103,18 @@ Manager{% endblock %} {% block beforeContent %}
               </td>
               <td role="cell" class="nhsuk-table__cell app-u-no-wrap">
                 <span class="nhsuk-table-responsive__heading" aria-hidden="true"
-                  >Date exceptions created </span
-                >18 December 2024
+                  >Date exceptions created </span>
+
+                  <p id="date"></p>
+
+                    <script>
+                        const dateElement = document.getElementById("date");
+                        const today = new Date();
+                        today.setMonth(today.getMonth() - 1);
+                        const options = { day: 'numeric', month: 'long', year: 'numeric' };
+                        dateElement.textContent = today.toLocaleDateString('en-GB', options);
+                    </script>
+
               </td>
               <td>
                 <span class="nhsuk-table-responsive__heading" aria-hidden="true"

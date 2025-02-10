@@ -32,8 +32,8 @@ Cohort Manager{% endblock %} {% block beforeContent %}
 
     <div class="nhsuk-card nhsuk-u-margin-bottom-4">
       <div class="nhsuk-card__content">
-        <h2 class="nhsuk-card__heading">Participant details</h3>
-        
+        <h2 class="nhsuk-card__heading">Participant details</h2>
+
         <dl class="nhsuk-summary-list">
 
           <div class="nhsuk-summary-list__row">
@@ -103,7 +103,7 @@ Cohort Manager{% endblock %} {% block beforeContent %}
 
     <div class="nhsuk-card nhsuk-u-margin-bottom-4">
       <div class="nhsuk-card__content">
-        <h2 class="nhsuk-card__heading">Exception details</h3>
+        <h2 class="nhsuk-card__heading">Exception details</h2>
 
         <dl class="nhsuk-summary-list">
           <div class="nhsuk-summary-list__row">
@@ -120,7 +120,15 @@ Cohort Manager{% endblock %} {% block beforeContent %}
 
           <div class="nhsuk-summary-list__row">
             <dt class="nhsuk-summary-list__key">Exception status</dt>
-            <dd class="nhsuk-summary-list__value"><strong class="nhsuk-tag">Raised</strong></dd>
+            <dd class="nhsuk-summary-list__value"><strong class="nhsuk-tag">Raised</strong> on <span id="date"><span> </dd>
+
+            <script>
+            const dateElement = document.getElementById("date");
+            const today = new Date();
+            const options = { day: 'numeric', month: 'long', year: 'numeric' };
+            dateElement.textContent = today.toLocaleDateString('en-GB', options);
+            </script>
+
           </div>
 
         </dl>
@@ -129,18 +137,22 @@ Cohort Manager{% endblock %} {% block beforeContent %}
 
     <div class="nhsuk-card nhsuk-u-margin-bottom-4">
       <div class="nhsuk-card__content">
-        <h2 class="nhsuk-card__heading">Exception status</h3>
-        
+        <h2 class="nhsuk-card__heading">Exception status</h2>
+
         <div class="nhsuk-form-group">
           <form action="/participant-information" method="post">
 
           <fieldset class="nhsuk-fieldset">
             <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--s">
               <h1 class="nhsuk-fieldset__heading">
-                Update the status of this exception when it has been raised with National Back Office (NBO): 
+                Update the status of this exception when it has been raised with National Back Office (NBO):
               </h1>
             </legend>
-        
+
+            <div class="nhsuk-hint" id="contact-hint">
+              Please ensure this exception has not been processed by another user before making changes to its status.
+            </div>
+
             <div class="nhsuk-radios nhsuk-u-margin-bottom-4">
 
               <div class="nhsuk-radios__item">
@@ -149,31 +161,31 @@ Cohort Manager{% endblock %} {% block beforeContent %}
                   Not raised
                 </label>
               </div>
-        
+
               <div class="nhsuk-radios__item">
                 <input class="nhsuk-radios__input" id="exception-status-1" name="exception-status" type="radio" value="yes" checked>
                 <label class="nhsuk-label nhsuk-radios__label" for="exception-status-1">
                   Raised
                 </label>
               </div>
-        
+
             </div>
 
               <button class="nhsuk-button" data-module="nhsuk-button" type="submit">
                 Update
               </button>
-            
+
 
           </fieldset>
         </form>
-        
+
         </div>
 
       </div>
     </div>
 
-    <p><strong>Exception last updated:</strong> 18 December 2024</p>
-    <p class="nhsuk-u-reading-width">Please ensure this exception has not been processed by another user before making changes to its status.</p>
+    <!---<p><strong>Exception last updated:</strong> 18 December 2024</p>--->
+
   </div>
   {% endblock %}
 </div>
