@@ -14,41 +14,42 @@ endblock %} {% block content %}
         <table role="table" class="nhsuk-table-responsive">
           <p class="nhsuk-u-font-size-26">Request to Amend Incorrect Patient PDS Record Data</p>
         <div class="nhsuk-hint" id="contact-hint">Use this item when there is incorrect Personal Demographics Service
-            (PDS record data for your patient and another data quality sub-category is not appropriate</div>
+            (PDS) record data for your patient and another data quality sub-category is not appropriate</div>
         </table>
 
         <div class="nhsuk-grid-row">
-          <!---- 1st column--->
+
+          <!---- 1st column begin--->
           <div class="nhsuk-grid-column-one-half">
 
             <div class="nhsuk-form-group">
               <label class="nhsuk-label" for="select-1">
                 *Account
               </label>
-              <select class="nhsuk-select" id="select-1" name="select-1">
+              <select class="nhsuk-select" id="select-1" name="select-1" style="width:500px;">
                 <option value="1" selected>NHS England - X26</option>
               </select>
             </div>
 
             <div class="nhsuk-form-group">
-              <label class="nhsuk-label" for="select-1">
-                Affected User
+              <label class="nhsuk-label" for="example">
+                  Affected User
               </label>
-              <select class="nhsuk-select" id="select-1" name="select-1">
-                <option value="1" selected>NHS England - X26</option>
-              </select>
+                <p class="nhsuk-body-s">Please enter Name, Email id and Phone Number</p>
+              <textarea class="nhsuk-textarea" id="example" name="example" rows="2" aria-describedby="example-hint"></textarea>
             </div>
 
           </div>
+          <!---end 1st col--->
 
-          <!---- 2nd column--->
+          <!---- 2nd column begin--->
           <div class="nhsuk-grid-column-one-half">
 
             <div class="nhsuk-form-group">
               <label class="nhsuk-label" for="select-1">
                 *Contact
               </label>
-              <select class="nhsuk-select" id="select-1" name="select-1">
+              <select class="nhsuk-select" id="select-1" name="select-1" style="width:500px;">
                 <option value="1" selected>John Doe</option>
                 <option value="2" >Suzzane wright</option>
                 <option value="3" disabled>Chris Ford</option>
@@ -56,17 +57,120 @@ endblock %} {% block content %}
             </div>
 
             <div class="nhsuk-form-group">
-              <label class="nhsuk-label" for="select-1">
+              <label class="nhsuk-label" for="example">
                 Alternate Contact
               </label>
-              <select class="nhsuk-select" id="select-1" name="select-1">
-                <option value="1" selected>NHS England - X26</option>
-              </select>
+              <p class="nhsuk-body-s">Add email address of contacts to be informed of request</p>
+              <textarea class="nhsuk-textarea" id="example" name="example" rows="2" aria-describedby="example-hint"></textarea>
             </div>
 
           </div>
-        </div>
+          <!---end 2nd col--->
 
+          <div class="nhsuk-grid-column-full">
+            <div class="nhsuk-form-group">
+              <label class="nhsuk-label" for="full">
+                Local Reference
+              </label>
+              <input class="nhsuk-input" id="example" name="example" type="text">
+            </div>
+          </div>
+
+
+          <div class="nhsuk-grid-column-full">
+            <div class="nhsuk-form-group">
+                <h4 class="nhsuk-heading-xs">Please provide the following demographic details for your patient:</h4>
+            </div>
+          </div>
+
+
+          <!---- 3rdcolumn begin--->
+          <div class="nhsuk-grid-column-one-half">
+
+            <div class="nhsuk-form-group">
+              <label class="nhsuk-label" for="example">
+                *NHS Number
+              </label>
+              <input class="nhsuk-input" id="example" name="example" type="text">
+            </div>
+
+            <div class="nhsuk-form-group">
+              <label class="nhsuk-label" for="example">
+              Previous Surname/Family Name
+              </label>
+              <input class="nhsuk-input" id="example" name="example" type="text">
+            </div>
+
+            <div class="nhsuk-form-group">
+              <label class="nhsuk-label" for="dob">*Date of Birth</label>
+              <div class="dob-container">
+                  <input class="nhsuk-input" id="dob" name="dob" type="date" required>
+                  <span class="calendar-icon">📅</span>
+              </div>
+            </div>
+
+            <div class="nhsuk-form-group">
+              <label class="nhsuk-label" for="example">
+              Place of Birth
+              </label>
+              <input class="nhsuk-input" id="example" name="example" type="text">
+            </div>
+
+          </div>
+            <!---end 3rd col--->
+
+                <!---- 4th column begin--->
+            <div class="nhsuk-grid-column-one-half">
+            <div class="nhsuk-form-group">
+              <label class="nhsuk-label" for="example">
+                Surname/Family Name
+              </label>
+              <input class="nhsuk-input" id="example" name="example" type="text">
+            </div>
+
+            <div class="nhsuk-form-group">
+              <label class="nhsuk-label" for="example">
+                Forename
+              </label>
+              <input class="nhsuk-input" id="example" name="example" type="text">
+            </div>
+
+            <div class="nhsuk-form-group">
+              <label class="nhsuk-label" for="select-1">
+                Gender
+              </label>
+              <select class="nhsuk-select" id="select-1" name="select-1" style="width:500px;">
+                <option value="1" selected>--none--</option>
+                <option value="2">Female</option>
+                <option value="3">Male</option>
+              </select>
+            </div>
+
+            <div class="nhsuk-form-group">
+              <label class="nhsuk-label" for="example">
+              Mother's maiden Name
+              </label>
+              <input class="nhsuk-input" id="example" name="example" type="text">
+            </div>
+
+
+
+          </div>
+          <!---end 4th col--->
+
+
+
+
+
+
+
+
+
+
+
+
+        </div>
+        <!---end main grid--->
 
 
       </div>

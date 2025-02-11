@@ -188,3 +188,24 @@ $button-shadow-size: 4px;
     }
   }
 }
+
+
+
+
+
+/* date of Birth */
+
+.dob-container {
+            position: relative;
+            display: inline-block;
+        }
+        .dob-container input {
+            padding-right: 320px;
+        }
+        .dob-container .calendar-icon {
+            position: absolute;
+            right: 5px;
+            top: 50%;
+            transform: translateY(-50%);
+            pointer-events: none;
+        }
