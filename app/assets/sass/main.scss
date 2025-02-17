@@ -190,7 +190,11 @@ $button-shadow-size: 4px;
 }
 
 
-
+.nhsuk-textarea, .nhsuk-input, .nhsuk-select
+{
+border: 1px solid #4c6272 !important;
+border-radius: none !important;
+}
 
 
 /* date of Birth */
@@ -209,3 +213,51 @@ $button-shadow-size: 4px;
             transform: translateY(-50%);
             pointer-events: none;
         }
+
+
+        .required::before {
+                    content: " *";
+                    color: red;
+                }
+
+
+        .question::after {
+                    content: " ?";
+                    color: white;
+                    width: 20px;
+                    height: 20px;
+                    border-radius: 50%;
+                    background-color: grey;
+                    display: inline-flex;
+                    justify-content: center;
+                    align-items: center;
+                    font-size: 12px;
+                    font-weight: 600;
+                    color: white;
+
+                }
+
+
+/* attach file */
+
+                .attach-file {
+                            display: flex;
+                            align-items: center;
+                            gap: 8px;
+                            font-size: 16px;
+                            color: #333;
+                            cursor: pointer;
+                        }
+
+                        .attach-file input[type="file"] {
+                            display: none;
+                        }
+
+                        .attach-file-icon {
+
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            color: white;
+                            font-weight: bold;
+                        }
