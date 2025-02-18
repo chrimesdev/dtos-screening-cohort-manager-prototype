@@ -249,7 +249,7 @@ endblock %} {% block content %}
           </div>
 
 
-          <div style="float:right; padding-right:20px;">
+      <div style="float:right; padding-right:20px;">
               <label class="attach-file">
                     <div class="attach-file-icon">📎</div>
                     <span>Add Attachments</span>
@@ -258,9 +258,45 @@ endblock %} {% block content %}
           </div>
 
 
+        <!---  <script>
+              let fileArray = [];
+
+              function handleFileSelect(event) {
+                  const files = Array.from(event.target.files);
+                  fileArray = fileArray.concat(files);
+                  updateFileList();
+              }
+
+              function updateFileList() {
+                  const fileList = document.getElementById('file-list');
+                  fileList.innerHTML = ''; // Clear previous list
+
+                  fileArray.forEach((file, index) => {
+                      const li = document.createElement('li');
+                      li.innerHTML = ` ${file.name} <span class="delete-icon" onclick="deleteFile(${index})">X</span>`;
+                      fileList.appendChild(li);
+                  });
+              }
+
+              function deleteFile(index) {
+                  fileArray.splice(index, 1);
+                  updateFileList();
+              }
+          </script>
+
+          <div style="float:right; padding-right:20px;">
+            <label class="attach-icon">📎 Add Attachments
+                <input type="file" id="file-input" multiple onchange="handleFileSelect(event)">
+            </label>
+            <ul id="file-list" class="file-list"></ul>
+          </div> --->
+
+
+
           <button class="nhsuk-button" data-module="nhsuk-button" data-prevent-double-click="true" type="submit" style="margin-left:20px;">
             Submit
           </button>
+
 
 
 
