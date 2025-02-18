@@ -13,7 +13,7 @@ endblock %} {% block content %}
       <div class="nhsuk-card__content">
         <table role="table" class="nhsuk-table-responsive">
           <p class="nhsuk-u-font-size-26">Request to Amend Incorrect Patient PDS Record Data</p>
-        <div class="nhsuk-hint" id="contact-hint">Use this item when there is incorrect Personal Demographics Service
+            <div class="nhsuk-hint" id="contact-hint">Use this item when there is incorrect Personal Demographics Service
             (PDS) record data for your patient and another data quality sub-category is not appropriate</div>
         </table>
 
@@ -26,7 +26,7 @@ endblock %} {% block content %}
               <label class="nhsuk-label required" for="select-1">
                 Account
               </label>
-              <select class="nhsuk-select" id="select-1" name="select-1" style="width:500px;">
+              <select class="nhsuk-select" id="select-1" name="select-1" style="width:500px;" disabled>
                 <option value="1" selected>NHS England - X26</option>
               </select>
             </div>
@@ -49,10 +49,8 @@ endblock %} {% block content %}
               <label class="nhsuk-label required" for="select-1">
                 Contact
               </label>
-              <select class="nhsuk-select" id="select-1" name="select-1" style="width:500px;">
-                <option value="1" selected>John Doe</option>
-                <option value="2" >Suzzane wright</option>
-                <option value="3" disabled>Chris Ford</option>
+              <select class="nhsuk-select" id="select-1" name="select-1" style="width:500px;" disabled>
+                <option value="3" selected>Chris Ford</option>
               </select>
             </div>
 
@@ -84,7 +82,7 @@ endblock %} {% block content %}
           </div>
 
 
-          <!---- 3rdcolumn begin--->
+          <!---- 3rd column begin--->
           <div class="nhsuk-grid-column-one-half">
 
             <div class="nhsuk-form-group">
@@ -142,7 +140,7 @@ endblock %} {% block content %}
           </div>
             <!---end 3rd col--->
 
-                <!---- 4th column begin--->
+            <!---- 4th column begin--->
             <div class="nhsuk-grid-column-one-half">
             <div class="nhsuk-form-group">
               <label class="nhsuk-label" for="example">
@@ -166,6 +164,8 @@ endblock %} {% block content %}
                 <option value="1" selected>--none--</option>
                 <option value="2">Female</option>
                 <option value="3">Male</option>
+                <option value="4">Indeterminate</option>
+                <option value="5">Not Known</option>
               </select>
             </div>
 
@@ -234,24 +234,20 @@ endblock %} {% block content %}
           </div>
           <!---end 4th col--->
 
+          <script>
+              function adjustHeight(element) {
+                  element.style.height = 'auto';
+                  element.style.height = (element.scrollHeight) + 'px';
+              }
+          </script>
 
           <div class="nhsuk-grid-column-full">
             <div class="nhsuk-form-group">
-              <label class="nhsuk-label required" for="full">
-                Description
-              </label>
-              <textarea class="nhsuk-textarea" id="example" name="example" rows="2" aria-describedby="example-hint"></textarea>
+                <label class="nhsuk-label required" for="expanding-textarea">Description</label>
+                <textarea class="nhsuk-textarea" id="expanding-textarea" name="example" oninput="adjustHeight(this)" rows="3" aria-describedby="example-hint"></textarea>
             </div>
           </div>
 
-
-          <!---div style="float:right; padding-right:20px;">
-            <div class="nhsuk-grid-row">
-              <div class="nhsuk-grid-column-full">
-                <p> 📎 Add attachments</p>
-              </div>
-            </div>
-          </div--->
 
           <div style="float:right; padding-right:20px;">
               <label class="attach-file">
@@ -265,10 +261,6 @@ endblock %} {% block content %}
           <button class="nhsuk-button" data-module="nhsuk-button" data-prevent-double-click="true" type="submit" style="margin-left:20px;">
             Submit
           </button>
-
-
-
-
 
 
 
