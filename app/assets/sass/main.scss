@@ -201,10 +201,10 @@ border-radius: none !important;
 
 .dob-container {
             position: relative;
-            display: inline-block;
+            display: block;
         }
         .dob-container input {
-            padding-right: 320px;
+            padding-right: 0px;
         }
         .dob-container .calendar-icon {
             position: absolute;
