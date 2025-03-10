@@ -1,0 +1,51 @@
+{% extends 'layout.html' %} {% block pageTitle %}Overview - Cohort Manager {%
+endblock %} {% block content %}
+<div class="nhsuk-grid-row">
+  <div class="nhsuk-grid-column-two-thirds">
+    <h1>Breast screening exceptions
+      <span class="nhsuk-caption-xl">Overview</span>
+    </h1>
+  </div>
+</div>
+
+<ul class="nhsuk-grid-row nhsuk-card-group">
+  <li class="nhsuk-grid-column-one-third nhsuk-card-group__item">
+    <div class="nhsuk-card nhsuk-card--clickable">
+      <div class="nhsuk-card__content">
+        <p class="nhsuk-heading-xl nhsuk-u-font-size-64 nhsuk-u-margin-bottom-1">
+          72
+          <span class="nhsuk-u-visually-hidden">Total</span>
+        </p>
+        <a href="/v5/exceptions-summary"
+          class="nhsuk-card__link nhsuk-u-font-weight-normal nhsuk-u-font-size-19 nhsuk-link--no-visited-state">Total</a>
+      </div>
+    </div>
+  </li>
+
+  <!---<li class="nhsuk-grid-column-one-third nhsuk-card-group__item">
+    <div class="nhsuk-card nhsuk-card--clickable">
+      <div class="nhsuk-card__content">
+        <p class="nhsuk-heading-xl nhsuk-u-font-size-64 nhsuk-u-margin-bottom-1">
+          9
+          <span class="nhsuk-u-visually-hidden">Created today</span>
+        </p>
+        <a href="/v5/exceptions-summary-today"
+          class="nhsuk-card__link nhsuk-u-font-weight-normal nhsuk-u-font-size-19 nhsuk-link--no-visited-state">Created today</a>
+      </div>
+    </div>
+  </li>--->
+
+  <li class="nhsuk-grid-column-one-third nhsuk-card-group__item">
+    <div class="nhsuk-card nhsuk-card--clickable">
+      <div class="nhsuk-card__content">
+        <p class="nhsuk-heading-xl nhsuk-u-font-size-64 nhsuk-u-margin-bottom-1">
+          20
+          <span class="nhsuk-u-visually-hidden">Not raised with NBO</span>
+        </p>
+        <a href="/v5/exceptions-summary-nbo"
+          class="nhsuk-card__link nhsuk-u-font-weight-normal nhsuk-u-font-size-19 nhsuk-link--no-visited-state">Not raised with NBO</a>
+      </div>
+    </div>
+  </li>
+</ul>
+{% endblock %}
