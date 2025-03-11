@@ -11,6 +11,7 @@
         function displayDate() {
             const dates = document.querySelectorAll('.date');
             const now = new Date();
+            now.setDate(now.getDate() - 1);
             const options = { day: 'numeric', month: 'long', year: 'numeric' };
             const formattedDate = now.toLocaleDateString('en-GB', options);
 
@@ -22,3 +23,23 @@
         // Run the function on page load
         displayDate();
     </script>
+
+
+    <!---<script>
+     // Function to get the formatted date
+     function formatDate(date) {
+         const options = { year: 'numeric', month: 'long', day: '2-digit' };
+         return date.toLocaleDateString('en-GB', options);
+     }
+
+     // Get yesterday's date
+     const yesterday = new Date(today);
+     yesterday.setDate(today.getDate() - 1);
+     document.getElementById('yesterday-date').textContent = formatDate(yesterday);
+
+     // Get today's date
+     const today = new Date();
+     document.getElementById('today-date').textContent = formatDate(today);
+
+
+ </script>--->

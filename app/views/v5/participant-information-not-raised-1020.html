@@ -7,7 +7,7 @@ Cohort Manager{% endblock %} {% block beforeContent %}
         <a class="nhsuk-breadcrumb__link" href="/v5">Overview</a>
       </li>
       <li class="nhsuk-breadcrumb__item">
-        <a class="nhsuk-breadcrumb__link" href="/v5/exceptions-summary">Exceptions summary</a>
+        <a class="nhsuk-breadcrumb__link" href="/v5/exceptions-summary-nbo">Exceptions summary</a>
       </li>
     </ol>
     <p class="nhsuk-breadcrumb__back">
@@ -38,23 +38,23 @@ Cohort Manager{% endblock %} {% block beforeContent %}
 
           <div class="nhsuk-summary-list__row">
             <dt class="nhsuk-summary-list__key">NHS number</dt>
-            <dd class="nhsuk-summary-list__value">723 333 6891</dd>
+            <dd class="nhsuk-summary-list__value">543 555 9087</dd>
           </div>
 
           <div class="nhsuk-summary-list__row">
             <dt class="nhsuk-summary-list__key">Surname</dt>
-            <dd class="nhsuk-summary-list__value">Lewis</dd>
+            <dd class="nhsuk-summary-list__value">Smith</dd>
           </div>
 
           <div class="nhsuk-summary-list__row">
             <dt class="nhsuk-summary-list__key">Forename</dt>
-            <dd class="nhsuk-summary-list__value">Sandra</dd>
+            <dd class="nhsuk-summary-list__value">Niela</dd>
           </div>
 
 
           <div class="nhsuk-summary-list__row">
             <dt class="nhsuk-summary-list__key">Date of birth</dt>
-            <dd class="nhsuk-summary-list__value">18/11/1993</dd>
+            <dd class="nhsuk-summary-list__value">23/02/1977</dd>
           </div>
 
           <div class="nhsuk-summary-list__row">
@@ -65,8 +65,8 @@ Cohort Manager{% endblock %} {% block beforeContent %}
           <div class="nhsuk-summary-list__row">
             <dt class="nhsuk-summary-list__key">Current address</dt>
             <dd class="nhsuk-summary-list__value">
-              73 Roman Rd<br />Leeds<br />
-              LS2 5ZN
+              20:20 House<br /> Skinner Lane<br />Leeds<br />
+              LS2 7QQ
             </dd>
           </div>
 
@@ -79,13 +79,13 @@ Cohort Manager{% endblock %} {% block beforeContent %}
             <dt class="nhsuk-summary-list__key">Contact details</dt>
             <dd class="nhsuk-summary-list__value">
               <p>07700 900362</p>
-              <p>sandra.lewis@example.com</p>
+              <p>niela.smith@example.com</p>
             </dd>
           </div>
 
           <div class="nhsuk-summary-list__row">
             <dt class="nhsuk-summary-list__key">Registered practice code</dt>
-            <dd class="nhsuk-summary-list__value">B86110</dd>
+            <dd class="nhsuk-summary-list__value">B66110</dd>
           </div>
 
           <div class="nhsuk-summary-list__row">
@@ -108,39 +108,23 @@ Cohort Manager{% endblock %} {% block beforeContent %}
         <dl class="nhsuk-summary-list">
           <div class="nhsuk-summary-list__row">
             <dt class="nhsuk-summary-list__key">Date exception created</dt>
-            <dd class="nhsuk-summary-list__value"><span id="date"></span>
+            <dd class="nhsuk-summary-list__value date"></dd>
+          </div>
 
-                  <script>
-                      const dateElement = document.getElementById("date");
-                      const today = new Date();
-                      today.setMonth(today.getMonth() - 1);
-                      const options = { day: 'numeric', month: 'long', year: 'numeric' };
-                      dateElement.textContent = today.toLocaleDateString('en-GB', options);
-                  </script>
-
-
+          <div class="nhsuk-summary-list__row">
+            <dt class="nhsuk-summary-list__key">NBO form</dt>
+            <dd class="nhsuk-summary-list__value">
+              Request to amend incorrect patient PDS record data
             </dd>
           </div>
 
           <div class="nhsuk-summary-list__row">
-            <dt class="nhsuk-summary-list__key">Short description</dt>
-            <dd class="nhsuk-summary-list__value">
-              Technical error - GP practice code and Reason for Removal fields contain incompatible values
-            </dd>
-          </div>
-
-          <div class="nhsuk-summary-list__row">
-            <dt class="nhsuk-summary-list__key">Description detail</dt>
+            <dt class="nhsuk-summary-list__key">More detail</dt>
             <dd class="nhsuk-summary-list__value">
 
-                  <p>The following fields have missing or conflicting information: GP practice code, reason for removal</p>
-                  <p>Either:</p>
-                  <ul>
-                    <li>enter a GP practice code, or </li>
-                    <li>enter a reason for removal</li>
-                  </ul>
-                  <p>Information must only be entered for one of these fields.
-                  Both fields cannot be empty.</p>
+                  <p>Address is blank</p>
+                  <p>Enter the participant's full address</p>
+                  <p>Cohort Manager rule (to be included for reporting): CMR17</p>
 
             </dd>
           </div>
