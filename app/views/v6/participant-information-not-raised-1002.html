@@ -1,0 +1,211 @@
+{% extends 'layout.html' %} {% block pageTitle %}Participant information -
+Cohort Manager{% endblock %} {% block beforeContent %}
+<nav class="nhsuk-breadcrumb" aria-label="Breadcrumb">
+  <div class="nhsuk-width-container">
+    <ol class="nhsuk-breadcrumb__list">
+      <li class="nhsuk-breadcrumb__item">
+        <a class="nhsuk-breadcrumb__link" href="/v5">Overview</a>
+      </li>
+      <li class="nhsuk-breadcrumb__item">
+        <a class="nhsuk-breadcrumb__link" href="/v5/exceptions-summary-nbo">Exceptions summary</a>
+      </li>
+    </ol>
+    <p class="nhsuk-breadcrumb__back">
+      <a class="nhsuk-breadcrumb__backlink" href="/v5">
+        <span class="nhsuk-u-visually-hidden">Back to &nbsp;</span>
+        Overview
+      </a>
+    </p>
+  </div>
+</nav>
+
+{% endblock %} {% block content %}
+<div class="nhsuk-grid-row">
+  <div class="nhsuk-grid-column-two-thirds">
+    <h1>Exception information
+      <span class="nhsuk-caption-xl">Exception ID: 1002</span>
+    </h1>
+  </div>
+</div>
+<div class="nhsuk-grid-row">
+  <div class="nhsuk-grid-column-full">
+
+    <div class="nhsuk-card nhsuk-u-margin-bottom-4">
+      <div class="nhsuk-card__content">
+        <h2 class="nhsuk-card__heading">Participant details</h2>
+
+        <dl class="nhsuk-summary-list">
+
+          <div class="nhsuk-summary-list__row">
+            <dt class="nhsuk-summary-list__key">NHS number</dt>
+            <dd class="nhsuk-summary-list__value">623 444 8972</dd>
+          </div>
+
+          <div class="nhsuk-summary-list__row">
+            <dt class="nhsuk-summary-list__key">Surname</dt>
+            <dd class="nhsuk-summary-list__value">Perry</dd>
+          </div>
+
+          <div class="nhsuk-summary-list__row">
+            <dt class="nhsuk-summary-list__key">Forename</dt>
+            <dd class="nhsuk-summary-list__value">Kathy</dd>
+          </div>
+
+
+          <div class="nhsuk-summary-list__row">
+            <dt class="nhsuk-summary-list__key">Date of birth</dt>
+            <dd class="nhsuk-summary-list__value">10/09/1980</dd>
+          </div>
+
+          <div class="nhsuk-summary-list__row">
+            <dt class="nhsuk-summary-list__key">Gender</dt>
+            <dd class="nhsuk-summary-list__value">Female</dd>
+          </div>
+
+          <div class="nhsuk-summary-list__row">
+            <dt class="nhsuk-summary-list__key">Current address</dt>
+            <dd class="nhsuk-summary-list__value">
+              12 Victoria<br /> Regent Street<br />Leeds<br />
+              LS1 8DN
+            </dd>
+          </div>
+
+          <!---div class="nhsuk-summary-list__row">
+            <dt class="nhsuk-summary-list__key">NHS number 2</dt>
+            <dd class="nhsuk-summary-list__value">631 567 4444</dd>
+          </div--->
+
+          <div class="nhsuk-summary-list__row">
+            <dt class="nhsuk-summary-list__key">Contact details</dt>
+            <dd class="nhsuk-summary-list__value">
+              <p>07700 900362</p>
+              <p>kathy.perry@example.com</p>
+            </dd>
+          </div>
+
+          <div class="nhsuk-summary-list__row">
+            <dt class="nhsuk-summary-list__key">Registered practice code</dt>
+            <dd class="nhsuk-summary-list__value">C76110</dd>
+          </div>
+
+          <div class="nhsuk-summary-list__row">
+            <dt class="nhsuk-summary-list__key">Registered practice address</dt>
+            <dd class="nhsuk-summary-list__value">
+              Anytown Medical Centre<br>
+              Anywhere<br>
+              Anytown<br>
+              AT1 1AA
+          </div>
+
+        </dl>
+      </div>
+    </div>
+
+    <div class="nhsuk-card nhsuk-u-margin-bottom-4">
+      <div class="nhsuk-card__content">
+        <h2 class="nhsuk-card__heading">Exception details</h2>
+
+        <dl class="nhsuk-summary-list">
+          <div class="nhsuk-summary-list__row">
+            <dt class="nhsuk-summary-list__key">Date exception created</dt>
+            <dd class="nhsuk-summary-list__value date"></dd>
+          </div>
+
+          <div class="nhsuk-summary-list__row">
+            <dt class="nhsuk-summary-list__key">NBO form</dt>
+            <dd class="nhsuk-summary-list__value">
+              Request to amend incorrect patient PDS record data
+            </dd>
+          </div>
+
+          <div class="nhsuk-summary-list__row">
+            <dt class="nhsuk-summary-list__key">More detail</dt>
+            <dd class="nhsuk-summary-list__value">
+
+                  <p>Missing forename</p>
+                  <p>Enter the participant's forename</p>
+                  <p>Cohort Manager rule (to be included for reporting): CMR16</p>
+
+            </dd>
+          </div>
+
+          <div class="nhsuk-summary-list__row">
+            <dt class="nhsuk-summary-list__key">Exception status</dt>
+            <dd class="nhsuk-summary-list__value"><strong class="nhsuk-tag nhsuk-tag--grey">Not raised</strong></dd>
+          </div>
+
+        </dl>
+      </div>
+    </div>
+
+    <div class="nhsuk-card nhsuk-u-margin-bottom-4">
+      <div class="nhsuk-card__content">
+        <h2 class="nhsuk-card__heading">Exception status</h2>
+
+        <div class="nhsuk-form-group">
+
+          <form action="/participant-information" method="post">
+
+            <fieldset class="nhsuk-fieldset">
+              <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--s">
+                <h1 class="nhsuk-fieldset__heading">
+                  Update the status of this exception when it has been raised with National Back Office (NBO):
+                </h1>
+              </legend>
+
+              <div class="nhsuk-hint" id="contact-hint">
+                Please ensure this exception has not been processed by another user before making changes to its status.
+              </div>
+
+              <div class="nhsuk-radios nhsuk-u-margin-bottom-4">
+
+                <div class="nhsuk-radios__item">
+                  <input class="nhsuk-radios__input" id="exception-status-2" name="exception-status" type="radio" value="no" checked>
+                  <label class="nhsuk-label nhsuk-radios__label" for="exception-status-2" selected>
+                    Not raised
+                  </label>
+                </div>
+
+                <div class="nhsuk-radios__item">
+                  <input class="nhsuk-radios__input" id="exception-status-1" name="exception-status" type="radio" value="yes">
+                  <label class="nhsuk-label nhsuk-radios__label" for="exception-status-1">
+                    Raised
+                  </label>
+                </div>
+
+              </div>
+
+                <button class="nhsuk-button" data-module="nhsuk-button" type="submit">
+                  Update
+                </button>
+
+            </fieldset>
+
+          </form>
+
+        </div>
+
+      </div>
+    </div>
+
+
+  </div>
+  {% endblock %}
+</div>
+
+
+
+
+<!--- date-previous month
+
+<script>
+    const dateElement = document.getElementById("date");
+    const today = new Date();
+    today.setMonth(today.getMonth() - 1);
+    const options = { day: 'numeric', month: 'long', year: 'numeric' };
+    dateElement.textContent = today.toLocaleDateString('en-GB', options);
+</script>
+
+
+
+  --->
