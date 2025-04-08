@@ -35,7 +35,7 @@ Manager{% endblock %} {% block beforeContent %}
   </style>
 
 
-<nav class="nhsuk-breadcrumb" aria-label="Breadcrumb">
+<!---<nav class="nhsuk-breadcrumb" aria-label="Breadcrumb">
   <div class="nhsuk-width-container">
     <ol class="nhsuk-breadcrumb__list">
       <li class="nhsuk-breadcrumb__item">
@@ -49,7 +49,16 @@ Manager{% endblock %} {% block beforeContent %}
       </a>
     </p>
   </div>
-</nav>
+</nav>--->
+
+<div class="nhsuk-back-link">
+
+  <a class="nhsuk-back-link__link" href="/v6">
+    <svg class="nhsuk-icon nhsuk-icon__chevron-left" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" height="24" width="24">
+      <path d="M8.5 12c0-.3.1-.5.3-.7l5-5c.4-.4 1-.4 1.4 0s.4 1 0 1.4L10.9 12l4.3 4.3c.4.4.4 1 0 1.4s-1 .4-1.4 0l-5-5c-.2-.2-.3-.4-.3-.7z"></path>
+    </svg>
+    Overview</a>
+</div>
 
 {% endblock %} {% block content %}
 <div class="nhsuk-grid-row">
@@ -123,9 +132,10 @@ Manager{% endblock %} {% block beforeContent %}
                 The following fields have missing or conflicting information: GP practice code, reason for removal
               </td>
               <td class="nhsuk-table__cell">
-                <strong class="nhsuk-tag">Raised</strong>
+                <strong class="nhsuk-tag">Raised</strong> </br> on <span id="today-date"></span>
               </td>
             </tr>
+
             <tr role="row" class="nhsuk-table__row">
               <td role="cell" class="nhsuk-table__cell">
                 <span class="nhsuk-table-responsive__heading" aria-hidden="true"
@@ -146,8 +156,12 @@ Manager{% endblock %} {% block beforeContent %}
                   >Short description </span>Missing forename
               </td>
               <td class="nhsuk-table__cell">
-                <strong class="nhsuk-tag nhsuk-tag--grey">Not raised</strong>
+                  <strong class="nhsuk-tag">Raised</strong> </br> on <span id="yesterday-date"></span>
+              </td>
               </tr>
+
+
+
             <tr role="row" class="nhsuk-table__row">
               <td role="cell" class="nhsuk-table__cell">
                 <span class="nhsuk-table-responsive__heading" aria-hidden="true"
@@ -168,7 +182,8 @@ Manager{% endblock %} {% block beforeContent %}
                   >Short description </span>Address is blank
               </td>
               <td class="nhsuk-table__cell">
-                <strong class="nhsuk-tag nhsuk-tag--grey">Not raised</strong>
+              <strong class="nhsuk-tag">Raised</strong> </br> on <span id="previous-date"></span>
+              </td>
               </tr>
 
             <tr role="row" class="nhsuk-table__row">
@@ -192,7 +207,7 @@ Manager{% endblock %} {% block beforeContent %}
                 >Technical error - Formal Death Status is supplied for a non death Reason for Removal reason
               </td>
               <td class="nhsuk-table__cell">
-                <strong class="nhsuk-tag nhsuk-tag--grey">Not raised</strong>
+                <strong class="nhsuk-tag nhsuk-tag--grey">Not raised</strong></td>
               </tr>
 
             <tr role="row" class="nhsuk-table__row">
@@ -216,7 +231,7 @@ Manager{% endblock %} {% block beforeContent %}
                 >It was not possible to determine the BSO dummy practice code for this subject
               </td>
               <td class="nhsuk-table__cell">
-                <strong class="nhsuk-tag nhsuk-tag--grey">Not raised</strong>
+                <strong class="nhsuk-tag nhsuk-tag--grey">Not raised</strong></td>
               </tr>
 
             <tr role="row" class="nhsuk-table__row">
@@ -240,7 +255,7 @@ Manager{% endblock %} {% block beforeContent %}
                 >The supplied demographics do not match the subjects record
               </td>
               <td class="nhsuk-table__cell">
-                <strong class="nhsuk-tag nhsuk-tag--grey">Not raised</strong>
+                <strong class="nhsuk-tag nhsuk-tag--grey">Not raised</strong></td>
               </tr>
 
             <tr role="row" class="nhsuk-table__row">
@@ -264,7 +279,7 @@ Manager{% endblock %} {% block beforeContent %}
                 >Technical error - Formal Death Status is supplied for a non death Reason for Removal reason
               </td>
               <td class="nhsuk-table__cell">
-                <strong class="nhsuk-tag nhsuk-tag--grey">Not raised</strong>
+                <strong class="nhsuk-tag nhsuk-tag--grey">Not raised</strong></td>
               </tr>
 
 
@@ -291,6 +306,29 @@ Manager{% endblock %} {% block beforeContent %}
       </p>
     </div>
   </div>
+
+
+  <script>
+      // Function to get the formatted date
+      function formatDate(date) {
+          const options = { year: 'numeric', month: 'long', day: '2-digit' };
+          return date.toLocaleDateString('en-GB', options);
+      }
+
+      // Get today's date
+      const today = new Date();
+      document.getElementById('today-date').textContent = formatDate(today);
+
+      // Get yesterday's date
+      const yesterday = new Date(today);
+      yesterday.setDate(today.getDate() - 1);
+      document.getElementById('yesterday-date').textContent = formatDate(yesterday);
+
+      // Get previouss date
+      const previous = new Date(today);
+      previous.setDate(today.getDate() - 3);
+      document.getElementById('previous-date').textContent = formatDate(previous);
+  </script>
 
 
     </div>

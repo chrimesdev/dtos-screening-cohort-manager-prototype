@@ -1,23 +1,19 @@
 {% extends 'layout.html' %} {% block pageTitle %}Participant information -
 Cohort Manager{% endblock %} {% block beforeContent %}
-<nav class="nhsuk-breadcrumb" aria-label="Breadcrumb">
-  <div class="nhsuk-width-container">
-    <ol class="nhsuk-breadcrumb__list">
-      <li class="nhsuk-breadcrumb__item">
-        <a class="nhsuk-breadcrumb__link" href="/v6">Overview</a>
-      </li>
-      <li class="nhsuk-breadcrumb__item">
-        <a class="nhsuk-breadcrumb__link" href="/v6/exceptions-summary-nbo">Exceptions summary</a>
-      </li>
-    </ol>
-    <p class="nhsuk-breadcrumb__back">
-      <a class="nhsuk-breadcrumb__backlink" href="/v6">
-        <span class="nhsuk-u-visually-hidden">Back to &nbsp;</span>
-        Overview
-      </a>
-    </p>
-  </div>
-</nav>
+
+<div class="nhsuk-back-link">
+
+  <a class="nhsuk-back-link__link" href="/v6">
+    <svg class="nhsuk-icon nhsuk-icon__chevron-left" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" height="24" width="24">
+      <path d="M8.5 12c0-.3.1-.5.3-.7l5-5c.4-.4 1-.4 1.4 0s.4 1 0 1.4L10.9 12l4.3 4.3c.4.4.4 1 0 1.4s-1 .4-1.4 0l-5-5c-.2-.2-.3-.4-.3-.7z"></path>
+    </svg>
+    Overview</a>
+    <a class="nhsuk-back-link__link" href="/v6/exceptions-summary-nbo">
+      <svg class="nhsuk-icon nhsuk-icon__chevron-left" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" height="24" width="24">
+        <path d="M8.5 12c0-.3.1-.5.3-.7l5-5c.4-.4 1-.4 1.4 0s.4 1 0 1.4L10.9 12l4.3 4.3c.4.4.4 1 0 1.4s-1 .4-1.4 0l-5-5c-.2-.2-.3-.4-.3-.7z"></path>
+      </svg>
+      Exceptions Summary</a>
+</div>
 
 {% endblock %} {% block content %}
 <div class="nhsuk-grid-row">
@@ -144,7 +140,7 @@ Cohort Manager{% endblock %} {% block beforeContent %}
 
         <div class="nhsuk-form-group">
 
-          <form action="/participant-information" method="post">
+          <form action="/v6/exceptions-summary-nbo-update-1002" method="post">
 
             <fieldset class="nhsuk-fieldset">
               <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--s">
