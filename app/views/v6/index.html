@@ -8,7 +8,7 @@ endblock %} {% block content %}
   </div>
 </div>
 
-<ul class="nhsuk-grid-row nhsuk-card-group">
+<!---<ul class="nhsuk-grid-row nhsuk-card-group">
   <li class="nhsuk-grid-column-one-third nhsuk-card-group__item">
     <div class="nhsuk-card nhsuk-card--clickable">
       <div class="nhsuk-card__content">
@@ -19,10 +19,11 @@ endblock %} {% block content %}
         <a href="/v6/exceptions-summary"
           class="nhsuk-card__link nhsuk-u-font-weight-normal nhsuk-u-font-size-19 nhsuk-link--no-visited-state">Total</a>
       </div>
+      A summary of all data exceptions, including those raised and not raised
     </div>
   </li>
 
-  <!---<li class="nhsuk-grid-column-one-third nhsuk-card-group__item">
+  <li class="nhsuk-grid-column-one-third nhsuk-card-group__item">
     <div class="nhsuk-card nhsuk-card--clickable">
       <div class="nhsuk-card__content">
         <p class="nhsuk-heading-xl nhsuk-u-font-size-64 nhsuk-u-margin-bottom-1">
@@ -33,7 +34,7 @@ endblock %} {% block content %}
           class="nhsuk-card__link nhsuk-u-font-weight-normal nhsuk-u-font-size-19 nhsuk-link--no-visited-state">Created today</a>
       </div>
     </div>
-  </li>--->
+  </li>
 
   <li class="nhsuk-grid-column-one-third nhsuk-card-group__item">
     <div class="nhsuk-card nhsuk-card--clickable">
@@ -47,5 +48,42 @@ endblock %} {% block content %}
       </div>
     </div>
   </li>
+</ul>--->
+
+
+
+
+<ul class="nhsuk-grid-row nhsuk-card-group">
+  <li class="nhsuk-grid-column-one-quarter nhsuk-card-group__item">
+
+    <div class="nhsuk-card nhsuk-card--clickable">
+      <div class="nhsuk-card__content">
+        <p class="nhsuk-heading-xl nhsuk-u-font-size-64 nhsuk-u-margin-bottom-1">30<span class="nhsuk-u-visually-hidden">Total</span></p>
+        <h2 class="nhsuk-card__heading nhsuk-heading-m">
+          <a class="nhsuk-card__link" href="/v6/exceptions-summary">Total</a>
+        </h2>
+        <p class="nhsuk-card__description">A summary of all data exceptions, including those raised and not raised</p>
+
+      </div>
+    </div>
+
+  </li>
+  <li class="nhsuk-grid-column-one-quarter nhsuk-card-group__item">
+
+    <div class="nhsuk-card nhsuk-card--clickable">
+      <div class="nhsuk-card__content">
+        <p class="nhsuk-heading-xl nhsuk-u-font-size-64 nhsuk-u-margin-bottom-1">20<span class="nhsuk-u-visually-hidden">Not Raised</span></p>
+        <h2 class="nhsuk-card__heading nhsuk-heading-m">
+          <a class="nhsuk-card__link" href="/v6/exceptions-summary-nbo">Not Raised</a>
+        </h2>
+        <p class="nhsuk-card__description">A list of exceptions that still need to be raised with National Back Office (NBO)</p>
+
+      </div>
+    </div>
+
+  </li>
 </ul>
+
+
+
 {% endblock %}

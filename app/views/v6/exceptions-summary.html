@@ -34,13 +34,11 @@ Manager{% endblock %} {% block beforeContent %}
     }
   </style>
 
-
-<!---<nav class="nhsuk-breadcrumb" aria-label="Breadcrumb">
-  <div class="nhsuk-width-container">
+  <nav class="nhsuk-breadcrumb" aria-label="Breadcrumb">
     <ol class="nhsuk-breadcrumb__list">
-      <li class="nhsuk-breadcrumb__item">
-        <a class="nhsuk-breadcrumb__link" href="/v6">Overview</a>
-      </li>
+      <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="/v6">Overview</a></li>
+      <!---li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="#">Level two</a></li>
+      <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="#">Level three</a></li--->
     </ol>
     <p class="nhsuk-breadcrumb__back">
       <a class="nhsuk-breadcrumb__backlink" href="/v6">
@@ -48,59 +46,45 @@ Manager{% endblock %} {% block beforeContent %}
         Overview
       </a>
     </p>
+  </nav>
+
+  {% endblock %} {% block content %}
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-full">
+      <h1>Summary
+        <span class="nhsuk-caption-xl">All breast screening exceptions</span>
+      </h1>
+    </div>
   </div>
-</nav>--->
 
-<div class="nhsuk-back-link">
-
-  <a class="nhsuk-back-link__link" href="/v6">
-    <svg class="nhsuk-icon nhsuk-icon__chevron-left" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" height="24" width="24">
-      <path d="M8.5 12c0-.3.1-.5.3-.7l5-5c.4-.4 1-.4 1.4 0s.4 1 0 1.4L10.9 12l4.3 4.3c.4.4.4 1 0 1.4s-1 .4-1.4 0l-5-5c-.2-.2-.3-.4-.3-.7z"></path>
-    </svg>
-    Overview</a>
-</div>
-
-{% endblock %} {% block content %}
-<div class="nhsuk-grid-row">
-  <div class="nhsuk-grid-column-full">
-    <h1>Summary
-      <span class="nhsuk-caption-xl">All breast screening exceptions</span>
-    </h1>
+  <div class="nhsuk-grid-column-one-third" style="padding: 0px 0px !important;">
+    <p class="nhsuk-body" style="float: left; font-size: 1.1875rem">
+      <b>Showing 10 of 30 results</b>
+    </p>
   </div>
-</div>
 
-<div style="float: right;">
-  <label for="select-1" style="font-size: 1.1875rem"> Sort by </label>
-  <select class="nhsuk-select" id="select-1" name="select-1">
-    <option value="6" selected>Date exception created (oldest first)</option>
-    <option value="1">Exception ID (ascending)</option>
-    <option value="2">Exception ID (descending)</option>
-  <!---<
-    <option value="3">NHS number (ascending)</option>
-    <option value="4">NHS number (descending)</option>
-    <option value="5">Date exception created (newest first)</option>
-    <option value="7">Short description (alphabetically A to Z)</option>
-    <option value="8">Short description (alphabetically Z to A)</option>
-    <option value="9">Exception status (not raised)</option>
-    <option value="10">Exception status (raised first)</option>
-    --->
-  </select>
+      <div class="nhsuk-form-group" style="float: right">
+        <label class="nhsuk-label disp" for="select-1" style="display: inline-block;">
+          <b>Sort by</b>
+        </label>
+        <select class="nhsuk-select" id="select-1" name="select-1">
+          <option value="1" selected>Date exception created (oldest first)</option>
+          <option value="2">Date exception created (newest first)</option>
+          <option value="3">Exception Status (Raised)</option>
+          <option value="4">Exception Status (Not-Raised)</option>
 
-  <button
-    class="nhsuk-button"
-    data-module="nhsuk-button"
-    type="submit"
-    style="padding: 4px 16px; font-size: 16px;">
-    Apply
-  </button>
-</div>
+    </select>
+    <button class="nhsuk-button" data-module="nhsuk-button" type="submit" style="padding: 4px 16px; font-size: 16px">
+      Apply
+    </button>
+  </div>
 
 <div class="nhsuk-grid-row">
   <div class="nhsuk-grid-column-full">
     <div class="nhsuk-card nhsuk-u-margin-bottom-2">
       <div class="nhsuk-card__content">
         <table role="table" class="nhsuk-table-responsive">
-          <caption class="nhsuk-table__caption">Exceptions sorted by Exception ID (ascending)</caption>
+
           <thead role="rowgroup" class="nhsuk-table__head">
             <tr role="row">
               <th role="columnheader" scope="col">Exception ID</th>
@@ -282,6 +266,75 @@ Manager{% endblock %} {% block beforeContent %}
                 <strong class="nhsuk-tag nhsuk-tag--grey">Not raised</strong></td>
               </tr>
 
+              <tr role="row" class="nhsuk-table__row">
+                <td role="cell" class="nhsuk-table__cell">
+                  <span class="nhsuk-table-responsive__heading" aria-hidden="true"
+                    >Exception ID </span
+                  ><a href="#">1120</a>
+                </td>
+                <td role="cell" class="nhsuk-table__cell app-u-no-wrap">
+                  <span class="nhsuk-table-responsive__heading" aria-hidden="true"
+                    >NHS number </span
+                  >999 765 0876
+                </td>
+                <td role="cell" class="nhsuk-table__cell app-u-no-wrap date">
+                  <span class="nhsuk-table-responsive__heading" aria-hidden="true"
+                    >Date exceptions created </span>
+                </td>
+                <td>
+                  <span class="nhsuk-table-responsive__heading" aria-hidden="true"
+                    >Short description </span> Missing forename
+                </td>
+                <td class="nhsuk-table__cell">
+                  <strong class="nhsuk-tag nhsuk-tag--grey">Not raised</strong></td>
+                </tr>
+
+                <tr role="row" class="nhsuk-table__row">
+                  <td role="cell" class="nhsuk-table__cell">
+                    <span class="nhsuk-table-responsive__heading" aria-hidden="true"
+                      >Exception ID </span
+                    ><a href="#">1125</a>
+                  </td>
+                  <td role="cell" class="nhsuk-table__cell app-u-no-wrap">
+                    <span class="nhsuk-table-responsive__heading" aria-hidden="true"
+                      >NHS number </span
+                    >743 398 9999
+                  </td>
+                  <td role="cell" class="nhsuk-table__cell app-u-no-wrap date">
+                    <span class="nhsuk-table-responsive__heading" aria-hidden="true"
+                      >Date exceptions created </span>
+                  </td>
+                  <td>
+                    <span class="nhsuk-table-responsive__heading" aria-hidden="true"
+                      >Short description </span> Address is blank
+                  </td>
+                  <td class="nhsuk-table__cell">
+                    <strong class="nhsuk-tag nhsuk-tag--grey">Not raised</strong></td>
+                  </tr>
+
+                  <tr role="row" class="nhsuk-table__row">
+                    <td role="cell" class="nhsuk-table__cell">
+                      <span class="nhsuk-table-responsive__heading" aria-hidden="true"
+                        >Exception ID </span
+                      ><a href="#">1127</a>
+                    </td>
+                    <td role="cell" class="nhsuk-table__cell app-u-no-wrap">
+                      <span class="nhsuk-table-responsive__heading" aria-hidden="true"
+                        >NHS number </span
+                      >444 765 9090
+                    </td>
+                    <td role="cell" class="nhsuk-table__cell app-u-no-wrap date">
+                      <span class="nhsuk-table-responsive__heading" aria-hidden="true"
+                        >Date exceptions created </span>
+                    </td>
+                    <td>
+                      <span class="nhsuk-table-responsive__heading" aria-hidden="true"
+                        >Short description </span> The supplied demographics do not match the subjects record
+                    </td>
+                    <td class="nhsuk-table__cell">
+                      <strong class="nhsuk-tag nhsuk-tag--grey">Not raised</strong></td>
+                    </tr>
+
 
           </tbody>
 
@@ -292,20 +345,12 @@ Manager{% endblock %} {% block beforeContent %}
 
     <div class="nhsuk-grid-row">
       <div class="nhsuk-grid-column-two-thirds">
-          <div class="pagination">
+          <div class="pagination" style="float: right; width: 40%;">
               <span class="page-number active">1</span>
               <span class="page-number next-link">2</span>
               <a class="next-link" href="/page/2"> Next → </a>
           </div>
       </div>
-
-
-    <div class="nhsuk-grid-column-one-third">
-      <p class="nhsuk-body" style="margin-top: 30px; margin-bottom: 0px; margin-right: 10px; float: right">
-        Showing 10 of 20 results
-      </p>
-    </div>
-  </div>
 
 
   <script>

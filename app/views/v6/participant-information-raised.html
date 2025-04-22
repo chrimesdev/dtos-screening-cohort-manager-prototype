@@ -1,5 +1,6 @@
 {% extends 'layout.html' %} {% block pageTitle %}Participant information -
 Cohort Manager{% endblock %} {% block beforeContent %}
+
 <nav class="nhsuk-breadcrumb" aria-label="Breadcrumb">
   <div class="nhsuk-width-container">
     <ol class="nhsuk-breadcrumb__list">
@@ -151,7 +152,7 @@ Cohort Manager{% endblock %} {% block beforeContent %}
         <h2 class="nhsuk-card__heading">Exception status</h2>
 
         <div class="nhsuk-form-group">
-          <form action="/participant-information" method="post">
+          <form action="/v6/exceptions-summary-nbo" method="post">
 
           <fieldset class="nhsuk-fieldset">
             <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--s">
@@ -183,7 +184,7 @@ Cohort Manager{% endblock %} {% block beforeContent %}
             </div>
 
               <button class="nhsuk-button" data-module="nhsuk-button" type="submit">
-                Update
+                Change
               </button>
 
 
