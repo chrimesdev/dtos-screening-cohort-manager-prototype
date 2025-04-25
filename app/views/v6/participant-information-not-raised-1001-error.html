@@ -25,6 +25,23 @@ Cohort Manager{% endblock %} {% block beforeContent %}
   </div>
 </div>
 
+<!---Error Summary--->
+
+<div class="nhsuk-error-summary" aria-labelledby="error-summary-title" role="alert" tabindex="-1">
+  <h2 class="nhsuk-error-summary__title" id="error-summary-title">
+    There is a problem
+  </h2>
+  <div class="nhsuk-error-summary__body">
+    <ul class="nhsuk-list nhsuk-error-summary__list" role="list">
+      <li> <a href="#contact">Enter proper ServiceNow ticket number</a>
+      </li>
+    </ul>
+  </div>
+</div>
+
+
+<!---End of error summary--->
+
 <div class="nhsuk-grid-row">
   <div class="nhsuk-grid-column-full">
 
@@ -69,13 +86,13 @@ Cohort Manager{% endblock %} {% block beforeContent %}
           </dd>
         </div>
 
-        <!---div class="nhsuk-summary-list__row">
+        <div class="nhsuk-summary-list__row">
           <dt class="nhsuk-summary-list__key">Contact details</dt>
           <dd class="nhsuk-summary-list__value">
             <p>07700 900362</p>
             <p>sandra.lewis@example.com</p>
           </dd>
-        </div--->
+        </div>
 
         <div class="nhsuk-summary-list__row">
           <dt class="nhsuk-summary-list__key">Registered practice code</dt>
@@ -138,7 +155,7 @@ Cohort Manager{% endblock %} {% block beforeContent %}
 
         <div class="nhsuk-form-group">
 
-          <form action="/v6/participant-information-not-raised-1001-error" method="post">
+          <form action="/v6/exceptions-summary-nbo-update-1001" method="post">
 
             <fieldset class="nhsuk-fieldset">
               <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--s">
@@ -154,29 +171,39 @@ Cohort Manager{% endblock %} {% block beforeContent %}
               <div class="nhsuk-radios nhsuk-u-margin-bottom-4">
 
                 <div class="nhsuk-radios__item">
-                  <input class="nhsuk-radios__input" id="exception-status-2" name="exception-status" type="radio" value="no" checked>
-                  <label class="nhsuk-label nhsuk-radios__label" for="exception-status-2" selected>
+                  <input class="nhsuk-radios__input" id="exception-status-2" name="exception-status" type="radio" value="yes" checked>
+                  <label class="nhsuk-label nhsuk-radios__label" for="exception-status-2">
                     Not raised
                   </label>
                 </div>
 
                 <div class="nhsuk-radios__item">
-                  <input class="nhsuk-radios__input" id="exception-status-1" name="exception-status" type="radio" value="yes">
-                  <label class="nhsuk-label nhsuk-radios__label" for="exception-status-1">
+                  <input class="nhsuk-radios__input" id="exception-status-1" name="exception-status" type="radio" value="no" checked>
+                  <label class="nhsuk-label nhsuk-radios__label" for="exception-status-1" selected>
                     Raised
                   </label>
                 </div>
 
               </div>
 
-              <div class="nhsuk-u-margin-bottom-4">
+
+              <div class="nhsuk-u-margin-bottom-4 nhsuk-form-group--error">
                 <label class="nhsuk-label" for="one-third">
                   Enter Service Now ticket number
                 </label>
                 <div class="nhsuk-hint" id="example-with-hint-text-hint">
                   For example, CS1234567
                 </div>
-                <input class="nhsuk-input nhsuk-u-width-one-third" id="one-third" name="one-third" type="text">
+
+                <!---error message--->
+
+                <span class="nhsuk-error-message" id="contact-error">
+                  <span class="nhsuk-u-visually-hidden">Error:</span> Enter proper ServiceNow ticket number
+                </span>
+
+                <!---end of error message--->
+
+                <input class="nhsuk-input nhsuk-u-width-one-third" id="contact" name="contact" type="text">
               </div>
 
               <button class="nhsuk-button" data-module="nhsuk-button" type="submit">

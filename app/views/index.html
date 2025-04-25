@@ -21,7 +21,10 @@ endblock %}
 
     <hr />
 
-    <h2>Cohort Manager</h2>
+    <h2 class="nhsuk-u-margin-bottom-2">Cohort Manager</h2>
+    <div class="nhsuk-hint" id="contact-hint">
+    UI versions for testing
+    </div>
 
     <ul>
       <li>
@@ -37,11 +40,27 @@ endblock %}
         <a href="/v5">Version 5 (conceptual) - NSD team (UR Round 1) </a>
       </li>
       <li>
-        <a href="#">Version 6 - NSD team (UR Round 2) </a>
+        <a href="/v6">Version 6 - NSD team (UR Round 2) </a>
       </li>
+            <ol style="font-size:8pt; color:grey'">
+              <li>
+                Content updates
+              </li>
+              <li>
+                SNoW ticket addition
+              </li>
+              <li>
+                Error message/Summary
+              </li>
+              <li>
+                Sorting list
+              </li>
+              <li>
+                Pagination
+              </li>
+        </ol>
     </ul>
-
-    <hr />
+    <hr/>
 
     <h2>Auth</h2>
 
@@ -51,33 +70,29 @@ endblock %}
       </li>
     </ul>
 
-    <ul>
-      <li>
-        <a href="/v6/SNow">Raise SNow ticket</a>
-      </li>
-    </ul>
+  <hr/>
 
-    <h2>Draft page</h2>
-
-    <ul>
-      <li>
-        <a href="/v6/SNOW-reference">SNoW reference</a>
-      </li>
-    </ul>
-
-    <!--
-
-    <hr />
-
-    <h2>Overview</h2>
+    <h2 class="nhsuk-u-margin-bottom-2">Draft pages</h2>
+    <div class="nhsuk-hint" id="contact-hint">
+    For review
+    </div>
 
     <ul>
+
       <li>
-        <a href="/overview">Overview</a>
+        <a href="/v6/participant-information-not-raised-1001-error">Error message/summary</a>
       </li>
+
+      <li>
+        <a href="/v6/SNOW-reference">SNoW ticket reference</a>
+      </li>
+
+      <li>
+        <a href="/v6/SNow">Service now form</a>
+      </li>
+
     </ul>
 
-    -->
   </div>
 </div>
 {% endblock %}
