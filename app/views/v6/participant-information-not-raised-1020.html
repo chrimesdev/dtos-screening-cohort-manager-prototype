@@ -26,8 +26,9 @@ Cohort Manager{% endblock %} {% block beforeContent %}
 <div class="nhsuk-grid-row">
   <div class="nhsuk-grid-column-full">
 
-    <div class="nhsuk-card nhsuk-u-margin-bottom-4">
-      <div class="nhsuk-card__content">
+    <div class="nhsuk-card nhsuk-do-dont-list nhsuk-u-margin-bottom-4 nhsuk-u-margin-top-0">
+
+        <h3 class="nhsuk-do-dont-list__label">Request to amend incorrect patient PDS record data</h3>
         <h2 class="nhsuk-card__heading">Participant details</h2>
 
         <dl class="nhsuk-summary-list">
@@ -94,7 +95,7 @@ Cohort Manager{% endblock %} {% block beforeContent %}
           </div>
 
         </dl>
-      </div>
+
     </div>
 
     <div class="nhsuk-card nhsuk-u-margin-bottom-4">
@@ -107,21 +108,19 @@ Cohort Manager{% endblock %} {% block beforeContent %}
             <dd class="nhsuk-summary-list__value date"></dd>
           </div>
 
-          <div class="nhsuk-summary-list__row">
+          <!---div class="nhsuk-summary-list__row">
             <dt class="nhsuk-summary-list__key">NBO form</dt>
             <dd class="nhsuk-summary-list__value">
               Request to amend incorrect patient PDS record data
             </dd>
-          </div>
+          </div--->
 
           <div class="nhsuk-summary-list__row">
             <dt class="nhsuk-summary-list__key">More detail</dt>
             <dd class="nhsuk-summary-list__value">
-
                   <p>Address is blank</p>
                   <p>Enter the participant's full address</p>
                   <p>Cohort Manager rule (to be included for reporting): CMR17</p>
-
             </dd>
           </div>
 
@@ -169,6 +168,16 @@ Cohort Manager{% endblock %} {% block beforeContent %}
                   </label>
                 </div>
 
+              </div>
+
+              <div class="nhsuk-u-margin-bottom-4">
+                <label class="nhsuk-label" for="one-third">
+                  Enter Service Now ticket number
+                </label>
+                <div class="nhsuk-hint" id="example-with-hint-text-hint">
+                  For example, CS1234567
+                </div>
+                <input class="nhsuk-input nhsuk-u-width-one-third" id="one-third" name="one-third" type="text">
               </div>
 
                 <button class="nhsuk-button" data-module="nhsuk-button" type="submit">
