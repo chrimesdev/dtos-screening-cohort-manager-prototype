@@ -143,35 +143,18 @@ Cohort Manager{% endblock %} {% block beforeContent %}
 
             <fieldset class="nhsuk-fieldset">
               <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--s">
-                <h1 class="nhsuk-fieldset__heading">
-                  Update the status of this exception when it has been raised with National Back Office (NBO):
-                </h1>
+                <h5 class="nhsuk-heading-sx">
+                Entering a ServiceNow case ID will change the status of the exception to ‘raised’
+                  <span class="nhsuk-hint" id="example-hint">(you’ll be able to access it on the Total summary page).</span>
+                  <span class="nhsuk-hint" id="example-hint">
+                       If you need to change the exception status back to ‘not raised’, remove any case ID previously entered and then save the changes with the answer left blank.
+                    </span>
+                </h5>
+
               </legend>
 
-              <div class="nhsuk-hint" id="contact-hint">
-                Please ensure this exception has not been processed by another user before making changes to its status.
-              </div>
-
-              <div class="nhsuk-radios nhsuk-u-margin-bottom-4">
-
-                <div class="nhsuk-radios__item">
-                  <input class="nhsuk-radios__input" id="exception-status-2" name="exception-status" type="radio" value="no" checked>
-                  <label class="nhsuk-label nhsuk-radios__label" for="exception-status-2" selected>
-                    Not raised
-                  </label>
-                </div>
-
-                <div class="nhsuk-radios__item">
-                  <input class="nhsuk-radios__input" id="exception-status-1" name="exception-status" type="radio" value="yes">
-                  <label class="nhsuk-label nhsuk-radios__label" for="exception-status-1">
-                    Raised
-                  </label>
-                </div>
-
-              </div>
-
               <div class="nhsuk-u-margin-bottom-4">
-                <label class="nhsuk-label required" for="one-third">
+                <label class="nhsuk-label nhsuk-u-font-weight-bold required" for="one-third">
                   Enter ServiceNow case ID
                 </label>
                 <div class="nhsuk-hint" id="example-with-hint-text-hint">

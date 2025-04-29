@@ -33,7 +33,7 @@ Cohort Manager{% endblock %} {% block beforeContent %}
   </h2>
   <div class="nhsuk-error-summary__body">
     <ul class="nhsuk-list nhsuk-error-summary__list" role="list">
-      <li> <a href="#name">Enter correct ServiceNow case ID</a>
+      <li> <a href="#name">enter the ServiceNow case ID in the correct format </a>
       </li>
     </ul>
   </div>
@@ -158,37 +158,20 @@ Cohort Manager{% endblock %} {% block beforeContent %}
 
             <fieldset class="nhsuk-fieldset">
               <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--s">
-                <h1 class="nhsuk-fieldset__heading">
-                  Change the status of this exception when it has been raised with National Back Office (NBO):
-                </h1>
+                <h5 class="nhsuk-heading-sx">
+                Entering a ServiceNow case ID will change the status of the exception to ‘raised’
+                  <span class="nhsuk-hint" id="example-hint">(you’ll be able to access it on the Total summary page).</span>
+                </h5>
+              <h5 class="nhsuk-heading-xs">
+                   If you need to change the exception status back to ‘not raised’, remove any case ID previously entered and then save the changes with the answer left blank.
+                </h5>
+
               </legend>
-
-              <div class="nhsuk-hint" id="contact-hint">
-                Please ensure this exception has not been processed by another user before making changes to its status.
-              </div>
-
-              <div class="nhsuk-radios nhsuk-u-margin-bottom-4">
-
-                <div class="nhsuk-radios__item">
-                  <input class="nhsuk-radios__input" id="exception-status-2" name="exception-status" type="radio" value="yes" checked>
-                  <label class="nhsuk-label nhsuk-radios__label" for="exception-status-2">
-                    Not raised
-                  </label>
-                </div>
-
-                <div class="nhsuk-radios__item">
-                  <input class="nhsuk-radios__input" id="exception-status-1" name="exception-status" type="radio" value="no" checked>
-                  <label class="nhsuk-label nhsuk-radios__label" for="exception-status-1" selected>
-                    Raised
-                  </label>
-                </div>
-
-              </div>
 
                 <!---error message--->
 
                 <div class="nhsuk-form-group nhsuk-form-group--error nhsuk-u-margin-bottom-4">
-                  <label class="nhsuk-label" for="name">
+                  <label class="nhsuk-label nhsuk-u-font-weight-bold required" for="name">
                       Enter ServiceNow case ID
                   </label>
                   <div class="nhsuk-hint" id="example-with-hint-text-hint">
@@ -196,7 +179,7 @@ Cohort Manager{% endblock %} {% block beforeContent %}
                   </div>
 
                   <span class="nhsuk-error-message" id="name-error">
-                    <span class="nhsuk-u-visually-hidden">Error:</span> Enter correct ServiceNow case ID
+                    <span class="nhsuk-u-visually-hidden">Error:</span> enter the ServiceNow case ID in the correct format
                   </span>
                   <input class="nhsuk-input nhsuk-input--error nhsuk-input nhsuk-input--width-10" id="name" name="name" type="text" aria-describedby="name-error">
                 </div>
