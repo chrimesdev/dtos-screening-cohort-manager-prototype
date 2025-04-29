@@ -23,24 +23,26 @@ Cohort Manager{% endblock %} {% block beforeContent %}
 {% endblock %} {% block content %}
 <div class="nhsuk-grid-row">
   <div class="nhsuk-grid-column-two-thirds">
-    <h1>Exception information
-      <span class="nhsuk-caption-xl">Exception ID: 1001</span>
+    <h1 class="nhsuk-u-margin-bottom-0">Exception information
+      <span class="nhsuk-caption-l">local reference (exception ID): 1001</span>
+      <span class="nhsuk-caption-l">Exception status: <strong class="nhsuk-tag">Raised</strong> on <span id="today-date"></span>&nbsp;&nbsp;&nbsp;
+      <a href="/v6/participant-information-not-raised-1001-change" style="font-size:14pt;">Change
+        <span class="nhsuk-u-visually-hidden">Exception status</span>
+      </a>
+
+      </span>
+        <span class="nhsuk-caption-l">ServiceNow case ID: CS1234567 &nbsp;&nbsp;&nbsp;
+          <a href="/v6/participant-information-not-raised-1001-change" style="font-size:14pt;">Change
+            <span class="nhsuk-u-visually-hidden">ServiceNow case ID</span>
+          </a></span>
     </h1>
-    <p class="nhsuk-body-s nhsuk-u-secondary-text-color nhsuk-u-margin-top-0 nhsuk-u-margin-bottom-0">
-      Exception status: <strong class="nhsuk-tag">Raised</strong> on <span id="today-date"></span><br><br>
-      Service Now ticket number: CS1234567 &nbsp;&nbsp;&nbsp;&nbsp;
-      <a href="/v6/participant-information-not-raised-1001-change">Change<span class="nhsuk-u-visually-hidden">Service Now ticket number</span></a>
-    </p>
-
   </div>
-
 </div>
-
 
 <div class="nhsuk-grid-row">
   <div class="nhsuk-grid-column-full">
 
-    <div class="nhsuk-card nhsuk-do-dont-list nhsuk-u-margin-bottom-4 ">
+    <div class="nhsuk-card nhsuk-do-dont-list nhsuk-u-margin-bottom-4">
 
         <h3 class="nhsuk-do-dont-list__label">Request to amend incorrect patient PDS record data</h3>
         <h2 class="nhsuk-card__heading">Participant details</h2>
