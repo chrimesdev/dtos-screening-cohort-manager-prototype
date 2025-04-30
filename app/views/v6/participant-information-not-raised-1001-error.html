@@ -158,20 +158,19 @@ Cohort Manager{% endblock %} {% block beforeContent %}
 
             <fieldset class="nhsuk-fieldset">
               <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--s">
-                <h5 class="nhsuk-heading-sx">
-                Entering a ServiceNow case ID will change the status of the exception to ‘raised’
-                  <span class="nhsuk-hint" id="example-hint">(you’ll be able to access it on the Total summary page).</span>
-                </h5>
-              <h5 class="nhsuk-heading-xs">
-                   If you need to change the exception status back to ‘not raised’, remove any case ID previously entered and then save the changes with the answer left blank.
-                </h5>
+                <p class="nhsuk-u-font-weight-normal">
+                Entering a ServiceNow case ID will change the status of the exception to ‘raised’. <br>You’ll be able to access it on the Total summary page.
+                </p>
+                <p class="nhsuk-u-font-weight-normal">
+                If you need to change the exception status back to ‘not raised’, remove any case ID previously entered and then save the changes with the answer left blank.
+                </p>
 
               </legend>
 
                 <!---error message--->
 
                 <div class="nhsuk-form-group nhsuk-form-group--error nhsuk-u-margin-bottom-4">
-                  <label class="nhsuk-label nhsuk-u-font-weight-bold required" for="name">
+                  <label class="nhsuk-label nhsuk-u-font-weight-bold" for="name">
                       Enter ServiceNow case ID
                   </label>
                   <div class="nhsuk-hint" id="example-with-hint-text-hint">

@@ -138,26 +138,45 @@ Cohort Manager{% endblock %} {% block beforeContent %}
 
         <div class="nhsuk-form-group">
 
-          <form action="/v6/participant-information-raised-ref" method="post">
+          <form action="/v6/participant-information-raised" method="post">
 
             <fieldset class="nhsuk-fieldset">
               <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--s">
-                <p class="nhsuk-u-font-weight-normal">
-                Entering a ServiceNow case ID will change the status of the exception to ‘raised’. <br>You’ll be able to access it on the Total summary page.
-                </p>
-                <p class="nhsuk-u-font-weight-normal">
-                If you need to change the exception status back to ‘not raised’, remove any case ID previously entered and then save the changes with the answer left blank.
-                </p>
+                <h1 class="nhsuk-fieldset__heading">
+                  Change the status of this exception when it has been raised with National Back Office (NBO):
+                </h1>
               </legend>
 
+              <div class="nhsuk-hint" id="contact-hint">
+                Please ensure this exception has not been processed by another user before making changes to its status.
+              </div>
+
+              <div class="nhsuk-radios nhsuk-u-margin-bottom-4">
+
+                <div class="nhsuk-radios__item">
+                  <input class="nhsuk-radios__input" id="exception-status-2" name="exception-status" type="radio" value="yes">
+                  <label class="nhsuk-label nhsuk-radios__label" for="exception-status-2">
+                    Not raised
+                  </label>
+                </div>
+
+                <div class="nhsuk-radios__item">
+                  <input class="nhsuk-radios__input" id="exception-status-1" name="exception-status" type="radio" value="no" checked>
+                  <label class="nhsuk-label nhsuk-radios__label" for="exception-status-1">
+                    Raised
+                  </label>
+                </div>
+
+              </div>
+
               <div class="nhsuk-u-margin-bottom-4">
-                <label class="nhsuk-label nhsuk-u-font-weight-bold" for="one-third">
-                  Enter ServiceNow Case ID
+                <label class="nhsuk-label nhsuk-u-font-weight-bold required" for="contact">
+                  Enter ServiceNow case ID
                 </label>
                 <div class="nhsuk-hint" id="example-with-hint-text-hint">
                   For example, CS1234567
                 </div>
-                <input class="nhsuk-input nhsuk-u-width-one-third" id="one-third" name="one-third" type="text" value="CS1234567">
+                <input class="nhsuk-input nhsuk-u-width-one-third" id="one-third" name="one-third" type="text">
               </div>
 
               <button class="nhsuk-button" data-module="nhsuk-button" type="submit">

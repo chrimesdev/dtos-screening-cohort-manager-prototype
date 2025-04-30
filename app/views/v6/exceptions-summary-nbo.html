@@ -57,25 +57,30 @@ Manager{% endblock %} {% block beforeContent %}
   </div>
 </div>
 
-<div class="nhsuk-grid-column-one-third" style="padding: 0px 0px !important;">
-  <p class="nhsuk-body" style="float: left; font-size: 1.1875rem">
-    <b>Showing 10 of 20 results</b>
-  </p>
-</div>
 
-    <div class="nhsuk-form-group" style="float: right">
-      <label class="nhsuk-label disp" for="select-1" style="display: inline-block;">
+
+<div class="nhsuk-grid-column-full">
+
+    <div class="nhsuk-form-group nhsuk-u-margin-bottom-0">
+      <label class="nhsuk-label" for="select-1">
         <b>Sort by</b>
       </label>
       <select class="nhsuk-select" id="select-1" name="select-1">
         <option value="1" selected>Date exception created (oldest first)</option>
         <option value="2">Date exception created (newest first)</option>
+      </select>
+      <button class="nhsuk-button" data-module="nhsuk-button" type="submit" style="padding: 4px 16px; font-size: 16px">
+        Apply
+      </button>
 
-  </select>
-  <button class="nhsuk-button" data-module="nhsuk-button" type="submit" style="padding: 4px 16px; font-size: 16px">
-    Apply
-  </button>
+      <p class="nhsuk-body" style="float: right; font-size: 1.1875rem">
+        <b>Showing 10 of 20 results</b>
+      </p>
+      
+    </div>
+
 </div>
+
 
 <div class="nhsuk-grid-row">
   <div class="nhsuk-grid-column-full">

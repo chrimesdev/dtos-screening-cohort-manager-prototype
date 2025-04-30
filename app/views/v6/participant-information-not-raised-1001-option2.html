@@ -69,14 +69,6 @@ Cohort Manager{% endblock %} {% block beforeContent %}
           </dd>
         </div>
 
-        <!---div class="nhsuk-summary-list__row">
-          <dt class="nhsuk-summary-list__key">Contact details</dt>
-          <dd class="nhsuk-summary-list__value">
-            <p>07700 900362</p>
-            <p>sandra.lewis@example.com</p>
-          </dd>
-        </div--->
-
         <div class="nhsuk-summary-list__row">
           <dt class="nhsuk-summary-list__key">Registered practice code</dt>
           <dd class="nhsuk-summary-list__value">B86110</dd>
@@ -138,23 +130,20 @@ Cohort Manager{% endblock %} {% block beforeContent %}
 
         <div class="nhsuk-form-group">
 
-          <form action="/v6/participant-information-not-raised-1001-error"" method="post">
+          <form action="/v6/participant-information-not-raised-1001-error" method="post">
 
             <fieldset class="nhsuk-fieldset">
               <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--s">
-                <h5 class="nhsuk-heading-sx">
-                Entering a ServiceNow case ID will change the status of the exception to ‘raised’
-                  <span class="nhsuk-hint" id="example-hint">(you’ll be able to access it on the Total summary page).</span>
-                  <span class="nhsuk-hint" id="example-hint">
-                       If you need to change the exception status back to ‘not raised’, remove any case ID previously entered and then save the changes with the answer left blank.
-                    </span>
-                </h5>
-
+                <p class="nhsuk-u-font-weight-normal">
+                Entering a ServiceNow case ID will change the status of the exception to ‘raised’. <br>You’ll be able to access it on the Total summary page.
+                </p>
+                <p class="nhsuk-u-font-weight-normal">
+                If you need to change the exception status back to ‘not raised’, remove any case ID previously entered and then save the changes with the answer left blank.
+                </p>
               </legend>
 
-
               <div class="nhsuk-u-margin-bottom-4">
-                <label class="nhsuk-label nhsuk-u-font-weight-bold required" for="one-third">
+                <label class="nhsuk-label nhsuk-u-font-weight-bold" for="one-third">
                   Enter ServiceNow Case ID
                 </label>
                 <div class="nhsuk-hint" id="example-with-hint-text-hint">
