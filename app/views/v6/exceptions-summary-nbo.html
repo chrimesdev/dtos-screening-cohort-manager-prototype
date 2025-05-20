@@ -88,12 +88,12 @@ Manager{% endblock %} {% block beforeContent %}
       <div class="nhsuk-card__content">
         <table role="table" class="nhsuk-table-responsive">
           <thead role="rowgroup" class="nhsuk-table__head">
-            <tr>
-              <th class="nhsuk-table__header" scope="col">Local reference <br>(exception ID)</th>
-              <th class="nhsuk-table__header" scope="col">NHS number</th>
-              <th class="nhsuk-table__header" scope="col">Date exception <br>created</th>
-              <th class="nhsuk-table__header" scope="col">Short description</th>
-              <th class="nhsuk-table__header" scope="col">Exception status</th>
+            <tr role="row">
+              <th role="columnheader" scope="col">Local reference<br/>Exception ID</th>
+              <th role="columnheader" scope="col">NHS number</th>
+              <th role="columnheader" scope="col">Date exception <br/>created</th>
+              <th role="columnheader" scope="col">Short description</th>
+              <th role="columnheader" scope="col">Exception status</th>
             </tr>
           </thead>
           <tbody class="nhsuk-table__body">
@@ -312,6 +312,7 @@ Manager{% endblock %} {% block beforeContent %}
             dateElement.textContent = today.toLocaleDateString('en-GB', options);
         </script>
     </div>
+
 
   </div>
 </div>
