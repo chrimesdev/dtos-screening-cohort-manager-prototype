@@ -51,10 +51,15 @@ Manager{% endblock %} {% block beforeContent %}
 
   {% endblock %} {% block content %}
   <div class="nhsuk-grid-row">
-    <div class="nhsuk-grid-column-full">
-      <h1>Summary
-        <span class="nhsuk-caption-xl">Breast screening exceptions not raised with National Back Office (NBO)</span>
+    <div class="nhsuk-grid-column-full nhsuk-u-margin-bottom-7">
+      <h1 class="nhsuk-label-wrapper">
+        <label class="nhsuk-label nhsuk-label--xl" for="summary">
+        Summary
+        </label>
       </h1>
+        <div class="nhsuk-caption-xl" id="summary-hint" aria-label="Summary-hint">
+          Breast screening exceptions not raised with National Back Office (NBO)
+        </div>
     </div>
   </div>
 
