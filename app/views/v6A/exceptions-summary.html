@@ -50,9 +50,11 @@ Manager{% endblock %} {% block beforeContent %}
 
   {% endblock %} {% block content %}
   <div class="nhsuk-grid-row">
-    <div class="nhsuk-grid-column-full">
-      <h1>Summary
-        <span class="nhsuk-caption-xl">All breast screening exceptions</span>
+    <div class="nhsuk-grid-column-full nhsuk-u-margin-bottom-7">
+      <h1 class="nhsuk-label-wrapper">
+        <label class="nhsuk-label nhsuk-label--xl" for="summary">
+        Raised breast screening exceptions
+        </label>
       </h1>
     </div>
   </div>
@@ -72,7 +74,7 @@ Manager{% endblock %} {% block beforeContent %}
         </button>
 
         <p class="nhsuk-body" style="float: right; font-size: 1.1875rem">
-          <b>Showing 10 of 20 results</b>
+          <b>Showing 10 of 15 results</b>
         </p>
 
       </div>
@@ -187,7 +189,7 @@ Manager{% endblock %} {% block beforeContent %}
                   <span class="nhsuk-table-responsive__heading" aria-hidden="true">Short description </span>Possible confused NHS Number
                 </td>
                 <td class="nhsuk-table__cell">
-                  <strong class="nhsuk-tag nhsuk-tag--grey">Not raised</strong>
+                  <strong class="nhsuk-tag nhsuk-tag">Raised</strong>
                 </td>
               </tr>
 
@@ -206,7 +208,7 @@ Manager{% endblock %} {% block beforeContent %}
                   <span class="nhsuk-table-responsive__heading" aria-hidden="true">Short description </span>The following fields have missing or conflicting information: GP practice code, reason for removal
                 </td>
                 <td class="nhsuk-table__cell">
-                  <strong class="nhsuk-tag nhsuk-tag--grey">Not raised</strong>
+                  <strong class="nhsuk-tag nhsuk-tag">Raised</strong>
                 </td>
               </tr>
 
@@ -225,7 +227,7 @@ Manager{% endblock %} {% block beforeContent %}
                   <span class="nhsuk-table-responsive__heading" aria-hidden="true">Short description </span>Postcode is in the wrong format
                 </td>
                 <td class="nhsuk-table__cell">
-                  <strong class="nhsuk-tag nhsuk-tag--grey">Not raised</strong>
+                  <strong class="nhsuk-tag nhsuk-tag">Raised</strong>
                 </td>
               </tr>
 
@@ -244,7 +246,7 @@ Manager{% endblock %} {% block beforeContent %}
                   <span class="nhsuk-table-responsive__heading" aria-hidden="true">Short description </span>Missing forename
                 </td>
                 <td class="nhsuk-table__cell">
-                  <strong class="nhsuk-tag nhsuk-tag--grey">Not raised</strong>
+                  <strong class="nhsuk-tag nhsuk-tag">Raised</strong>
                 </td>
               </tr>
 
@@ -265,7 +267,7 @@ Manager{% endblock %} {% block beforeContent %}
                   Address is blank
                 </td>
                 <td class="nhsuk-table__cell">
-                  <strong class="nhsuk-tag nhsuk-tag--grey">Not raised</strong>
+                  <strong class="nhsuk-tag nhsuk-tag">Raised</strong>
                 </td>
               </tr>
 
@@ -284,7 +286,7 @@ Manager{% endblock %} {% block beforeContent %}
                   <span class="nhsuk-table-responsive__heading" aria-hidden="true">Short description </span>Postcode is in the wrong format
                 </td>
                 <td class="nhsuk-table__cell">
-                  <strong class="nhsuk-tag nhsuk-tag--grey">Not raised</strong>
+                  <strong class="nhsuk-tag nhsuk-tag">Raised</strong>
                 </td>
               </tr>
               <tr role="row" class="nhsuk-table__row">
@@ -302,7 +304,7 @@ Manager{% endblock %} {% block beforeContent %}
                   <span class="nhsuk-table-responsive__heading" aria-hidden="true">Short description </span>Possible confused NHS Number
                 </td>
                 <td class="nhsuk-table__cell">
-                  <strong class="nhsuk-tag nhsuk-tag--grey">Not raised</strong>
+                  <strong class="nhsuk-tag nhsuk-tag">Raised</strong>
                 </td>
               </tr>
 
