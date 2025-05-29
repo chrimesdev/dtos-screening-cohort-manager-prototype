@@ -1,0 +1,186 @@
+{% extends 'layout.html' %} {% block pageTitle %}Participant information -
+Cohort Manager{% endblock %} {% block beforeContent %}
+
+
+<nav class="nhsuk-breadcrumb" aria-label="Breadcrumb">
+  <ol class="nhsuk-breadcrumb__list">
+    <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="/v6A">Overview</a></li>
+    <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="/v6A/exceptions-summary">Exceptions Summary</a></li>
+  <!--- li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="#">Level three</a></li--->
+  </ol>
+  <p class="nhsuk-breadcrumb__back">
+    <a class="nhsuk-breadcrumb__backlink" href="/v6A/exceptions-summary">
+      <span class="nhsuk-u-visually-hidden">Back to &nbsp;</span>
+      Exceptions Summary
+    </a>
+  </p>
+</nav>
+
+{% endblock %} {% block content %}
+<div class="nhsuk-grid-row">
+  <div class="nhsuk-grid-column-two-thirds nhsuk-u-margin-bottom-7">
+    <h1 class="nhsuk-label-wrapper">
+      <label class="nhsuk-label nhsuk-label--xl" for="exception-information">
+      Exception information
+      </label>
+    </h1>
+    <div class="nhsuk-caption-xl" id="exception-information-hint" aria-label="exception-information-hint" >
+    Local reference (exception ID): 1001
+    </div>
+
+  </div>
+</div>
+
+<div class="nhsuk-grid-row">
+  <div class="nhsuk-grid-column-full">
+
+<div class="nhsuk-card nhsuk-do-dont-list nhsuk-u-margin-bottom-4 nhsuk-u-margin-top-0">
+
+    <h3 class="nhsuk-do-dont-list__label">Portal form: Request to amend incorrect patient PDS record data</h3>
+      <h2 class="nhsuk-card__heading">Participant details</h2>
+
+      <dl class="nhsuk-summary-list">
+
+        <div class="nhsuk-summary-list__row">
+          <dt class="nhsuk-summary-list__key">NHS number</dt>
+          <dd class="nhsuk-summary-list__value">723 333 6891</dd>
+        </div>
+
+        <div class="nhsuk-summary-list__row">
+          <dt class="nhsuk-summary-list__key">Surname</dt>
+          <dd class="nhsuk-summary-list__value">Lewis</dd>
+        </div>
+
+        <div class="nhsuk-summary-list__row">
+          <dt class="nhsuk-summary-list__key">Forename</dt>
+          <dd class="nhsuk-summary-list__value">Sandra</dd>
+        </div>
+
+
+        <div class="nhsuk-summary-list__row">
+          <dt class="nhsuk-summary-list__key">Date of birth</dt>
+          <dd class="nhsuk-summary-list__value">18/11/1993</dd>
+        </div>
+
+        <div class="nhsuk-summary-list__row">
+          <dt class="nhsuk-summary-list__key">Gender</dt>
+          <dd class="nhsuk-summary-list__value">Female</dd>
+        </div>
+
+        <div class="nhsuk-summary-list__row">
+          <dt class="nhsuk-summary-list__key">Current address</dt>
+          <dd class="nhsuk-summary-list__value">
+            73 Roman Rd<br />Leeds<br />
+            LS2 5ZN
+          </dd>
+        </div>
+
+        <div class="nhsuk-summary-list__row">
+          <dt class="nhsuk-summary-list__key">Contact details</dt>
+          <dd class="nhsuk-summary-list__value">
+            <p>07700 900362</p>
+            <p>sandra.lewis@example.com</p>
+          </dd>
+        </div>
+
+        <div class="nhsuk-summary-list__row">
+          <dt class="nhsuk-summary-list__key">Registered practice code</dt>
+          <dd class="nhsuk-summary-list__value">B86110</dd>
+        </div>
+
+        <div class="nhsuk-summary-list__row">
+          <dt class="nhsuk-summary-list__key">Registered practice address</dt>
+          <dd class="nhsuk-summary-list__value">
+            Anytown Medical Centre<br>
+            Anywhere<br>
+            Anytown<br>
+            AT1 1AA
+        </div>
+
+      </dl>
+
+</div>
+
+
+    <div class="nhsuk-card nhsuk-u-margin-bottom-4">
+      <div class="nhsuk-card__content">
+        <h2 class="nhsuk-card__heading">Exception details</h2>
+
+        <dl class="nhsuk-summary-list">
+          <div class="nhsuk-summary-list__row">
+            <dt class="nhsuk-summary-list__key">Date exception created</dt>
+            <dd class="nhsuk-summary-list__value date"></dd>
+          </div>
+
+          <div class="nhsuk-summary-list__row">
+            <dt class="nhsuk-summary-list__key">More detail</dt>
+            <dd class="nhsuk-summary-list__value">
+
+                  <p>The following fields have missing or conflicting information: GP practice code, reason for removal</p>
+                  <p>Either:</p>
+                  <ul>
+                    <li>enter a GP practice code, or </li>
+                    <li>enter a reason for removal</li>
+                  </ul>
+                  <p>Information must only be entered for one of these fields.
+                  Both fields cannot be empty</p>
+                  <p>Cohort Manager rule (to be included for reporting): CMR13</p>
+
+            </dd>
+          </div>
+
+          <div class="nhsuk-summary-list__row">
+            <dt class="nhsuk-summary-list__key">Exception status</dt>
+            <dd class="nhsuk-summary-list__value"><strong class="nhsuk-tag nhsuk-tag--grey">Not raised</strong></dd>
+          </div>
+
+        </dl>
+      </div>
+    </div>
+
+    <div class="nhsuk-card nhsuk-u-margin-bottom-4">
+      <div class="nhsuk-card__content">
+        <h2 class="nhsuk-card__heading">Exception status</h2>
+
+        <div class="nhsuk-form-group">
+
+          <form action="/v6A/participant-information-raised-ref" method="post">
+
+            <fieldset class="nhsuk-fieldset">
+              <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--s">
+                <p class="nhsuk-u-font-weight-normal">
+                Entering a ServiceNow case ID will change the status of the exception to “Raised”. <br/>You’ll be able to access it on the “Raised breast screening exceptions” page.
+                </p>
+                <p class="nhsuk-u-font-weight-normal">
+                If you need to change the exception status back to “Not raised”, delete any case ID previously entered and then save the changes with this field left empty.
+                </p>
+              </legend>
+
+              <div class="nhsuk-u-margin-bottom-4"  id="case">
+                <label class="nhsuk-label nhsuk-u-font-weight-bold" for="one-third">
+                  Enter ServiceNow Case ID
+                </label>
+                <div class="nhsuk-hint" id="example-with-hint-text-hint">
+                  For example, CS1234567
+                </div>
+                <input class="nhsuk-input nhsuk-u-width-one-third" id="one-third" name="one-third" type="text" value="CS1234567">
+              </div>
+
+              <button class="nhsuk-button" data-module="nhsuk-button" type="submit">
+                Save and continue
+              </button>
+
+
+            </fieldset>
+
+          </form>
+
+        </div>
+
+      </div>
+    </div>
+
+
+  </div>
+  {% endblock %}
+</div>
