@@ -39,7 +39,7 @@ Cohort Manager{% endblock %} {% block beforeContent %}
   </h2>
   <div class="nhsuk-error-summary__body">
     <ul class="nhsuk-list nhsuk-error-summary__list" role="list">
-      <li> <a href="#name">ServiceNow case ID must be 9 characters. It is made up of 2 letters and 7 numbers, like CS1234567</a>
+      <li> <a href="#name">ServiceNow case ID must not contain any special characters</a>
       </li>
     </ul>
   </div>
@@ -183,7 +183,7 @@ Cohort Manager{% endblock %} {% block beforeContent %}
                   </div>
 
                   <span class="nhsuk-error-message" id="name-error">
-                    <span class="nhsuk-u-visually-hidden">Error:</span> ServiceNow case ID must be 9 characters. <br/>It is made up of 2 letters and 7 numbers, like CS1234567
+                    <span class="nhsuk-u-visually-hidden">Error:</span>ServiceNow case ID must not contain any special characters
                   </span>
                   <input class="nhsuk-input nhsuk-input--error nhsuk-input nhsuk-input--width-10" id="name" name="name" type="text" aria-describedby="name-error">
                 </div>

@@ -1,12 +1,16 @@
-{% extends 'layout.html' %} {% block pageTitle %}Error - Not authorised {%
-endblock %} {% block content %}
+{% extends 'layout.html' %} {% block pageTitle %}Screening prototype -
+Screening{% endblock %} {% block header %} {{ header({ "service": { "name":
+"Screening", "href": "/" }, "showNav": "false", "showSearch": "false" }) }} {% endblock %}
+
+
+{% block content %}
 
 <main class="nhsuk-main-wrapper nhsuk-main-wrapper--s" id="maincontent" role="main">
     <div class="nhsuk-grid-row">
       <div class="nhsuk-grid-column-two-thirds">
 
         <h1>You are not authorised to view this page </h1>
-        <p><a href="#">Contact us</a>, to request access, providing:</p>
+        <p><a href="#">Contact us</a> to request access, providing:</p>
         <ul>
           <li>your name </li>
           <li>your used ID </li>
