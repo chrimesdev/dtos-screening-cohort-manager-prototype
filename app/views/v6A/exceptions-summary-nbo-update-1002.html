@@ -38,8 +38,6 @@ Manager{% endblock %} {% block beforeContent %}
   <nav class="nhsuk-breadcrumb" aria-label="Breadcrumb">
     <ol class="nhsuk-breadcrumb__list">
       <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="/v6A">Home</a></li>
-      <!---li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="#">Level two</a></li>
-      <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="#">Level three</a></li--->
     </ol>
     <p class="nhsuk-breadcrumb__back">
       <a class="nhsuk-breadcrumb__backlink" href="/v6A">
@@ -54,12 +52,9 @@ Manager{% endblock %} {% block beforeContent %}
     <div class="nhsuk-grid-column-full nhsuk-u-margin-bottom-7">
       <h1 class="nhsuk-label-wrapper">
         <label class="nhsuk-label nhsuk-label--xl" for="summary">
-        Summary
+        Not raised breast screening exceptions
         </label>
       </h1>
-        <div class="nhsuk-caption-xl" id="summary-hint" aria-label="Summary-hint">
-          Breast screening exceptions not raised with National Back Office (NBO)
-        </div>
     </div>
   </div>
 
@@ -93,9 +88,9 @@ Manager{% endblock %} {% block beforeContent %}
 
           <thead role="rowgroup" class="nhsuk-table__head">
             <tr role="row">
-              <th role="columnheader" scope="col">Exception ID</th>
+              <th role="columnheader" scope="col">Local reference<br/>Exception ID</th>
               <th role="columnheader" scope="col">NHS number</th>
-              <th role="columnheader" scope="col">Date exception created</th>
+              <th role="columnheader" scope="col">Date exception <br/>created</th>
               <th role="columnheader" scope="col">Short description</th>
               <th role="columnheader" scope="col">Exception status</th>
             </tr>
