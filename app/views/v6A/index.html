@@ -1,18 +1,19 @@
 {% extends 'layout.html' %} {% block pageTitle %} Home - Cohort Manager {%
-endblock %} {% block content %}
+endblock %} {% block beforeContent %}
 
 
+
+{% endblock %} {% block content %}
 <div class="nhsuk-grid-row">
   <div class="nhsuk-grid-column-two-thirds nhsuk-u-margin-bottom-7">
     <h1 class="nhsuk-label-wrapper">
-      <label class="nhsuk-label nhsuk-label--xl" for="Breast-screening-exceptions">
+      <div class="nhsuk-label nhsuk-label--xl" aria-label="Breast-screening-exceptions">
       Breast screening exceptions
-      </label>
+      </div>
     </h1>
-    <div class="nhsuk-caption-xl" id="Breast-screening-exceptions-hint" aria-label="Breast-screening-exceptions-home" >
+    <div class="nhsuk-caption-xl" aria-label="Breast-screening-exceptions-home" >
     Home
     </div>
-
   </div>
 </div>
 
@@ -22,7 +23,7 @@ endblock %} {% block content %}
   <li class="nhsuk-grid-column-one-quarter nhsuk-card-group__item">
     <div class="nhsuk-card nhsuk-card--clickable">
       <div class="nhsuk-card__content">
-        <p class="nhsuk-heading-xl nhsuk-u-font-size-64 nhsuk-u-margin-bottom-1">20<span class="nhsuk-u-visually-hidden">Not raised</span></p>
+        <h1 class="nhsuk-heading-xl nhsuk-u-font-size-64 nhsuk-u-margin-bottom-1">20<span class="nhsuk-u-visually-hidden">Not raised</span></h1>
         <h2 class="nhsuk-card__heading nhsuk-heading-m">
           <a class="nhsuk-card__link" href="/v6A/exceptions-summary-nbo">Not raised</a>
         </h2>
@@ -35,7 +36,7 @@ endblock %} {% block content %}
   <li class="nhsuk-grid-column-one-quarter nhsuk-card-group__item">
     <div class="nhsuk-card nhsuk-card--clickable">
       <div class="nhsuk-card__content">
-        <p class="nhsuk-heading-xl nhsuk-u-font-size-64 nhsuk-u-margin-bottom-1">15<span class="nhsuk-u-visually-hidden">Raised</span></p>
+        <h1 class="nhsuk-heading-xl nhsuk-u-font-size-64 nhsuk-u-margin-bottom-1">15<span class="nhsuk-u-visually-hidden">Raised</span></h1>
         <h2 class="nhsuk-card__heading nhsuk-heading-m">
           <a class="nhsuk-card__link" href="/v6A/exceptions-summary">Raised</a>
         </h2>
