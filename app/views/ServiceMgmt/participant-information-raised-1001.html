@@ -197,7 +197,7 @@ Manager{% endblock %} {% block header %}
         <dl class="nhsuk-summary-list">
           <div class="nhsuk-summary-list__row">
             <dt class="nhsuk-summary-list__key">Date exception created</dt>
-            <dd class="nhsuk-summary-list__value"><p id="yesterday-date"></p></dd>
+            <dd class="nhsuk-summary-list__value"><span class="date-yesterday"></span></dd>
 
           </div>
 
@@ -225,20 +225,28 @@ Manager{% endblock %} {% block header %}
 
 
     <script>
-        // Function to get the formatted date
-        function formatDate(date) {
-            const options = { year: 'numeric', month: 'long', day: '2-digit' };
-            return date.toLocaleDateString('en-GB', options);
-        }
+      // Utility function to get a formatted date string
+      function getFormattedDate(offset) {
+        const date = new Date();
+        date.setDate(date.getDate() - offset);
+        const options = { year: 'numeric', month: 'long', day: '2-digit' };
+        return date.toLocaleDateString('en-GB', options); // Format: DD-month-YYYY
+      }
 
-        // Get today's date
-        const today = new Date();
-        document.getElementById('today-date').textContent = formatDate(today);
+      // Function to populate dates
+      function populateDates() {
+        const today = getFormattedDate(0);
+        const yesterday = getFormattedDate(1);
+        const dayBeforeYesterday = getFormattedDate(2);
 
-        // Get yesterday's date
-        const yesterday = new Date(today);
-        yesterday.setDate(today.getDate() - 1);
-        document.getElementById('yesterday-date').textContent = formatDate(yesterday);
+        // Replace content for each type of date
+        document.querySelectorAll('.date-today').forEach(el => el.textContent = today);
+        document.querySelectorAll('.date-yesterday').forEach(el => el.textContent = yesterday);
+        document.querySelectorAll('.date-today-2').forEach(el => el.textContent = dayBeforeYesterday);
+      }
+
+      // Run when page loads
+      window.onload = populateDates;
     </script>
 
     <!---<p><strong>Exception last updated:</strong> 18 December 2024</p>--->
