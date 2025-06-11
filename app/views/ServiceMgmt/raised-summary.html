@@ -128,8 +128,6 @@ Manager{% endblock %} {% block header %}
 
   </div>
 
-
-
 <div class="nhsuk-grid-row">
   <div class="nhsuk-grid-column-full">
     <div class="nhsuk-card nhsuk-u-margin-bottom-2">
@@ -143,7 +141,7 @@ Manager{% endblock %} {% block header %}
               <th role="columnheader" scope="col">Date exception <br>created</th>
               <th role="columnheader" scope="col">Short <br>description</th>
               <th role="columnheader" scope="col">SNow <br>case ID</th>
-              <th role="columnheader" scope="col">Exception <br>status</th>
+              <th role="columnheader" scope="col" style="width:120px;">Exception <br>status</th>
             </tr>
           </thead>
           <tbody class="nhsuk-table__body">
@@ -173,7 +171,7 @@ Manager{% endblock %} {% block header %}
                 >CS1234567
               </td>
               <td class="nhsuk-table__cell">
-                <strong class="nhsuk-tag">Raised</strong>
+                <strong class="nhsuk-tag">Raised</strong><br> on <span class="date-today"></span>
               </td>
             </tr>
 
@@ -201,7 +199,7 @@ Manager{% endblock %} {% block header %}
                 >CS1111111
               </td>
               <td class="nhsuk-table__cell">
-                  <strong class="nhsuk-tag">Raised</strong>
+                  <strong class="nhsuk-tag">Raised</strong><br> on <span class="date-today"></span>
               </td>
               </tr>
 
@@ -230,7 +228,7 @@ Manager{% endblock %} {% block header %}
                 >CS9999990
               </td>
               <td class="nhsuk-table__cell">
-              <strong class="nhsuk-tag">Raised</strong>
+              <strong class="nhsuk-tag">Raised</strong><br> on <span class="date-today"></span>
               </td>
               </tr>
 
@@ -254,7 +252,7 @@ Manager{% endblock %} {% block header %}
                   >CS7654321
                 </td>
                 <td class="nhsuk-table__cell">
-                  <strong class="nhsuk-tag nhsuk-tag">Raised</strong>
+                  <strong class="nhsuk-tag nhsuk-tag">Raised</strong><br> on <span class="date-today"></span>
                 </td>
               </tr>
 
@@ -278,7 +276,7 @@ Manager{% endblock %} {% block header %}
                   >CS6543217
                 </td>
                 <td class="nhsuk-table__cell">
-                  <strong class="nhsuk-tag nhsuk-tag">Raised</strong>
+                  <strong class="nhsuk-tag nhsuk-tag">Raised</strong><br> on <span class="date-today"></span>
                 </td>
               </tr>
 
@@ -302,7 +300,7 @@ Manager{% endblock %} {% block header %}
                   >CS5432176
                 </td>
                 <td class="nhsuk-table__cell">
-                  <strong class="nhsuk-tag nhsuk-tag">Raised</strong>
+                  <strong class="nhsuk-tag nhsuk-tag">Raised</strong><br> on <span class="date-today"></span>
                 </td>
               </tr>
 
@@ -326,7 +324,7 @@ Manager{% endblock %} {% block header %}
                   >CS4321765
                 </td>
                 <td class="nhsuk-table__cell">
-                  <strong class="nhsuk-tag nhsuk-tag">Raised</strong>
+                  <strong class="nhsuk-tag nhsuk-tag">Raised</strong><br> on <span class="date-today"></span>
                 </td>
               </tr>
 
@@ -352,7 +350,7 @@ Manager{% endblock %} {% block header %}
                   >CS3217654
                 </td>
                 <td class="nhsuk-table__cell">
-                  <strong class="nhsuk-tag nhsuk-tag">Raised</strong>
+                  <strong class="nhsuk-tag nhsuk-tag">Raised</strong><br> on <span class="date-today"></span>
                 </td>
               </tr>
 
@@ -376,7 +374,7 @@ Manager{% endblock %} {% block header %}
                   >CS2176543
                 </td>
                 <td class="nhsuk-table__cell">
-                  <strong class="nhsuk-tag nhsuk-tag">Raised</strong>
+                  <strong class="nhsuk-tag nhsuk-tag">Raised</strong><br> on <span class="date-today"></span>
                 </td>
               </tr>
 
@@ -400,7 +398,7 @@ Manager{% endblock %} {% block header %}
                   >CS1765432
                 </td>
                 <td class="nhsuk-table__cell">
-                  <strong class="nhsuk-tag nhsuk-tag">Raised </strong>
+                  <strong class="nhsuk-tag nhsuk-tag">Raised </strong><br> on <span class="date-today"></span>
                 </td>
               </tr>
 
@@ -420,27 +418,32 @@ Manager{% endblock %} {% block header %}
       </div>
 
 
-  <script>
-      // Function to get the formatted date
-      function formatDate(date) {
+      <script>
+        // Utility function to get a formatted date string
+        function getFormattedDate(offset) {
+          const date = new Date();
+          date.setDate(date.getDate() - offset);
           const options = { year: 'numeric', month: 'long', day: '2-digit' };
-          return date.toLocaleDateString('en-GB', options);
-      }
+          return date.toLocaleDateString('en-GB', options); // Format: DD-month-YYYY
+        }
 
-      // Get today's date
-      const today = new Date();
-      document.getElementById('today-date').textContent = formatDate(today);
+        // Function to populate dates
+        function populateDates() {
+          const today = getFormattedDate(0);
+          const yesterday = getFormattedDate(1);
+          const dayBeforeYesterday = getFormattedDate(2);
 
-      // Get yesterday's date
-      const yesterday = new Date(today);
-      yesterday.setDate(today.getDate() - 1);
-      document.getElementById('yesterday-date').textContent = formatDate(yesterday);
+          // Replace content for each type of date
+          document.querySelectorAll('.date-today').forEach(el => el.textContent = today);
+          document.querySelectorAll('.date-yesterday').forEach(el => el.textContent = yesterday);
+          document.querySelectorAll('.date-today-2').forEach(el => el.textContent = dayBeforeYesterday);
+        }
 
-      // Get previouss date
-      const previous = new Date(today);
-      previous.setDate(today.getDate() - 3);
-      document.getElementById('previous-date').textContent = formatDate(previous);
-  </script>
+        // Run when page loads
+        window.onload = populateDates;
+      </script>
+
+
   <style>
       .pagination {
         display: flex;
