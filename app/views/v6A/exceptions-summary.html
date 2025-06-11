@@ -1,38 +1,7 @@
 {% extends 'layout.html' %} {% block pageTitle %}Exceptions summary - Cohort
 Manager{% endblock %} {% block beforeContent %}
 
-<style>
-    .pagination {
-      display: flex;
-      gap: 20px;
-      align-items: center;
-      font-family: sans-serif;
-      margin-top:30px;
-      margin-left: 10px;
-    }
-    .page-number {
-      padding: 8px 12px;
-      border: 1px solid #ccc;
-      border-radius: 4px;
-    }
-    .page-number.active {
-      background-color: #005eb8;
-      color: white;
-      pointer-events: none;
-      cursor: default;
-    }
-    .next-link {
-      display: flex;
-      align-items: center;
-      gap: 4px;
-      text-decoration: none;
-      color: #005eb8;
-      font-weight: bold;
-    }
-    .next-link:hover {
-      text-decoration: underline;
-    }
-  </style>
+
 
   <nav class="nhsuk-breadcrumb" aria-label="Breadcrumb">
     <ol class="nhsuk-breadcrumb__list">
@@ -120,7 +89,7 @@ Manager{% endblock %} {% block beforeContent %}
                 The following fields have missing or conflicting information: GP practice code, reason for removal
               </td>
               <td class="nhsuk-table__cell">
-                <strong class="nhsuk-tag">Raised</strong>
+                <strong class="nhsuk-tag">Raised</strong> <br> on <span class="date-today"></span>
               </td>
             </tr>
 
@@ -144,11 +113,9 @@ Manager{% endblock %} {% block beforeContent %}
                   >Short description </span>Missing forename
               </td>
               <td class="nhsuk-table__cell">
-                  <strong class="nhsuk-tag">Raised</strong>
+                  <strong class="nhsuk-tag">Raised</strong> <br>on <span class="date-today"></span>
               </td>
               </tr>
-
-
 
             <tr role="row" class="nhsuk-table__row">
               <td role="cell" class="nhsuk-table__cell">
@@ -170,7 +137,7 @@ Manager{% endblock %} {% block beforeContent %}
                   >Short description </span>Postcode is in the wrong format
               </td>
               <td class="nhsuk-table__cell">
-              <strong class="nhsuk-tag">Raised</strong>
+              <strong class="nhsuk-tag">Raised</strong><br>on <span class="date-today"></span>
               </td>
               </tr>
 
@@ -189,7 +156,7 @@ Manager{% endblock %} {% block beforeContent %}
                   <span class="nhsuk-table-responsive__heading" aria-hidden="true">Short description </span>Possible confused NHS Number
                 </td>
                 <td class="nhsuk-table__cell">
-                  <strong class="nhsuk-tag nhsuk-tag">Raised</strong>
+                  <strong class="nhsuk-tag nhsuk-tag">Raised</strong><br>on <span class="date-today"></span>
                 </td>
               </tr>
 
@@ -208,7 +175,7 @@ Manager{% endblock %} {% block beforeContent %}
                   <span class="nhsuk-table-responsive__heading" aria-hidden="true">Short description </span>The following fields have missing or conflicting information: GP practice code, reason for removal
                 </td>
                 <td class="nhsuk-table__cell">
-                  <strong class="nhsuk-tag nhsuk-tag">Raised</strong>
+                  <strong class="nhsuk-tag nhsuk-tag">Raised</strong><br>on <span class="date-today"></span>
                 </td>
               </tr>
 
@@ -227,7 +194,7 @@ Manager{% endblock %} {% block beforeContent %}
                   <span class="nhsuk-table-responsive__heading" aria-hidden="true">Short description </span>Postcode is in the wrong format
                 </td>
                 <td class="nhsuk-table__cell">
-                  <strong class="nhsuk-tag nhsuk-tag">Raised</strong>
+                  <strong class="nhsuk-tag nhsuk-tag">Raised</strong><br>on <span class="date-today"></span>
                 </td>
               </tr>
 
@@ -246,7 +213,7 @@ Manager{% endblock %} {% block beforeContent %}
                   <span class="nhsuk-table-responsive__heading" aria-hidden="true">Short description </span>Missing forename
                 </td>
                 <td class="nhsuk-table__cell">
-                  <strong class="nhsuk-tag nhsuk-tag">Raised</strong>
+                  <strong class="nhsuk-tag nhsuk-tag">Raised</strong><br>on <span class="date-today"></span>
                 </td>
               </tr>
 
@@ -267,7 +234,7 @@ Manager{% endblock %} {% block beforeContent %}
                   Address is blank
                 </td>
                 <td class="nhsuk-table__cell">
-                  <strong class="nhsuk-tag nhsuk-tag">Raised</strong>
+                  <strong class="nhsuk-tag nhsuk-tag">Raised</strong><br>on <span class="date-yesterday"></span>
                 </td>
               </tr>
 
@@ -286,7 +253,7 @@ Manager{% endblock %} {% block beforeContent %}
                   <span class="nhsuk-table-responsive__heading" aria-hidden="true">Short description </span>Postcode is in the wrong format
                 </td>
                 <td class="nhsuk-table__cell">
-                  <strong class="nhsuk-tag nhsuk-tag">Raised</strong>
+                  <strong class="nhsuk-tag nhsuk-tag">Raised</strong><br>on <span class="date-yesterday"></span>
                 </td>
               </tr>
               <tr role="row" class="nhsuk-table__row">
@@ -304,7 +271,7 @@ Manager{% endblock %} {% block beforeContent %}
                   <span class="nhsuk-table-responsive__heading" aria-hidden="true">Short description </span>Possible confused NHS Number
                 </td>
                 <td class="nhsuk-table__cell">
-                  <strong class="nhsuk-tag nhsuk-tag">Raised</strong>
+                  <strong class="nhsuk-tag nhsuk-tag">Raised</strong><br>on <span class="date-today-2"></span>
                 </td>
               </tr>
 
@@ -326,7 +293,7 @@ Manager{% endblock %} {% block beforeContent %}
       </div>
 
 
-  <script>
+  <!---script>
       // Function to get the formatted date
       function formatDate(date) {
           const options = { year: 'numeric', month: 'long', day: '2-digit' };
@@ -342,12 +309,76 @@ Manager{% endblock %} {% block beforeContent %}
       yesterday.setDate(today.getDate() - 1);
       document.getElementById('yesterday-date').textContent = formatDate(yesterday);
 
-      // Get previouss date
+      // Get previous date
       const previous = new Date(today);
-      previous.setDate(today.getDate() - 3);
+      previous.setDate(today.getDate() - 2);
       document.getElementById('previous-date').textContent = formatDate(previous);
+
+  </script--->
+
+
+
+  <script>
+    // Utility function to get a formatted date string
+    function getFormattedDate(offset) {
+      const date = new Date();
+      date.setDate(date.getDate() - offset);
+      const options = { year: 'numeric', month: 'long', day: '2-digit' };
+      return date.toLocaleDateString('en-GB', options); // Format: DD-month-YYYY
+    }
+
+    // Function to populate dates
+    function populateDates() {
+      const today = getFormattedDate(0);
+      const yesterday = getFormattedDate(1);
+      const dayBeforeYesterday = getFormattedDate(2);
+
+      // Replace content for each type of date
+      document.querySelectorAll('.date-today').forEach(el => el.textContent = today);
+      document.querySelectorAll('.date-yesterday').forEach(el => el.textContent = yesterday);
+      document.querySelectorAll('.date-today-2').forEach(el => el.textContent = dayBeforeYesterday);
+    }
+
+    // Run when page loads
+    window.onload = populateDates;
   </script>
 
+
+
+
+
+  <style>
+      .pagination {
+        display: flex;
+        gap: 20px;
+        align-items: center;
+        font-family: sans-serif;
+        margin-top:30px;
+        margin-left: 10px;
+      }
+      .page-number {
+        padding: 8px 12px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+      }
+      .page-number.active {
+        background-color: #005eb8;
+        color: white;
+        pointer-events: none;
+        cursor: default;
+      }
+      .next-link {
+        display: flex;
+        align-items: center;
+        gap: 4px;
+        text-decoration: none;
+        color: #005eb8;
+        font-weight: bold;
+      }
+      .next-link:hover {
+        text-decoration: underline;
+      }
+    </style>
 
     </div>
   {% endblock %}
