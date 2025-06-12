@@ -475,9 +475,28 @@ Manager{% endblock %} {% block header %}
       .next-link:hover {
         text-decoration: underline;
       }
+
+      .floating-div {
+      position: fixed;
+      top: 750px;
+      right: 20px;
+      width: 150px;
+      padding: 15px;
+      background-color: #ffeb3b;
+      color: black;
+      border-radius: 8px;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+      z-index: 1000;
+    }
     </style>
 
+    <div class="floating-div">
+    <a href="raised-summary-option2">Option 2</a>
     </div>
+
+  </div>
   {% endblock %}
+
+
 </div>
 </div>
