@@ -47,6 +47,11 @@ block outerContent %} {% endblock %} {% block header %} {{ header({ "service": {
     </button>
 </form>
 
+
+<div class="floating-div">
+  <a href="/BSS-2-line/home">Go to Option 2</a>
+</div>
+
   <script>
     function handleSubmit(event) {
       event.preventDefault();
@@ -68,4 +73,19 @@ block outerContent %} {% endblock %} {% block header %} {{ header({ "service": {
   }
 }
   </script>
+
+  <style>
+    .floating-div {
+      position: fixed;
+      top: 200px;
+      right: 20px;
+      width: 120px;
+      padding: 15px;
+      background-color: #ffb81C;
+      color: #000;
+      border-radius: 8px;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+      z-index: 1000;
+    }
+  </style>
 {% endblock %}

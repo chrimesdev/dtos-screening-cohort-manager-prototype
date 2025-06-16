@@ -4,7 +4,7 @@ Manager{% endblock %} {% block beforeContent %}
 
 <header class="nhsuk-header" role="banner">
 
-    <nav class="nhsuk-header__account" aria-label="Account" id="header-navigation" role="navigation" style="width: 450px; color: #fff;  position: absolute;
+    <nav class="nhsuk-header__account" aria-label="Account" id="header-navigation" role="navigation" style="width: 400px; color: #fff;  position: absolute;
     top: 15px;right: 210px;">
       <ul class="nhsuk-header__account-list">
         <li class="nhsuk-header__account-item">
@@ -22,9 +22,9 @@ Manager{% endblock %} {% block beforeContent %}
               d="M8 0c4.4 0 8 3.6 8 8s-3.6 8-8 8-8-3.6-8-8 3.6-8 8-8Zm0 1a7 7 0 1 0 0 14A7 7 0 0 0 8 1Zm-1.5 9h3a2.5 2.5 0 0 1 2.5 2.5V14a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1v-1.5A2.5 2.5 0 0 1 6.5 10ZM8 9C6.368 9 5 7.684 5 6s1.316-3 3-3c1.632 0 3 1.316 3 3S9.632 9 8 9"
             />
           </svg>
-          Pamela Luke
+          Andrea Mike
         </li>
-        <li class="nhsuk-header__account-item">pamela.luke@nhs.net</li>
+        <li class="nhsuk-header__account-item">andrea.m@nhs.net</li>
         <li class="nhsuk-header__account-item">
           <form class="nhsuk-header__account-form">
             <button class="nhsuk-header__account-button">Log out</button>
@@ -107,7 +107,7 @@ Manager{% endblock %} {% block beforeContent %}
                 <th role="columnheader" scope="col">Date</th>
                 <th role="columnheader" scope="col">Demographic change</th>
                 <th role="columnheader" scope="col">View/download</th>
-                <th role="columnheader" scope="col">Action</th>
+                <th role="columnheader" scope="col">Status</th>
               </tr>
             </thead>
             <tbody class="nhsuk-table__body">
@@ -127,168 +127,13 @@ Manager{% endblock %} {% block beforeContent %}
                   ><a href="/BSS-2-line/view-report">view report</a>
                 </td>
                 <td role="cell" class="nhsuk-table__cell app-u-no-wrap">
-                  <span class="nhsuk-table-responsive__heading" aria-hidden="true"
-                    >Action </span
-                  >Unread
+                  <span class="nhsuk-tag nhsuk-tag--grey" aria-hidden="true"
+                    >Unread </span>
                 </td>
               </tr>
 
               <tr role="row" class="nhsuk-table__row">
                 <td role="cell" class="nhsuk-table__cell app-u-no-wrap date-today">
-                  <span class="nhsuk-table-responsive__heading" aria-hidden="true">Date </span>
-                </td>
-                <td>
-                  <span class="nhsuk-table-responsive__heading" aria-hidden="true"
-                    >Demographic change
-                  </span>
-                  NHS number change
-                </td>
-                <td role="cell" class="nhsuk-table__cell app-u-no-wrap">
-                  <span class="nhsuk-table-responsive__heading" aria-hidden="true"
-                    >View/download </span
-                  ><a href="#">view report</a>
-                </td>
-                <td role="cell" class="nhsuk-table__cell app-u-no-wrap">
-                  <span class="nhsuk-table-responsive__heading" aria-hidden="true"
-                    >Action </span
-                  >Unread
-                </td>
-              </tr>
-
-              <tr role="row" class="nhsuk-table__row">
-                <td role="cell" class="nhsuk-table__cell app-u-no-wrap date-today">
-                  <span class="nhsuk-table-responsive__heading" aria-hidden="true">Date </span>
-                </td>
-                <td>
-                  <span class="nhsuk-table-responsive__heading" aria-hidden="true"
-                    >Demographic change
-                  </span>
-                  NHS number change
-                </td>
-                <td role="cell" class="nhsuk-table__cell app-u-no-wrap">
-                  <span class="nhsuk-table-responsive__heading" aria-hidden="true"
-                    >View/download </span
-                  ><a href="#">view report</a>
-                </td>
-                <td role="cell" class="nhsuk-table__cell app-u-no-wrap">
-                  <span class="nhsuk-table-responsive__heading" aria-hidden="true"
-                    >Action </span
-                  >Unread
-                </td>
-              </tr>
-
-              <tr role="row" class="nhsuk-table__row">
-                <td role="cell" class="nhsuk-table__cell app-u-no-wrap date-today">
-                  <span class="nhsuk-table-responsive__heading" aria-hidden="true">Date </span>
-                </td>
-                <td>
-                  <span class="nhsuk-table-responsive__heading" aria-hidden="true"
-                    >Demographic change
-                  </span>
-                  NHS number change
-                </td>
-                <td role="cell" class="nhsuk-table__cell app-u-no-wrap">
-                  <span class="nhsuk-table-responsive__heading" aria-hidden="true"
-                    >View/download </span
-                  ><a href="#">view report</a>
-                </td>
-                <td role="cell" class="nhsuk-table__cell app-u-no-wrap">
-                  <span class="nhsuk-table-responsive__heading" aria-hidden="true"
-                    >Action </span
-                  >In progress
-                </td>
-              </tr>
-
-              <tr role="row" class="nhsuk-table__row">
-                <td role="cell" class="nhsuk-table__cell app-u-no-wrap date-today">
-                  <span class="nhsuk-table-responsive__heading" aria-hidden="true">Date </span>
-                </td>
-                <td>
-                  <span class="nhsuk-table-responsive__heading" aria-hidden="true"
-                    >Demographic change
-                  </span>
-                  NHS number change
-                </td>
-                <td role="cell" class="nhsuk-table__cell app-u-no-wrap">
-                  <span class="nhsuk-table-responsive__heading" aria-hidden="true"
-                    >View/download </span
-                  ><a href="#">view report</a>
-                </td>
-                <td role="cell" class="nhsuk-table__cell app-u-no-wrap">
-                  <span class="nhsuk-table-responsive__heading" aria-hidden="true"
-                    >Action </span
-                  >In Progress
-                </td>
-              </tr>
-
-              <tr role="row" class="nhsuk-table__row">
-                <td role="cell" class="nhsuk-table__cell app-u-no-wrap date">
-                  <span class="nhsuk-table-responsive__heading" aria-hidden="true">Date </span>
-                </td>
-                <td>
-                  <span class="nhsuk-table-responsive__heading" aria-hidden="true"
-                    >Demographic change
-                  </span>
-                  NHS number change
-                </td>
-                <td role="cell" class="nhsuk-table__cell app-u-no-wrap">
-                  <span class="nhsuk-table-responsive__heading" aria-hidden="true"
-                    >View/download </span
-                  ><a href="#">view report</a>
-                </td>
-                <td role="cell" class="nhsuk-table__cell app-u-no-wrap">
-                  <span class="nhsuk-table-responsive__heading" aria-hidden="true"
-                    >Action </span
-                  >In Progress
-                </td>
-              </tr>
-
-              <tr role="row" class="nhsuk-table__row">
-                <td role="cell" class="nhsuk-table__cell app-u-no-wrap date">
-                  <span class="nhsuk-table-responsive__heading" aria-hidden="true">Date </span>
-                </td>
-                <td>
-                  <span class="nhsuk-table-responsive__heading" aria-hidden="true"
-                    >Demographic change
-                  </span>
-                  NHS number change
-                </td>
-                <td role="cell" class="nhsuk-table__cell app-u-no-wrap">
-                  <span class="nhsuk-table-responsive__heading" aria-hidden="true"
-                    >View/download </span
-                  ><a href="#">view report</a>
-                </td>
-                <td role="cell" class="nhsuk-table__cell app-u-no-wrap">
-                  <span class="nhsuk-table-responsive__heading" aria-hidden="true"
-                    >Action </span
-                  >In Progress
-                </td>
-              </tr>
-
-              <tr role="row" class="nhsuk-table__row">
-                <td role="cell" class="nhsuk-table__cell app-u-no-wrap date">
-                  <span class="nhsuk-table-responsive__heading" aria-hidden="true">Date </span>
-                </td>
-                <td>
-                  <span class="nhsuk-table-responsive__heading" aria-hidden="true"
-                    >Demographic change
-                  </span>
-                  NHS number change
-                </td>
-                <td role="cell" class="nhsuk-table__cell app-u-no-wrap">
-                  <span class="nhsuk-table-responsive__heading" aria-hidden="true"
-                    >View/download </span
-                  ><a href="#">view report</a>
-                </td>
-                <td role="cell" class="nhsuk-table__cell app-u-no-wrap">
-                  <span class="nhsuk-table-responsive__heading" aria-hidden="true"
-                    >Action </span
-                  >In progress
-                </td>
-              </tr>
-
-              <tr role="row" class="nhsuk-table__row">
-                <td role="cell" class="nhsuk-table__cell app-u-no-wrap date">
                   <span class="nhsuk-table-responsive__heading" aria-hidden="true">Date </span>
                 </td>
                 <td>
@@ -303,9 +148,155 @@ Manager{% endblock %} {% block beforeContent %}
                   ><a href="/BSS-2-line/view-report-complete">view report</a>
                 </td>
                 <td role="cell" class="nhsuk-table__cell app-u-no-wrap">
+                  <span class="nhsuk-tag" aria-hidden="true"
+                    >Complete </span>
+                </td>
+              </tr>
+
+              <tr role="row" class="nhsuk-table__row">
+                <td role="cell" class="nhsuk-table__cell app-u-no-wrap date-today">
+                  <span class="nhsuk-table-responsive__heading" aria-hidden="true">Date </span>
+                </td>
+                <td>
                   <span class="nhsuk-table-responsive__heading" aria-hidden="true"
-                    >Action </span
-                  >Complete
+                    >Demographic change
+                  </span>
+                  NHS number change
+                </td>
+                <td role="cell" class="nhsuk-table__cell app-u-no-wrap">
+                  <span class="nhsuk-table-responsive__heading" aria-hidden="true"
+                    >View/download </span
+                  ><a href="#">view report</a>
+                </td>
+                <td role="cell" class="nhsuk-table__cell app-u-no-wrap">
+                  <span class="nhsuk-tag nhsuk-tag--grey" aria-hidden="true"
+                    >Unread </span>
+                </td>
+              </tr>
+
+              <tr role="row" class="nhsuk-table__row">
+                <td role="cell" class="nhsuk-table__cell app-u-no-wrap date-today">
+                  <span class="nhsuk-table-responsive__heading" aria-hidden="true">Date </span>
+                </td>
+                <td>
+                  <span class="nhsuk-table-responsive__heading" aria-hidden="true"
+                    >Demographic change
+                  </span>
+                  NHS number change
+                </td>
+                <td role="cell" class="nhsuk-table__cell app-u-no-wrap">
+                  <span class="nhsuk-table-responsive__heading" aria-hidden="true"
+                    >View/download </span
+                  ><a href="#">view report</a>
+                </td>
+                <td role="cell" class="nhsuk-table__cell app-u-no-wrap">
+                  <span class="nhsuk-tag nhsuk-tag--white" aria-hidden="true"
+                    >In progress </span>
+                </td>
+              </tr>
+
+              <tr role="row" class="nhsuk-table__row">
+                <td role="cell" class="nhsuk-table__cell app-u-no-wrap date-today">
+                  <span class="nhsuk-table-responsive__heading" aria-hidden="true">Date </span>
+                </td>
+                <td>
+                  <span class="nhsuk-table-responsive__heading" aria-hidden="true"
+                    >Demographic change
+                  </span>
+                  NHS number change
+                </td>
+                <td role="cell" class="nhsuk-table__cell app-u-no-wrap">
+                  <span class="nhsuk-table-responsive__heading" aria-hidden="true"
+                    >View/download </span
+                  ><a href="#">view report</a>
+                </td>
+                <td role="cell" class="nhsuk-table__cell app-u-no-wrap">
+                  <span class="nhsuk-tag nhsuk-tag--white aria-hidden="true"
+                    >In progress </span>
+                </td>
+              </tr>
+
+              <tr role="row" class="nhsuk-table__row">
+                <td role="cell" class="nhsuk-table__cell app-u-no-wrap date">
+                  <span class="nhsuk-table-responsive__heading" aria-hidden="true">Date </span>
+                </td>
+                <td>
+                  <span class="nhsuk-table-responsive__heading" aria-hidden="true"
+                    >Demographic change
+                  </span>
+                  NHS number change
+                </td>
+                <td role="cell" class="nhsuk-table__cell app-u-no-wrap">
+                  <span class="nhsuk-table-responsive__heading" aria-hidden="true"
+                    >View/download </span
+                  ><a href="#">view report</a>
+                </td>
+                <td role="cell" class="nhsuk-table__cell app-u-no-wrap">
+                  <span class="nhsuk-tag nhsuk-tag--white" aria-hidden="true"
+                    >In progress </span>
+                </td>
+              </tr>
+
+              <tr role="row" class="nhsuk-table__row">
+                <td role="cell" class="nhsuk-table__cell app-u-no-wrap date">
+                  <span class="nhsuk-table-responsive__heading" aria-hidden="true">Date </span>
+                </td>
+                <td>
+                  <span class="nhsuk-table-responsive__heading" aria-hidden="true"
+                    >Demographic change
+                  </span>
+                  NHS number change
+                </td>
+                <td role="cell" class="nhsuk-table__cell app-u-no-wrap">
+                  <span class="nhsuk-table-responsive__heading" aria-hidden="true"
+                    >View/download </span
+                  ><a href="#">view report</a>
+                </td>
+                <td role="cell" class="nhsuk-table__cell app-u-no-wrap">
+                  <span class="nhsuk-tag nhsuk-tag--white" aria-hidden="true"
+                    >In progress </span>
+                </td>
+              </tr>
+
+              <tr role="row" class="nhsuk-table__row">
+                <td role="cell" class="nhsuk-table__cell app-u-no-wrap date">
+                  <span class="nhsuk-table-responsive__heading" aria-hidden="true">Date </span>
+                </td>
+                <td>
+                  <span class="nhsuk-table-responsive__heading" aria-hidden="true"
+                    >Demographic change
+                  </span>
+                  NHS number change
+                </td>
+                <td role="cell" class="nhsuk-table__cell app-u-no-wrap">
+                  <span class="nhsuk-table-responsive__heading" aria-hidden="true"
+                    >View/download </span
+                  ><a href="#">view report</a>
+                </td>
+                <td role="cell" class="nhsuk-table__cell app-u-no-wrap">
+                  <span class="nhsuk-tag nhsuk-tag--white" aria-hidden="true"
+                    >In progress </span>
+                </td>
+              </tr>
+
+              <tr role="row" class="nhsuk-table__row">
+                <td role="cell" class="nhsuk-table__cell app-u-no-wrap date">
+                  <span class="nhsuk-table-responsive__heading" aria-hidden="true">Date </span>
+                </td>
+                <td>
+                  <span class="nhsuk-table-responsive__heading" aria-hidden="true"
+                    >Demographic change
+                  </span>
+                  NHS number change
+                </td>
+                <td role="cell" class="nhsuk-table__cell app-u-no-wrap">
+                  <span class="nhsuk-table-responsive__heading" aria-hidden="true"
+                    >View/download </span
+                  ><a href="/#">view report</a>
+                </td>
+                <td role="cell" class="nhsuk-table__cell app-u-no-wrap">
+                  <span class="nhsuk-tag" aria-hidden="true"
+                    >Complete </span>
                 </td>
               </tr>
 
@@ -325,9 +316,8 @@ Manager{% endblock %} {% block beforeContent %}
                   ><a href="#">view report</a>
                 </td>
                 <td role="cell" class="nhsuk-table__cell app-u-no-wrap">
-                  <span class="nhsuk-table-responsive__heading" aria-hidden="true"
-                    >Action </span
-                  >Complete
+                  <span class="nhsuk-tag" aria-hidden="true"
+                    >Complete </span>
                 </td>
               </tr>
 

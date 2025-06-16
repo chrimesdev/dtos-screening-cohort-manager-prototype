@@ -4,7 +4,7 @@ Manager{% endblock %} {% block beforeContent %}
 
 <header class="nhsuk-header" role="banner">
 
-    <nav class="nhsuk-header__account" aria-label="Account" id="header-navigation" role="navigation" style="width: 450px; color: #fff;  position: absolute;
+    <nav class="nhsuk-header__account" aria-label="Account" id="header-navigation" role="navigation" style="width: 400px; color: #fff;  position: absolute;
     top: 15px;right: 210px;">
       <ul class="nhsuk-header__account-list">
         <li class="nhsuk-header__account-item">
@@ -22,9 +22,9 @@ Manager{% endblock %} {% block beforeContent %}
               d="M8 0c4.4 0 8 3.6 8 8s-3.6 8-8 8-8-3.6-8-8 3.6-8 8-8Zm0 1a7 7 0 1 0 0 14A7 7 0 0 0 8 1Zm-1.5 9h3a2.5 2.5 0 0 1 2.5 2.5V14a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1v-1.5A2.5 2.5 0 0 1 6.5 10ZM8 9C6.368 9 5 7.684 5 6s1.316-3 3-3c1.632 0 3 1.316 3 3S9.632 9 8 9"
             />
           </svg>
-          Pamela Luke
+          Andrea Mike
         </li>
-        <li class="nhsuk-header__account-item">pamela.luke@nhs.net</li>
+        <li class="nhsuk-header__account-item">andrea.m@nhs.net</li>
         <li class="nhsuk-header__account-item">
           <form class="nhsuk-header__account-form">
             <button class="nhsuk-header__account-button">Log out</button>
@@ -59,12 +59,12 @@ Manager{% endblock %} {% block beforeContent %}
   <div class="nhsuk-grid-row">
     <div class="nhsuk-grid-column-two-thirds nhsuk-u-margin-bottom-7">
       <h1 class="nhsuk-label-wrapper">
-        <div class="nhsuk-label nhsuk-label--xl" aria-label="exception-information">
+        <div class="nhsuk-label nhsuk-label--xl" aria-label="NHS number change">
         NHS number change
         </div>
       </h1>
-      <div class="nhsuk-caption-xl date-today"" aria-label="local-referemce-1001" >
-      Local reference (exception ID): 1001
+      <div class="nhsuk-caption-xl date-today" aria-label="date" >
+
       </div>
     </div>
   </div>
@@ -175,13 +175,39 @@ Manager{% endblock %} {% block beforeContent %}
                 </td>
                 <td role="cell" class="nhsuk-table__cell app-u-no-wrap">
                   <span class="nhsuk-table-responsive__heading" aria-hidden="true">New NHS number</span>
-                  723 333 8888
+                  725 547 8888
                 </td>
               </tr>
+
+              <!-- Example of a third patient row -->
+              <tr role="row" class="nhsuk-table__row">
+                <td role="cell" class="nhsuk-table__cell">
+                  <div class="nhsuk-checkboxes__item">
+                    <input class="nhsuk-checkboxes__input" id="select-Sara" name="patients" type="checkbox" value="Sara-Ali">
+                    <label class="nhsuk-label nhsuk-checkboxes__label" for="select-Sara">
+                      <span class="nhsuk-u-visually-hidden">Select Sara Ali</span>
+                    </label>
+                  </div>
+                </td>
+                <td class="nhsuk-table__cell">
+                  <span class="nhsuk-table-responsive__heading" aria-hidden="true">Patient name</span>
+                  Sara Ali
+                </td>
+                <td role="cell" class="nhsuk-table__cell">03 Mar 1985</td>
+                <td role="cell" class="nhsuk-table__cell app-u-no-wrap">
+                  <span class="nhsuk-table-responsive__heading" aria-hidden="true">Old NHS number</span>
+                  666 666 3333
+                </td>
+                <td role="cell" class="nhsuk-table__cell app-u-no-wrap">
+                  <span class="nhsuk-table-responsive__heading" aria-hidden="true">New NHS number</span>
+                  723 333 1122
+                </td>
+              </tr>
+
             </tbody>
           </table>
 
-          <button class="nhsuk-button nhsuk-u-margin-top-4" type="submit">Unread</button>
+          <!---button class="nhsuk-button nhsuk-u-margin-top-4" type="submit">Unread</button--->
           <button class="nhsuk-button nhsuk-u-margin-top-4" type="submit">In progress</button>
           <button class="nhsuk-button nhsuk-u-margin-top-4" type="submit">Complete</button>
         </form>
