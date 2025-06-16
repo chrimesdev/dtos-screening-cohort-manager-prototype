@@ -1,0 +1,109 @@
+{% extends 'layout.html' %} {% block pageTitle %}Raised Exceptions summary - Cohort
+Manager{% endblock %} {% block beforeContent %}
+
+
+
+
+<!header class="nhsuk-header" role="banner">
+
+    <nav class="nhsuk-header__account" aria-label="Account" id="header-navigation" role="navigation" style="width: 450px; color: #fff;  position: absolute;
+    top: 15px;right: 210px;">
+      <ul class="nhsuk-header__account-list">
+        <li class="nhsuk-header__account-item">
+          <svg
+            class="nhsuk-icon nhsuk-icon__user"
+            xmlns="http://www.w3.org/2000/svg"
+            width="20"
+            height="20"
+            viewBox="0 0 16 16"
+            aria-hidden="true"
+            focusable="false"
+          >
+            <path
+              fill="currentcolor"
+              d="M8 0c4.4 0 8 3.6 8 8s-3.6 8-8 8-8-3.6-8-8 3.6-8 8-8Zm0 1a7 7 0 1 0 0 14A7 7 0 0 0 8 1Zm-1.5 9h3a2.5 2.5 0 0 1 2.5 2.5V14a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1v-1.5A2.5 2.5 0 0 1 6.5 10ZM8 9C6.368 9 5 7.684 5 6s1.316-3 3-3c1.632 0 3 1.316 3 3S9.632 9 8 9"
+            />
+          </svg>
+          Pamela Luke
+        </li>
+        <li class="nhsuk-header__account-item">pamela.luke@nhs.net</li>
+        <li class="nhsuk-header__account-item">
+          <form class="nhsuk-header__account-form">
+            <button class="nhsuk-header__account-button">Log out</button>
+          </form>
+        </li>
+      </ul>
+    </nav>
+
+
+</header>
+
+
+{% endblock %}
+
+
+<!-- For adding page content -->
+<!-- Page layout code can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
+{% block content %}
+<form id="radioForm" onsubmit="handleSubmit(event)">
+<div class="nhsuk-form-group">
+
+  <fieldset class="nhsuk-fieldset">
+    <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--l">
+      <h1 class="nhsuk-fieldset__heading">
+        Which team do you work with?
+      </h1>
+    </legend>
+
+    <div class="nhsuk-radios">
+      <div class="nhsuk-radios__item">
+        <input class="nhsuk-radios__input" id="radio-1" name="destination" type="radio" value="/v6A">
+        <label class="nhsuk-label nhsuk-radios__label" for="radio-1">
+          National service desk
+        </label>
+      </div>
+
+      <div class="nhsuk-radios__item">
+        <input class="nhsuk-radios__input" id="radio-2" name="destination" type="radio" value="/BSS-2-line/report-list">
+        <label class="nhsuk-label nhsuk-radios__label" for="radio-2">
+        Participant index (PI) bureau
+        </label>
+      </div>
+
+      <div class="nhsuk-radios__item">
+        <input class="nhsuk-radios__input" id="radio-3" name="destination" type="radio" value="/ServiceMgmt">
+        <label class="nhsuk-label nhsuk-radios__label" for="radio-2">
+        Service management
+        </label>
+      </div>
+
+    </div>
+  </fieldset>
+</div>
+    <button class="nhsuk-button" data-module="nhsuk-button" type="submit">
+    Continue
+    </button>
+</form>
+
+  <script>
+    function handleSubmit(event) {
+      event.preventDefault();
+      const radios = document.getElementsByName('destination');
+      let selected = null;
+
+      for (const radio of radios) {
+        if (radio.checked) {
+          selected = radio.value;
+          break;
+        }
+      }
+
+      if (selected) {
+    window.location.href = selected;
+  } else {
+    // Redirect to an error page if no selection
+    window.location.href = 'BSS-2-line/error-BSS';
+  }
+}
+  </script>
+{% endblock %}

@@ -1,0 +1,191 @@
+{% extends 'layout.html' %} {% block pageTitle %}Raised Exceptions summary - Cohort
+Manager{% endblock %} {% block beforeContent %}
+
+
+<header class="nhsuk-header" role="banner">
+
+    <nav class="nhsuk-header__account" aria-label="Account" id="header-navigation" role="navigation" style="width: 450px; color: #fff;  position: absolute;
+    top: 15px;right: 210px;">
+      <ul class="nhsuk-header__account-list">
+        <li class="nhsuk-header__account-item">
+          <svg
+            class="nhsuk-icon nhsuk-icon__user"
+            xmlns="http://www.w3.org/2000/svg"
+            width="20"
+            height="20"
+            viewBox="0 0 16 16"
+            aria-hidden="true"
+            focusable="false"
+          >
+            <path
+              fill="currentcolor"
+              d="M8 0c4.4 0 8 3.6 8 8s-3.6 8-8 8-8-3.6-8-8 3.6-8 8-8Zm0 1a7 7 0 1 0 0 14A7 7 0 0 0 8 1Zm-1.5 9h3a2.5 2.5 0 0 1 2.5 2.5V14a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1v-1.5A2.5 2.5 0 0 1 6.5 10ZM8 9C6.368 9 5 7.684 5 6s1.316-3 3-3c1.632 0 3 1.316 3 3S9.632 9 8 9"
+            />
+          </svg>
+          Pamela Luke
+        </li>
+        <li class="nhsuk-header__account-item">pamela.luke@nhs.net</li>
+        <li class="nhsuk-header__account-item">
+          <form class="nhsuk-header__account-form">
+            <button class="nhsuk-header__account-button">Log out</button>
+          </form>
+        </li>
+      </ul>
+    </nav>
+
+
+</header>
+
+
+  {% endblock %}
+
+  {% block content %}
+
+  <nav class="nhsuk-breadcrumb nhsuk-u-margin-bottom-4" aria-label="Breadcrumb">
+    <ol class="nhsuk-breadcrumb__list">
+      <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="/BSS-2-line/report-list">Reports</a></li>
+      <!---li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="#">Level two</a></li>
+      <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="#">Level three</a></li--->
+    </ol>
+    <p class="nhsuk-breadcrumb__back">
+      <a class="nhsuk-breadcrumb__backlink" href="/ServiceMgmt">
+        <span class="nhsuk-u-visually-hidden">Back to</span>
+        Reports
+      </a>
+    </p>
+  </nav>
+
+
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-two-thirds nhsuk-u-margin-bottom-7">
+      <h1 class="nhsuk-label-wrapper">
+        <div class="nhsuk-label nhsuk-label--xl" aria-label="exception-information">
+        NHS number change
+        </div>
+      </h1>
+      <div class="nhsuk-caption-xl date-today"" aria-label="local-referemce-1001" >
+      Local reference (exception ID): 1001
+      </div>
+    </div>
+  </div>
+
+  <!---div class="nhsuk-grid-column-full">
+
+      <div class="nhsuk-form-group nhsuk-u-margin-bottom-0">
+        <label class="nhsuk-label" for="select-1">
+          <b>Sort by</b>
+        </label>
+        <select class="nhsuk-select" id="select-1" name="select-1">
+          <option value="1" selected>Date(most recent first)</option>
+          <option value="2">Date (oldest first)</option>
+          <option value="3">Unread</option>
+          <option value="4">In progress</option>
+          <option value="5">Complete</option>
+        </select>
+        <button class="nhsuk-button" data-module="nhsuk-button" type="submit" style="padding: 4px 16px; font-size: 16px">
+          Apply
+        </button>
+
+        <div class="nhsuk-header__content" id="content-header">
+          <div class="nhsuk-header__search nhsuk-u-margin-bottom-5" style="float: right; margin-top: -70px;">
+            <div class="nhsuk-header__search-wrap" id="wrap-search">
+              <form class="nhsuk-header__search-form" id="search" action=" " method="get" role="search">
+                <label class="nhsuk-u-visually-hidden" for="search-field">Search the NHS website</label>
+                <input class="nhsuk-search__input" id="search-field" name="search-field" type="search" placeholder="Search" autocomplete="on">
+                <button class="nhsuk-search__submit" type="submit" style="background-color: #d8dde0;">
+                  <svg class="nhsuk-icon nhsuk-icon__search" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                    <path d="M19.71 18.29l-4.11-4.1a7 7 0 1 0-1.41 1.41l4.1 4.11a1 1 0 0 0 1.42 0 1 1 0 0 0 0-1.42zM5 10a5 5 0 1 1 5 5 5 5 0 0 1-5-5z"></path>
+                  </svg>
+                  <span class="nhsuk-u-visually-hidden">Search</span>
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+        <p class="nhsuk-body" style="float: right; font-size: 1.1875rem; margin-right: 20px;">
+          <b>Showing 10 of 12 results</b>
+        </p>
+      </div>
+
+  </div--->
+
+<!--- page results--->
+<!---if search is required--->
+<!--- end page results--->
+
+
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-full">
+      <div class="nhsuk-card nhsuk-u-margin-bottom-2">
+        <div class="nhsuk-card__content">
+          <table role="table" class="nhsuk-table-responsive">
+
+            <thead role="rowgroup" class="nhsuk-table__head">
+              <tr role="row">
+                <th role="columnheader" scope="col">Patient name</th>
+                <th role="columnheader" scope="col">Date of Birth</th>
+                <th role="columnheader" scope="col">Old NHS number</th>
+                <th role="columnheader" scope="col">New NHS number</th>
+              </tr>
+            </thead>
+            <tbody class="nhsuk-table__body">
+              <tr role="row" class="nhsuk-table__row">
+                <td>
+                  <span class="nhsuk-table-responsive__heading" aria-hidden="true"
+                    >Patient name
+                  </span>
+                  Alex Cooper
+                </td>
+                <td role="cell" class="nhsuk-table__cell">
+                  05 Aug 1975
+                </td>
+                <td role="cell" class="nhsuk-table__cell app-u-no-wrap">
+                  <span class="nhsuk-table-responsive__heading" aria-hidden="true"
+                    >Old NHS number </span
+                  >999 999 9010
+                </td>
+                <td role="cell" class="nhsuk-table__cell app-u-no-wrap">
+                  <span class="nhsuk-table-responsive__heading" aria-hidden="true"
+                    >New NHS number </span
+                  >723 333 6891
+                </td>
+              </tr>
+
+            </tbody>
+
+          </table>
+        </div>
+      </div>
+
+
+
+
+        <script>
+          // Utility function to get a formatted date string
+          function getFormattedDate(offset) {
+            const date = new Date();
+            date.setDate(date.getDate() - offset);
+            const options = { year: 'numeric', month: 'long', day: '2-digit' };
+            return date.toLocaleDateString('en-GB', options); // Format: DD-month-YYYY
+          }
+
+          // Function to populate dates
+          function populateDates() {
+            const today = getFormattedDate(0);
+            const yesterday = getFormattedDate(1);
+            const dayBeforeYesterday = getFormattedDate(2);
+
+            // Replace content for each type of date
+            document.querySelectorAll('.date-today').forEach(el => el.textContent = today);
+            document.querySelectorAll('.date-yesterday').forEach(el => el.textContent = yesterday);
+            document.querySelectorAll('.date-today-2').forEach(el => el.textContent = dayBeforeYesterday);
+          }
+
+          // Run when page loads
+          window.onload = populateDates;
+        </script>
+
+
+    {% endblock %}
+  </div>
+  </div>
