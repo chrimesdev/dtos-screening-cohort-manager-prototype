@@ -1,0 +1,217 @@
+{% extends 'layout.html' %} {% block pageTitle %}exceptions information - Local reference (exception ID)1001 {% endblock %} {% block beforeContent %}
+
+
+
+
+<header class="nhsuk-header" role="banner">
+
+    <nav class="nhsuk-header__account" aria-label="Account" id="header-navigation" role="navigation" style="width: 400px; color: #fff;  position: absolute;
+    top: 15px;right: 210px;">
+      <ul class="nhsuk-header__account-list">
+        <li class="nhsuk-header__account-item">
+          <svg
+            class="nhsuk-icon nhsuk-icon__user"
+            xmlns="http://www.w3.org/2000/svg"
+            width="20"
+            height="20"
+            viewBox="0 0 16 16"
+            aria-hidden="true"
+            focusable="false"
+          >
+            <path
+              fill="currentcolor"
+              d="M8 0c4.4 0 8 3.6 8 8s-3.6 8-8 8-8-3.6-8-8 3.6-8 8-8Zm0 1a7 7 0 1 0 0 14A7 7 0 0 0 8 1Zm-1.5 9h3a2.5 2.5 0 0 1 2.5 2.5V14a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1v-1.5A2.5 2.5 0 0 1 6.5 10ZM8 9C6.368 9 5 7.684 5 6s1.316-3 3-3c1.632 0 3 1.316 3 3S9.632 9 8 9"
+            />
+          </svg>
+          Andrea Mike
+        </li>
+        <li class="nhsuk-header__account-item">andrea.m@nhs.net</li>
+        <li class="nhsuk-header__account-item">
+          <form class="nhsuk-header__account-form">
+            <button class="nhsuk-header__account-button">Log out</button>
+          </form>
+        </li>
+      </ul>
+    </nav>
+
+
+</header>
+
+
+{% endblock %}
+
+{% block content %}
+
+<nav class="nhsuk-breadcrumb nhsuk-u-margin-bottom-4" aria-label="Breadcrumb">
+  <div class="nhsuk-width-container">
+    <ol class="nhsuk-breadcrumb__list">
+      <li class="nhsuk-breadcrumb__item">
+        <a class="nhsuk-breadcrumb__link" href="/ServiceMgmt">Home</a>
+      </li>
+      <li class="nhsuk-breadcrumb__item">
+        <a class="nhsuk-breadcrumb__link" href="/ServiceMgmt/exceptions-nbo">Not raised breast screening exceptions</a>
+      </li>
+    </ol>
+    <p class="nhsuk-breadcrumb__back">
+      <a class="nhsuk-breadcrumb__backlink" href="/ServiceMgmt/exceptions-nbo"">
+        <span class="nhsuk-u-visually-hidden">Back to</span>
+        Not raised breast screening exceptions
+      </a>
+    </p>
+
+  </div>
+</nav>
+
+
+<div class="nhsuk-grid-row">
+  <div class="nhsuk-grid-column-two-thirds nhsuk-u-margin-bottom-7">
+    <h1 class="nhsuk-label-wrapper">
+      <div class="nhsuk-label nhsuk-label--xl" aria-label="exception-information">
+      Exception information
+      </div>
+    </h1>
+    <div class="nhsuk-caption-xl" aria-label="local-referemce-1001" >
+    Local reference (exception ID): 1001
+    </div>
+  </div>
+</div>
+
+
+
+<!--- main table--->
+
+<div class="nhsuk-grid-row">
+  <div class="nhsuk-grid-column-full">
+
+<div class="nhsuk-card nhsuk-do-dont-list nhsuk-u-margin-bottom-4 nhsuk-u-margin-top-0">
+
+    <h3 class="nhsuk-do-dont-list__label">Portal form: Request to amend incorrect patient PDS record data</h3>
+      <h2 class="nhsuk-card__heading">Participant details</h2>
+
+      <dl class="nhsuk-summary-list">
+
+        <div class="nhsuk-summary-list__row">
+          <dt class="nhsuk-summary-list__key">NHS number</dt>
+          <dd class="nhsuk-summary-list__value">723 333 6891</dd>
+        </div>
+
+        <div class="nhsuk-summary-list__row">
+          <dt class="nhsuk-summary-list__key">Surname</dt>
+          <dd class="nhsuk-summary-list__value">Lewis</dd>
+        </div>
+
+        <div class="nhsuk-summary-list__row">
+          <dt class="nhsuk-summary-list__key">Forename</dt>
+          <dd class="nhsuk-summary-list__value">Sandra</dd>
+        </div>
+
+
+        <div class="nhsuk-summary-list__row">
+          <dt class="nhsuk-summary-list__key">Date of birth</dt>
+          <dd class="nhsuk-summary-list__value">18/11/1993</dd>
+        </div>
+
+        <div class="nhsuk-summary-list__row">
+          <dt class="nhsuk-summary-list__key">Gender</dt>
+          <dd class="nhsuk-summary-list__value">Female</dd>
+        </div>
+
+        <div class="nhsuk-summary-list__row">
+          <dt class="nhsuk-summary-list__key">Current address</dt>
+          <dd class="nhsuk-summary-list__value">
+            73 Roman Rd<br />Leeds<br />
+            LS2 5ZN
+          </dd>
+        </div>
+
+        <div class="nhsuk-summary-list__row">
+          <dt class="nhsuk-summary-list__key">Registered practice code</dt>
+          <dd class="nhsuk-summary-list__value">B86110</dd>
+        </div>
+
+      </dl>
+
+</div>
+
+
+    <div class="nhsuk-card nhsuk-u-margin-bottom-4">
+      <div class="nhsuk-card__content">
+        <h2 class="nhsuk-card__heading">Exception details</h2>
+
+        <dl class="nhsuk-summary-list">
+          <div class="nhsuk-summary-list__row">
+            <dt class="nhsuk-summary-list__key">Date exception created</dt>
+            <dd class="nhsuk-summary-list__value date"></dd>
+          </div>
+
+          <div class="nhsuk-summary-list__row">
+            <dt class="nhsuk-summary-list__key">More detail</dt>
+            <dd class="nhsuk-summary-list__value">
+
+                  <p>The following fields have missing or conflicting information: GP practice code, reason for removal</p>
+                  <p>Either:</p>
+                  <ul>
+                    <li>enter a GP practice code, or </li>
+                    <li>enter a reason for removal</li>
+                  </ul>
+                  <p>Information must only be entered for one of these fields.
+                  Both fields cannot be empty</p>
+                  <p>Cohort Manager rule (to be included for reporting): CMR13</p>
+
+            </dd>
+          </div>
+
+          <div class="nhsuk-summary-list__row">
+            <dt class="nhsuk-summary-list__key">Exception status</dt>
+            <dd class="nhsuk-summary-list__value"><strong class="nhsuk-tag nhsuk-tag--grey">Not raised</strong></dd>
+          </div>
+
+        </dl>
+      </div>
+    </div>
+
+    <div class="nhsuk-card nhsuk-u-margin-bottom-4">
+      <div class="nhsuk-card__content">
+        <h2 class="nhsuk-card__heading">Exception status</h2>
+
+        <div class="nhsuk-form-group">
+
+          <form action="/v6A/exceptions-summary-nbo-update-1001" method="post">
+
+            <fieldset class="nhsuk-fieldset">
+              <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--s">
+                <p class="nhsuk-u-font-weight-normal">
+                Entering a ServiceNow case ID will change the status of the exception to “Raised”. <br/>You’ll be able to access it on the “Raised breast screening exceptions” page.
+                </p>
+                <p class="nhsuk-u-font-weight-normal">
+                If you need to change the exception status back to “Not raised”, delete any case ID previously entered and then save the changes with this field left empty.
+                </p>
+              </legend>
+
+              <div class="nhsuk-u-margin-bottom-4">
+                <label class="nhsuk-label nhsuk-u-font-weight-bold" for="one-third">
+                  Enter ServiceNow Case ID
+                </label>
+                <div class="nhsuk-hint" id="example-with-hint-text-hint">
+                  For example, CS1234567
+                </div>
+                <input class="nhsuk-input nhsuk-u-width-one-third" id="one-third" name="one-third" type="text">
+              </div>
+
+              <button class="nhsuk-button" data-module="nhsuk-button" type="submit">
+                Save and continue
+              </button>
+
+
+            </fieldset>
+
+          </form>
+
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+  {% endblock %}
+</div>
