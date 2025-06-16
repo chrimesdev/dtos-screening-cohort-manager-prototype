@@ -13,29 +13,22 @@ block outerContent %} {% endblock %} {% block header %} {{ header({ "service": {
   <fieldset class="nhsuk-fieldset">
     <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--l">
       <h1 class="nhsuk-fieldset__heading">
-        Which team do you work with?
+      Lorem Ipsum
       </h1>
     </legend>
 
     <div class="nhsuk-radios">
       <div class="nhsuk-radios__item">
-        <input class="nhsuk-radios__input" id="radio-1" name="destination" type="radio" value="/v6A">
+        <input class="nhsuk-radios__input" id="radio-1" name="destination" type="radio" value="/ServiceMgmt">
         <label class="nhsuk-label nhsuk-radios__label" for="radio-1">
-          National service desk
+          Exceptions
         </label>
       </div>
 
       <div class="nhsuk-radios__item">
         <input class="nhsuk-radios__input" id="radio-2" name="destination" type="radio" value="/BSS-2-line/report-list">
         <label class="nhsuk-label nhsuk-radios__label" for="radio-2">
-        Participant index (PI) bureau
-        </label>
-      </div>
-
-      <div class="nhsuk-radios__item">
-        <input class="nhsuk-radios__input" id="radio-3" name="destination" type="radio" value="/ServiceMgmt">
-        <label class="nhsuk-label nhsuk-radios__label" for="radio-3">
-        Service management
+      Reports
         </label>
       </div>
 
@@ -49,7 +42,7 @@ block outerContent %} {% endblock %} {% block header %} {{ header({ "service": {
 
 
 <div class="floating-div">
-  <a href="/BSS-2-line/BS">Go to Option 2</a>
+  <a href="/BSS-2-line/home">Go to Option 3</a>
 </div>
 
   <script>
@@ -69,7 +62,7 @@ block outerContent %} {% endblock %} {% block header %} {{ header({ "service": {
     window.location.href = selected;
   } else {
     // Redirect to an error page if no selection
-    window.location.href = '/BSS-2-line/error-BSS';
+    window.location.href = 'BSS-2-line/error-BSS';
   }
 }
   </script>
