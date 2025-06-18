@@ -1,35 +1,31 @@
 {% extends 'layout.html' %} {% block pageTitle %} Home - Cohort Manager {%
-endblock %} {% block beforeContent %}
-
-
-
-{% endblock %} {% block content %}
+endblock %} {% block beforeContent %} {% endblock %} {% block content %}
 <div class="nhsuk-grid-row">
-  <div class="nhsuk-grid-column-two-thirds nhsuk-u-margin-bottom-7">
-    <h1 class="nhsuk-label-wrapper">
-      <div class="nhsuk-label nhsuk-label--xl" aria-label="Breast-screening-exceptions">
-      Breast screening
-      </div>
-    </h1>
-    <div class="nhsuk-caption-xl" aria-label="Breast-screening-exceptions-home" >
-    Exceptions
-    </div>
+  <div class="nhsuk-grid-column-two-thirds">
+    <h1>Breast screening</h1>
+    <h2>Exceptions</h2>
   </div>
 </div>
 
 <!---Exceptions--->
 
 <ul class="nhsuk-grid-row nhsuk-card-group">
-
   <li class="nhsuk-grid-column-one-quarter nhsuk-card-group__item">
     <div class="nhsuk-card nhsuk-card--clickable">
       <div class="nhsuk-card__content">
-        <h1 class="nhsuk-heading-xl nhsuk-u-font-size-64 nhsuk-u-margin-bottom-1">20<span class="nhsuk-u-visually-hidden">Not raised</span></h1>
+        <h1
+          class="nhsuk-heading-xl nhsuk-u-font-size-64 nhsuk-u-margin-bottom-1"
+        >
+          20<span class="nhsuk-u-visually-hidden">Not raised</span>
+        </h1>
         <h2 class="nhsuk-card__heading nhsuk-heading-m">
-          <a class="nhsuk-card__link" href="/v6A/exceptions-summary-nbo">Not raised</a>
+          <a class="nhsuk-card__link" href="/v6A/exceptions-summary-nbo"
+            >Not raised</a
+          >
         </h2>
-        <p class="nhsuk-card__description">Exceptions to be raised with teams</p>
-
+        <p class="nhsuk-card__description">
+          Exceptions to be raised with teams
+        </p>
       </div>
     </div>
   </li>
@@ -37,29 +33,36 @@ endblock %} {% block beforeContent %}
   <li class="nhsuk-grid-column-one-quarter nhsuk-card-group__item">
     <div class="nhsuk-card nhsuk-card--clickable">
       <div class="nhsuk-card__content">
-        <h1 class="nhsuk-heading-xl nhsuk-u-font-size-64 nhsuk-u-margin-bottom-1">15<span class="nhsuk-u-visually-hidden">Raised</span></h1>
+        <h1
+          class="nhsuk-heading-xl nhsuk-u-font-size-64 nhsuk-u-margin-bottom-1"
+        >
+          15<span class="nhsuk-u-visually-hidden">Raised</span>
+        </h1>
         <h2 class="nhsuk-card__heading nhsuk-heading-m">
           <a class="nhsuk-card__link" href="/v6A/exceptions-summary">Raised</a>
         </h2>
-        <p class="nhsuk-card__description">Access and amend previously raised exceptions</p>
-
+        <p class="nhsuk-card__description">
+          Access and amend previously raised exceptions
+        </p>
       </div>
     </div>
   </li>
 
-  <li class="nhsuk-grid-column-one-quarter nhsuk-card-group__item">
-  <div class="nhsuk-card nhsuk-card--clickable">
+  <!-- <li class="nhsuk-grid-column-one-quarter nhsuk-card-group__item">
+    <div class="nhsuk-card nhsuk-card--clickable">
       <div class="nhsuk-card__content">
-        <h1 class="nhsuk-heading-xl nhsuk-u-font-size-64 nhsuk-u-margin-bottom-1">5<span class="nhsuk-u-visually-hidden">Closed</span></h1>
+        <h1
+          class="nhsuk-heading-xl nhsuk-u-font-size-64 nhsuk-u-margin-bottom-1"
+        >
+          5<span class="nhsuk-u-visually-hidden">Closed</span>
+        </h1>
         <h2 class="nhsuk-card__heading nhsuk-heading-m">
           <a class="nhsuk-card__link" href="/v6A/exceptions-closed">Closed</a>
         </h2>
         <p class="nhsuk-card__description">Exceptions that have been closed</p>
-
       </div>
     </div>
-  </li>
-
+  </li> -->
 </ul>
 
 <!---end of exceptions--->
@@ -67,31 +70,31 @@ endblock %} {% block beforeContent %}
 <!--- Reports--->
 
 <div class="nhsuk-grid-row">
-  <div class="nhsuk-grid-column-two-thirds nhsuk-u-margin-bottom-7">
-    <div class="nhsuk-caption-xl" aria-label="Breast-screening-Reports-home" >
-    Reports
-    </div>
+  <div class="nhsuk-grid-column-two-thirds">
+    <h2>Reports</h2>
   </div>
 </div>
 
-
 <ul class="nhsuk-grid-row nhsuk-card-group">
-
   <li class="nhsuk-grid-column-one-quarter nhsuk-card-group__item">
     <div class="nhsuk-card nhsuk-card--clickable">
       <div class="nhsuk-card__content">
-        <h1 class="nhsuk-heading-xl nhsuk-u-font-size-64 nhsuk-u-margin-bottom-1">2<span class="nhsuk-u-visually-hidden">Reports</span></h1>
+        <h1
+          class="nhsuk-heading-xl nhsuk-u-font-size-64 nhsuk-u-margin-bottom-1"
+        >
+          2<span class="nhsuk-u-visually-hidden">Reports</span>
+        </h1>
         <h2 class="nhsuk-card__heading nhsuk-heading-m">
           <a class="nhsuk-card__link" href="/v6A/report-list">Reports</a>
         </h2>
-        <p class="nhsuk-card__description">To manage investigations into demographic changes</p>
-
+        <p class="nhsuk-card__description">
+          To manage investigations into demographic changes
+        </p>
       </div>
     </div>
   </li>
 
-<!--- end of reports--->
+  <!--- end of reports--->
 
-
-
-{% endblock %}
+  {% endblock %}
+</ul>

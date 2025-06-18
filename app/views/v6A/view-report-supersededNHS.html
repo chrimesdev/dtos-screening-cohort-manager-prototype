@@ -1,22 +1,20 @@
-{% extends 'layout.html' %} {% block pageTitle %}view report{% endblock %} {% block beforeContent %}
-
+{% extends 'layout.html' %} {% block pageTitle %}NHS number change - Cohort Manager{% endblock %} {% block beforeContent %}
+<nav class="nhsuk-breadcrumb" aria-label="Breadcrumb">
+  <ol class="nhsuk-breadcrumb__list">
+    <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="/v6A">Home</a></li>
+    <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="/v6A/report-list">Reports</a></li>
+  </ol>
+  <p class="nhsuk-breadcrumb__back">
+    <a class="nhsuk-breadcrumb__backlink" href="/v6A/report-list">
+      <span class="nhsuk-u-visually-hidden">Back to &nbsp;</span>
+      Reports
+    </a>
+  </p>
+</nav>
 
   {% endblock %}
 
   {% block content %}
-
-  <nav class="nhsuk-breadcrumb nhsuk-u-margin-bottom-4" aria-label="Breadcrumb">
-    <ol class="nhsuk-breadcrumb__list">
-      <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="/v6A/report-list">Reports</a></li>
-    </ol>
-    <p class="nhsuk-breadcrumb__back">
-      <a class="nhsuk-breadcrumb__backlink" href="/v6A/report-list">
-        <span class="nhsuk-u-visually-hidden">Back to</span>
-        Reports
-      </a>
-    </p>
-  </nav>
-
 
   <div class="nhsuk-grid-row">
     <div class="nhsuk-grid-column-two-thirds nhsuk-u-margin-bottom-7">
@@ -40,7 +38,7 @@
             <thead role="rowgroup" class="nhsuk-table__head">
               <tr role="row">
                 <th role="columnheader" scope="col">Patient name</th>
-                <th role="columnheader" scope="col">Date of Birth</th>
+                <th role="columnheader" scope="col">Date of birth</th>
                 <th role="columnheader" scope="col">Old NHS number</th>
                 <th role="columnheader" scope="col">New NHS number</th>
               </tr>

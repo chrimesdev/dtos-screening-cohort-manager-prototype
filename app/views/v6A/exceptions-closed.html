@@ -1,242 +1,284 @@
-{% extends 'layout.html' %} {% block pageTitle %}Closed Exceptions summary - Cohort
-Manager{% endblock %} {% block beforeContent %}
+{% extends 'layout.html' %} {% block pageTitle %}Closed breast screening
+exceptions - Cohort Manager{% endblock %} {% block beforeContent %}
 
-
-
-  <nav class="nhsuk-breadcrumb" aria-label="Breadcrumb">
-    <ol class="nhsuk-breadcrumb__list">
-      <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="/v6A">Home</a></li>
-      <!---li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="#">Level two</a></li>
+<nav class="nhsuk-breadcrumb" aria-label="Breadcrumb">
+  <ol class="nhsuk-breadcrumb__list">
+    <li class="nhsuk-breadcrumb__item">
+      <a class="nhsuk-breadcrumb__link" href="/v6A">Home</a>
+    </li>
+    <!---li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="#">Level two</a></li>
       <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="#">Level three</a></li--->
-    </ol>
-    <p class="nhsuk-breadcrumb__back">
-      <a class="nhsuk-breadcrumb__backlink" href="/v6A">
-        <span class="nhsuk-u-visually-hidden">Back to</span>
-        Home
-      </a>
-    </p>
-  </nav>
+  </ol>
+  <p class="nhsuk-breadcrumb__back">
+    <a class="nhsuk-breadcrumb__backlink" href="/v6A">
+      <span class="nhsuk-u-visually-hidden">Back to</span>
+      Home
+    </a>
+  </p>
+</nav>
 
-  {% endblock %} {% block content %}
-  <div class="nhsuk-grid-row">
-    <div class="nhsuk-grid-column-full nhsuk-u-margin-bottom-7">
-      <h1 class="nhsuk-label-wrapper">
-        <label class="nhsuk-label nhsuk-label--xl">
+{% endblock %} {% block content %}
+<div class="nhsuk-grid-row">
+  <div class="nhsuk-grid-column-full nhsuk-u-margin-bottom-7">
+    <h1 class="nhsuk-label-wrapper">
+      <label class="nhsuk-label nhsuk-label--xl">
         Closed breast screening exceptions
-        </label>
-      </h1>
-    </div>
+      </label>
+    </h1>
   </div>
+</div>
 
+<div class="nhsuk-form-group nhsuk-u-margin-bottom-0">
+  <label class="nhsuk-label" for="select-1">
+    <b>Sort by</b>
+  </label>
+  <select class="nhsuk-select" id="select-1" name="select-1">
+    <option value="1" selected>Status last updated (most recent first)</option>
+    <option value="2">Status last updated (oldest first)</option>
+  </select>
+  <button
+    class="nhsuk-button"
+    data-module="nhsuk-button"
+    type="submit"
+    style="padding: 4px 16px; font-size: 16px"
+  >
+    Apply
+  </button>
+
+  <p class="nhsuk-body" style="float: right; font-size: 1.1875rem">
+    <b>Showing 5 of 5 results</b>
+  </p>
+</div>
+
+<div class="nhsuk-grid-row">
   <div class="nhsuk-grid-column-full">
+    <div class="nhsuk-card nhsuk-u-margin-bottom-2">
+      <div class="nhsuk-card__content">
+        <table role="table" class="nhsuk-table-responsive">
+          <thead role="rowgroup" class="nhsuk-table__head">
+            <tr role="row">
+              <th role="columnheader" scope="col">
+                Local reference <br />(exception ID)
+              </th>
+              <th role="columnheader" scope="col">NHS <br />number</th>
+              <th role="columnheader" scope="col">
+                Date exception <br />created
+              </th>
+              <th role="columnheader" scope="col">Short <br />description</th>
+              <th role="columnheader" scope="col">SNow <br />case ID</th>
+              <th role="columnheader" scope="col" style="width: 120px">
+                Exception <br />status
+              </th>
+            </tr>
+          </thead>
+          <tbody class="nhsuk-table__body">
+            <tr role="row" class="nhsuk-table__row">
+              <td role="cell" class="nhsuk-table__cell">
+                <span class="nhsuk-table-responsive__heading" aria-hidden="true"
+                  >Exception ID </span
+                ><a href="#">1024</a>
+              </td>
+              <td role="cell" class="nhsuk-table__cell app-u-no-wrap">
+                <span class="nhsuk-table-responsive__heading" aria-hidden="true"
+                  >NHS number </span
+                >643 634 1243
+              </td>
+              <td role="cell" class="nhsuk-table__cell app-u-no-wrap date">
+                <span class="nhsuk-table-responsive__heading" aria-hidden="true"
+                  >Date exception created</span
+                >
+              </td>
+              <td>
+                <span class="nhsuk-table-responsive__heading" aria-hidden="true"
+                  >Short description </span
+                >Possible confused NHS Number
+              </td>
+              <td role="cell" class="nhsuk-table__cell app-u-no-wrap">
+                <span class="nhsuk-table-responsive__heading" aria-hidden="true"
+                  >Case ID </span
+                >CS7654321
+              </td>
+              <td class="nhsuk-table__cell">
+                <strong class="nhsuk-tag nhsuk-tag">Closed</strong><br />
+                on <span class="date-today"></span>
+              </td>
+            </tr>
 
-      <div class="nhsuk-form-group nhsuk-u-margin-bottom-0">
-        <label class="nhsuk-label" for="select-1">
-          <b>Sort by</b>
-        </label>
-        <select class="nhsuk-select" id="select-1" name="select-1">
-          <option value="1" selected>Status last updated (most recent first)</option>
-          <option value="2">Status last updated (oldest first)</option>
-        </select>
-        <button class="nhsuk-button" data-module="nhsuk-button" type="submit" style="padding: 4px 16px; font-size: 16px">
-          Apply
-        </button>
+            <tr role="row" class="nhsuk-table__row">
+              <td role="cell" class="nhsuk-table__cell">
+                <span class="nhsuk-table-responsive__heading" aria-hidden="true"
+                  >Exception ID </span
+                ><a href="#">1040</a>
+              </td>
+              <td role="cell" class="nhsuk-table__cell app-u-no-wrap">
+                <span class="nhsuk-table-responsive__heading" aria-hidden="true"
+                  >NHS number </span
+                >653 542 4353
+              </td>
+              <td role="cell" class="nhsuk-table__cell app-u-no-wrap date">
+                <span class="nhsuk-table-responsive__heading" aria-hidden="true"
+                  >Date exception created</span
+                >
+              </td>
+              <td>
+                <span class="nhsuk-table-responsive__heading" aria-hidden="true"
+                  >Short description </span
+                >The following fields have missing or conflicting information:
+                GP practice code, reason for removal
+              </td>
+              <td role="cell" class="nhsuk-table__cell app-u-no-wrap">
+                <span class="nhsuk-table-responsive__heading" aria-hidden="true"
+                  >Case ID </span
+                >CS6543217
+              </td>
+              <td class="nhsuk-table__cell">
+                <strong class="nhsuk-tag nhsuk-tag">Closed</strong><br />
+                on <span class="date-today"></span>
+              </td>
+            </tr>
 
-        <p class="nhsuk-body" style="float: right; font-size: 1.1875rem">
-          <b>Showing 5 of 5 results</b>
-        </p>
+            <tr role="row" class="nhsuk-table__row">
+              <td role="cell" class="nhsuk-table__cell">
+                <span class="nhsuk-table-responsive__heading" aria-hidden="true"
+                  >Exception ID </span
+                ><a href="/v6A/participant-information-closed-1001">1001</a>
+              </td>
+              <td role="cell" class="nhsuk-table__cell app-u-no-wrap">
+                <span class="nhsuk-table-responsive__heading" aria-hidden="true"
+                  >NHS number </span
+                >723 333 6891
+              </td>
+              <td
+                role="cell"
+                class="nhsuk-table__cell app-u-no-wrap date-today-2"
+              >
+                <span class="nhsuk-table-responsive__heading" aria-hidden="true"
+                  >Date exceptions created
+                </span>
+              </td>
+              <td>
+                <span class="nhsuk-table-responsive__heading" aria-hidden="true"
+                  >Short description
+                </span>
+                The following fields have missing or conflicting information: GP
+                practice code, reason for removal
+              </td>
+              <td role="cell" class="nhsuk-table__cell app-u-no-wrap">
+                <span class="nhsuk-table-responsive__heading" aria-hidden="true"
+                  >Case ID </span
+                >CS1234567
+              </td>
+              <td class="nhsuk-table__cell">
+                <strong class="nhsuk-tag">Closed</strong><br />
+                on <span class="date-yesterday"></span>
+              </td>
+            </tr>
 
+            <tr role="row" class="nhsuk-table__row">
+              <td role="cell" class="nhsuk-table__cell">
+                <span class="nhsuk-table-responsive__heading" aria-hidden="true"
+                  >Exception ID </span
+                ><a href="#">1002</a>
+              </td>
+              <td role="cell" class="nhsuk-table__cell app-u-no-wrap">
+                <span class="nhsuk-table-responsive__heading" aria-hidden="true"
+                  >NHS number </span
+                >623 444 8972
+              </td>
+              <td
+                role="cell"
+                class="nhsuk-table__cell app-u-no-wrap date-today-2"
+              >
+                <span class="nhsuk-table-responsive__heading" aria-hidden="true"
+                  >Date exceptions created
+                </span>
+              </td>
+              <td>
+                <span class="nhsuk-table-responsive__heading" aria-hidden="true"
+                  >Short description </span
+                >Missing forename
+              </td>
+              <td role="cell" class="nhsuk-table__cell app-u-no-wrap">
+                <span class="nhsuk-table-responsive__heading" aria-hidden="true"
+                  >Case ID </span
+                >CS1111111
+              </td>
+              <td class="nhsuk-table__cell">
+                <strong class="nhsuk-tag">Closed</strong><br />
+                on <span class="date-yesterday"></span>
+              </td>
+            </tr>
+
+            <tr role="row" class="nhsuk-table__row">
+              <td role="cell" class="nhsuk-table__cell">
+                <span class="nhsuk-table-responsive__heading" aria-hidden="true"
+                  >Exception ID </span
+                ><a href="#">1020</a>
+              </td>
+              <td role="cell" class="nhsuk-table__cell app-u-no-wrap">
+                <span class="nhsuk-table-responsive__heading" aria-hidden="true"
+                  >NHS number </span
+                >543 555 9087
+              </td>
+              <td
+                role="cell"
+                class="nhsuk-table__cell app-u-no-wrap date-today-2"
+              >
+                <span class="nhsuk-table-responsive__heading" aria-hidden="true"
+                  >Date exceptions created
+                </span>
+              </td>
+              <td>
+                <span class="nhsuk-table-responsive__heading" aria-hidden="true"
+                  >Short description </span
+                >Postcode is in the wrong format
+              </td>
+              <td role="cell" class="nhsuk-table__cell app-u-no-wrap">
+                <span class="nhsuk-table-responsive__heading" aria-hidden="true"
+                  >Case ID </span
+                >CS9999990
+              </td>
+              <td class="nhsuk-table__cell">
+                <strong class="nhsuk-tag">Closed</strong><br />
+                on <span class="date-yesterday"></span>
+              </td>
+            </tr>
+          </tbody>
+        </table>
       </div>
+    </div>
 
-  </div>
+    <script>
+      // Utility function to get a formatted date string
+      function getFormattedDate(offset) {
+        const date = new Date();
+        date.setDate(date.getDate() - offset);
+        const options = { year: "numeric", month: "long", day: "2-digit" };
+        return date.toLocaleDateString("en-GB", options); // Format: DD-month-YYYY
+      }
 
+      // Function to populate dates
+      function populateDates() {
+        const today = getFormattedDate(0);
+        const yesterday = getFormattedDate(1);
+        const dayBeforeYesterday = getFormattedDate(2);
 
+        // Replace content for each type of date
+        document
+          .querySelectorAll(".date-today")
+          .forEach((el) => (el.textContent = today));
+        document
+          .querySelectorAll(".date-yesterday")
+          .forEach((el) => (el.textContent = yesterday));
+        document
+          .querySelectorAll(".date-today-2")
+          .forEach((el) => (el.textContent = dayBeforeYesterday));
+      }
 
-  <div class="nhsuk-grid-row">
-    <div class="nhsuk-grid-column-full">
-      <div class="nhsuk-card nhsuk-u-margin-bottom-2">
-        <div class="nhsuk-card__content">
-          <table role="table" class="nhsuk-table-responsive">
-
-            <thead role="rowgroup" class="nhsuk-table__head">
-              <tr role="row">
-                <th role="columnheader" scope="col">Local reference <br>(exception ID)</th>
-                <th role="columnheader" scope="col">NHS <br>number</th>
-                <th role="columnheader" scope="col">Date exception <br>created</th>
-                <th role="columnheader" scope="col">Short <br>description</th>
-                <th role="columnheader" scope="col">SNow <br>case ID</th>
-                <th role="columnheader" scope="col" style="width:120px;">Exception <br>status</th>
-              </tr>
-            </thead>
-            <tbody class="nhsuk-table__body">
-
-              <tr role="row" class="nhsuk-table__row">
-                <td role="cell" class="nhsuk-table__cell">
-                  <span class="nhsuk-table-responsive__heading" aria-hidden="true">Exception ID </span><a
-                    href="#">1024</a>
-                </td>
-                <td role="cell" class="nhsuk-table__cell app-u-no-wrap">
-                  <span class="nhsuk-table-responsive__heading" aria-hidden="true">NHS number </span>643 634 1243
-                </td>
-                <td role="cell" class="nhsuk-table__cell app-u-no-wrap date">
-                  <span class="nhsuk-table-responsive__heading" aria-hidden="true">Date exception created</span>
-                </td>
-                <td>
-                  <span class="nhsuk-table-responsive__heading" aria-hidden="true">Short description </span>Possible confused NHS Number
-                </td>
-                <td role="cell" class="nhsuk-table__cell app-u-no-wrap">
-                  <span class="nhsuk-table-responsive__heading" aria-hidden="true"
-                    >Case ID </span
-                  >CS7654321
-                </td>
-                <td class="nhsuk-table__cell">
-                  <strong class="nhsuk-tag nhsuk-tag">Closed</strong><br> on <span class="date-today"></span>
-                </td>
-              </tr>
-
-              <tr role="row" class="nhsuk-table__row">
-                <td role="cell" class="nhsuk-table__cell">
-                  <span class="nhsuk-table-responsive__heading" aria-hidden="true">Exception ID </span><a
-                    href="#">1040</a>
-                </td>
-                <td role="cell" class="nhsuk-table__cell app-u-no-wrap">
-                  <span class="nhsuk-table-responsive__heading" aria-hidden="true">NHS number </span>653 542 4353
-                </td>
-                <td role="cell" class="nhsuk-table__cell app-u-no-wrap date">
-                  <span class="nhsuk-table-responsive__heading" aria-hidden="true">Date exception created</span>
-                </td>
-                <td>
-                  <span class="nhsuk-table-responsive__heading" aria-hidden="true">Short description </span>The following fields have missing or conflicting information: GP practice code, reason for removal
-                </td>
-                <td role="cell" class="nhsuk-table__cell app-u-no-wrap">
-                  <span class="nhsuk-table-responsive__heading" aria-hidden="true"
-                    >Case ID </span
-                  >CS6543217
-                </td>
-                <td class="nhsuk-table__cell">
-                  <strong class="nhsuk-tag nhsuk-tag">Closed</strong><br> on <span class="date-today"></span>
-                </td>
-              </tr>
-
-              <tr role="row" class="nhsuk-table__row">
-                <td role="cell" class="nhsuk-table__cell">
-                  <span class="nhsuk-table-responsive__heading" aria-hidden="true"
-                    >Exception ID </span
-                  ><a href="/v6A/participant-information-closed-1001">1001</a>
-                </td>
-                <td role="cell" class="nhsuk-table__cell app-u-no-wrap">
-                  <span class="nhsuk-table-responsive__heading" aria-hidden="true"
-                    >NHS number </span
-                  >723 333 6891
-                </td>
-                <td role="cell" class="nhsuk-table__cell app-u-no-wrap date-today-2">
-                  <span class="nhsuk-table-responsive__heading" aria-hidden="true">Date exceptions created </span>
-                </td>
-                <td>
-                  <span class="nhsuk-table-responsive__heading" aria-hidden="true"
-                    >Short description
-                  </span>
-                  The following fields have missing or conflicting information: GP practice code, reason for removal
-                </td>
-                <td role="cell" class="nhsuk-table__cell app-u-no-wrap">
-                  <span class="nhsuk-table-responsive__heading" aria-hidden="true"
-                    >Case ID </span
-                  >CS1234567
-                </td>
-                <td class="nhsuk-table__cell">
-                  <strong class="nhsuk-tag">Closed</strong><br> on <span class="date-yesterday"></span>
-                </td>
-              </tr>
-
-              <tr role="row" class="nhsuk-table__row">
-                <td role="cell" class="nhsuk-table__cell">
-                  <span class="nhsuk-table-responsive__heading" aria-hidden="true"
-                    >Exception ID </span
-                  ><a href="#">1002</a>
-                </td>
-                <td role="cell" class="nhsuk-table__cell app-u-no-wrap">
-                  <span class="nhsuk-table-responsive__heading" aria-hidden="true"
-                    >NHS number </span
-                  >623 444 8972
-                </td>
-                <td role="cell" class="nhsuk-table__cell app-u-no-wrap date-today-2">
-                  <span class="nhsuk-table-responsive__heading" aria-hidden="true">Date exceptions created </span>
-                </td>
-                <td>
-                  <span class="nhsuk-table-responsive__heading" aria-hidden="true"
-                    >Short description </span>Missing forename
-                </td>
-                <td role="cell" class="nhsuk-table__cell app-u-no-wrap">
-                  <span class="nhsuk-table-responsive__heading" aria-hidden="true"
-                    >Case ID </span
-                  >CS1111111
-                </td>
-                <td class="nhsuk-table__cell">
-                    <strong class="nhsuk-tag">Closed</strong><br> on <span class="date-yesterday"></span>
-                </td>
-                </tr>
-
-              <tr role="row" class="nhsuk-table__row">
-                <td role="cell" class="nhsuk-table__cell">
-                  <span class="nhsuk-table-responsive__heading" aria-hidden="true"
-                    >Exception ID </span
-                  ><a href="#">1020</a>
-                </td>
-                <td role="cell" class="nhsuk-table__cell app-u-no-wrap">
-                  <span class="nhsuk-table-responsive__heading" aria-hidden="true"
-                    >NHS number </span
-                  >543 555 9087
-                </td>
-                <td role="cell" class="nhsuk-table__cell app-u-no-wrap date-today-2">
-                  <span class="nhsuk-table-responsive__heading" aria-hidden="true"
-                    >Date exceptions created </span>
-                </td>
-                <td>
-                  <span class="nhsuk-table-responsive__heading" aria-hidden="true"
-                    >Short description </span>Postcode is in the wrong format
-                </td>
-                <td role="cell" class="nhsuk-table__cell app-u-no-wrap">
-                  <span class="nhsuk-table-responsive__heading" aria-hidden="true"
-                    >Case ID </span
-                  >CS9999990
-                </td>
-                <td class="nhsuk-table__cell">
-                <strong class="nhsuk-tag">Closed</strong><br> on <span class="date-yesterday"></span>
-                </td>
-                </tr>
-
-            </tbody>
-
-          </table>
-        </div>
-      </div>
-
-
-        <script>
-          // Utility function to get a formatted date string
-          function getFormattedDate(offset) {
-            const date = new Date();
-            date.setDate(date.getDate() - offset);
-            const options = { year: 'numeric', month: 'long', day: '2-digit' };
-            return date.toLocaleDateString('en-GB', options); // Format: DD-month-YYYY
-          }
-
-          // Function to populate dates
-          function populateDates() {
-            const today = getFormattedDate(0);
-            const yesterday = getFormattedDate(1);
-            const dayBeforeYesterday = getFormattedDate(2);
-
-            // Replace content for each type of date
-            document.querySelectorAll('.date-today').forEach(el => el.textContent = today);
-            document.querySelectorAll('.date-yesterday').forEach(el => el.textContent = yesterday);
-            document.querySelectorAll('.date-today-2').forEach(el => el.textContent = dayBeforeYesterday);
-          }
-
-          // Run when page loads
-          window.onload = populateDates;
-        </script>
+      // Run when page loads
+      window.onload = populateDates;
+    </script>
 
     {% endblock %}
   </div>
-  </div>
+</div>
