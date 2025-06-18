@@ -1,0 +1,143 @@
+{% extends 'layout.html' %} {% block pageTitle %}view report{% endblock %} {% block beforeContent %}
+
+
+  {% endblock %}
+
+  {% block content %}
+
+  <nav class="nhsuk-breadcrumb nhsuk-u-margin-bottom-4" aria-label="Breadcrumb">
+    <ol class="nhsuk-breadcrumb__list">
+      <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="/v6A/report-list">Reports</a></li>
+    </ol>
+    <p class="nhsuk-breadcrumb__back">
+      <a class="nhsuk-breadcrumb__backlink" href="/v6A/report-list">
+        <span class="nhsuk-u-visually-hidden">Back to</span>
+        Reports
+      </a>
+    </p>
+  </nav>
+
+
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-two-thirds nhsuk-u-margin-bottom-7">
+      <h1 class="nhsuk-label-wrapper">
+        <div class="nhsuk-label nhsuk-label--xl" aria-label="NHS number change">
+        NHS number change
+        </div>
+      </h1>
+      <div class="nhsuk-caption-xl date-today" aria-label="date" >
+
+      </div>
+    </div>
+  </div>
+
+<div class="nhsuk-grid-row">
+  <div class="nhsuk-grid-column-full">
+    <div class="nhsuk-card nhsuk-u-margin-bottom-2">
+      <div class="nhsuk-card__content">
+        <form action="/BSS-2-line/report-list" method="post">
+          <table role="table" class="nhsuk-table-responsive">
+            <thead role="rowgroup" class="nhsuk-table__head">
+              <tr role="row">
+                <th role="columnheader" scope="col">Patient name</th>
+                <th role="columnheader" scope="col">Date of Birth</th>
+                <th role="columnheader" scope="col">Old NHS number</th>
+                <th role="columnheader" scope="col">New NHS number</th>
+              </tr>
+            </thead>
+            <tbody class="nhsuk-table__body">
+              <tr role="row" class="nhsuk-table__row">
+
+                <td class="nhsuk-table__cell">
+                  <span class="nhsuk-table-responsive__heading" aria-hidden="true">Patient name</span>
+                  Alex Cooper
+                </td>
+                <td role="cell" class="nhsuk-table__cell">05 Aug 1975</td>
+                <td role="cell" class="nhsuk-table__cell app-u-no-wrap">
+                  <span class="nhsuk-table-responsive__heading" aria-hidden="true">Old NHS number</span>
+                  999 999 9010
+                </td>
+                <td role="cell" class="nhsuk-table__cell app-u-no-wrap">
+                  <span class="nhsuk-table-responsive__heading" aria-hidden="true">New NHS number</span>
+                  723 333 6891
+                </td>
+              </tr>
+
+              <!-- Example of a second patient row -->
+              <tr role="row" class="nhsuk-table__row">
+
+                <td class="nhsuk-table__cell">
+                  <span class="nhsuk-table-responsive__heading" aria-hidden="true">Patient name</span>
+                  Jane Doe
+                </td>
+                <td role="cell" class="nhsuk-table__cell">12 Dec 1980</td>
+                <td role="cell" class="nhsuk-table__cell app-u-no-wrap">
+                  <span class="nhsuk-table-responsive__heading" aria-hidden="true">Old NHS number</span>
+                  888 888 1234
+                </td>
+                <td role="cell" class="nhsuk-table__cell app-u-no-wrap">
+                  <span class="nhsuk-table-responsive__heading" aria-hidden="true">New NHS number</span>
+                  725 547 8888
+                </td>
+              </tr>
+
+              <!-- Example of a third patient row -->
+              <tr role="row" class="nhsuk-table__row">
+
+                <td class="nhsuk-table__cell">
+                  <span class="nhsuk-table-responsive__heading" aria-hidden="true">Patient name</span>
+                  Sara Ali
+                </td>
+                <td role="cell" class="nhsuk-table__cell">03 Mar 1985</td>
+                <td role="cell" class="nhsuk-table__cell app-u-no-wrap">
+                  <span class="nhsuk-table-responsive__heading" aria-hidden="true">Old NHS number</span>
+                  666 666 3333
+                </td>
+                <td role="cell" class="nhsuk-table__cell app-u-no-wrap">
+                  <span class="nhsuk-table-responsive__heading" aria-hidden="true">New NHS number</span>
+                  723 333 1122
+                </td>
+              </tr>
+
+            </tbody>
+          </table>
+
+
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+        <script>
+          // Utility function to get a formatted date string
+          function getFormattedDate(offset) {
+            const date = new Date();
+            date.setDate(date.getDate() - offset);
+            const options = { year: 'numeric', month: 'long', day: '2-digit' };
+            return date.toLocaleDateString('en-GB', options); // Format: DD-month-YYYY
+          }
+
+          // Function to populate dates
+          function populateDates() {
+            const today = getFormattedDate(0);
+            const yesterday = getFormattedDate(1);
+            const dayBeforeYesterday = getFormattedDate(2);
+
+            // Replace content for each type of date
+            document.querySelectorAll('.date-today').forEach(el => el.textContent = today);
+            document.querySelectorAll('.date-yesterday').forEach(el => el.textContent = yesterday);
+            document.querySelectorAll('.date-today-2').forEach(el => el.textContent = dayBeforeYesterday);
+          }
+
+          // Run when page loads
+          window.onload = populateDates;
+        </script>
+
+
+    {% endblock %}
+  </div>
+  </div>

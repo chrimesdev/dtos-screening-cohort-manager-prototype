@@ -1,0 +1,312 @@
+{% extends 'layout.html' %} {% block pageTitle %}Overview - Cohort Manager {%
+endblock %} {% block content %}
+<div class="nhsuk-grid-row">
+  <div class="nhsuk-grid-column-two-thirds">
+    <p class="nhsuk-body">Request to amend incorrect patient PDS record data</p>
+  </div>
+</div>
+
+<div class="nhsuk-grid-row">
+  <div class="nhsuk-grid-column-full">
+    <p class="nhsuk-body-s required">indicates required</p>
+    <div class="nhsuk-card nhsuk-u-margin-bottom-2">
+      <div class="nhsuk-card__content">
+        <table role="table" class="nhsuk-table-responsive">
+          <p class="nhsuk-u-font-size-26">Request to Amend Incorrect Patient PDS Record Data</p>
+            <div class="nhsuk-hint" id="contact-hint">Use this item when there is incorrect Personal Demographics Service
+            (PDS) record data for your patient and another data quality sub-category is not appropriate</div>
+        </table>
+
+        <div class="nhsuk-grid-row">
+
+          <!---- 1st column begin--->
+          <div class="nhsuk-grid-column-one-half">
+
+            <div class="nhsuk-form-group">
+              <label class="nhsuk-label required" for="select-1">
+                Account
+              </label>
+              <select class="nhsuk-select" id="select-1" name="select-1" style="width:500px;" disabled>
+                <option value="1" selected>NHS England - X26</option>
+              </select>
+            </div>
+
+            <div class="nhsuk-form-group">
+              <label class="nhsuk-label question" for="example">
+                  Affected User
+              </label>
+                <p class="nhsuk-body-s">Please enter Name, Email id and Phone Number</p>
+              <textarea class="nhsuk-textarea" id="example" name="example" rows="2" aria-describedby="example-hint"></textarea>
+            </div>
+
+          </div>
+          <!---end 1st col--->
+
+          <!---- 2nd column begin--->
+          <div class="nhsuk-grid-column-one-half">
+
+            <div class="nhsuk-form-group">
+              <label class="nhsuk-label required" for="select-1">
+                Contact
+              </label>
+              <select class="nhsuk-select" id="select-1" name="select-1" style="width:500px;" disabled>
+                <option value="3" selected>Chris Ford</option>
+              </select>
+            </div>
+
+            <div class="nhsuk-form-group">
+              <label class="nhsuk-label question" for="example">
+                Alternate Contact
+              </label>
+              <p class="nhsuk-body-s">Add email address of contacts to be informed of request</p>
+              <textarea class="nhsuk-textarea" id="example" name="example" rows="2" aria-describedby="example-hint"></textarea>
+            </div>
+
+          </div>
+          <!---end 2nd col--->
+
+          <div class="nhsuk-grid-column-full">
+            <div class="nhsuk-form-group">
+              <label class="nhsuk-label" for="full">
+                Local Reference
+              </label>
+              <input class="nhsuk-input" id="example" name="example" type="text">
+            </div>
+          </div>
+
+
+          <div class="nhsuk-grid-column-full">
+            <div class="nhsuk-form-group">
+                <h4 class="nhsuk-heading-xs">Please provide the following demographic details for your patient:</h4>
+            </div>
+          </div>
+
+
+          <!---- 3rd column begin--->
+          <div class="nhsuk-grid-column-one-half">
+
+            <div class="nhsuk-form-group">
+              <label class="nhsuk-label required" for="example">
+                NHS Number
+              </label>
+              <input class="nhsuk-input" id="example" name="example" type="text">
+            </div>
+
+            <div class="nhsuk-form-group">
+              <label class="nhsuk-label" for="example">
+              Previous Surname/Family Name
+              </label>
+              <input class="nhsuk-input" id="example" name="example" type="text">
+            </div>
+
+            <div class="nhsuk-form-group">
+              <label class="nhsuk-label required" for="dob">Date of Birth</label>
+              <div class="dob-container">
+                  <input class="nhsuk-input" id="dob" name="dob" type="date" placeholder="DD/MM/YYYY" required>
+                  <span class="calendar-icon">📅</span>
+              </div>
+            </div>
+
+            <div class="nhsuk-form-group">
+              <label class="nhsuk-label" for="example">
+              Place of Birth
+              </label>
+              <input class="nhsuk-input" id="example" name="example" type="text">
+            </div>
+
+            <div class="nhsuk-form-group">
+              <label class="nhsuk-label" for="example">
+              Registered practice Details
+              </label>
+              <textarea class="nhsuk-textarea" id="example" name="example" rows="2" aria-describedby="example-hint"></textarea>
+            </div>
+
+            <div class="nhsuk-form-group">
+              <label class="nhsuk-label question" for="example">
+                Previous Addresses (including post codes)
+              </label>
+              <p class="nhsuk-body-s">List as many as you know</p>
+              <textarea class="nhsuk-textarea" id="example" name="example" rows="2" aria-describedby="example-hint"></textarea>
+            </div>
+
+            <div class="nhsuk-form-group">
+              <label class="nhsuk-label question" for="example">
+                Any Additional Details
+              </label>
+              <p class="nhsuk-body-s">e.g. Name of spouse or partner etc.</p>
+              <textarea class="nhsuk-textarea" id="example" name="example" rows="2" aria-describedby="example-hint"></textarea>
+            </div>
+
+          </div>
+            <!---end 3rd col--->
+
+            <!---- 4th column begin--->
+            <div class="nhsuk-grid-column-one-half">
+            <div class="nhsuk-form-group">
+              <label class="nhsuk-label" for="example">
+                Surname/Family Name
+              </label>
+              <input class="nhsuk-input" id="example" name="example" type="text">
+            </div>
+
+            <div class="nhsuk-form-group">
+              <label class="nhsuk-label" for="example">
+                Forename
+              </label>
+              <input class="nhsuk-input" id="example" name="example" type="text">
+            </div>
+
+            <div class="nhsuk-form-group">
+              <label class="nhsuk-label" for="select-1">
+                Gender
+              </label>
+              <select class="nhsuk-select" id="select-1" name="select-1" style="width:500px;">
+                <option value="1" selected>--none--</option>
+                <option value="2">Female</option>
+                <option value="3">Male</option>
+                <option value="4">Indeterminate</option>
+                <option value="5">Not Known</option>
+              </select>
+            </div>
+
+            <div class="nhsuk-form-group">
+              <label class="nhsuk-label" for="example">
+              Mother's maiden Name
+              </label>
+              <input class="nhsuk-input" id="example" name="example" type="text">
+            </div>
+
+            <div class="nhsuk-form-group">
+                <p class="nhsuk-u-font-size-19">Last Known Addresses (including post codes)</p>
+            </div>
+
+            <div class="nhsuk-form-group">
+              <label class="nhsuk-label" for="example">
+              Address 1
+              </label>
+              <input class="nhsuk-input" id="example" name="example" type="text">
+            </div>
+
+            <div class="nhsuk-form-group">
+              <label class="nhsuk-label" for="example">
+              Address 2
+              </label>
+              <input class="nhsuk-input" id="example" name="example" type="text">
+            </div>
+
+            <div class="nhsuk-form-group">
+              <label class="nhsuk-label" for="example">
+              Address 3
+              </label>
+              <input class="nhsuk-input" id="example" name="example" type="text">
+            </div>
+
+            <div class="nhsuk-form-group">
+              <label class="nhsuk-label" for="example">
+              Address 4
+              </label>
+              <input class="nhsuk-input" id="example" name="example" type="text">
+            </div>
+
+            <div class="nhsuk-form-group">
+              <label class="nhsuk-label" for="example">
+              Address 5
+              </label>
+              <input class="nhsuk-input" id="example" name="example" type="text">
+            </div>
+
+            <div class="nhsuk-form-group">
+              <label class="nhsuk-label" for="example">
+              Postcode
+              </label>
+              <input class="nhsuk-input" id="example" name="example" type="text">
+            </div>
+
+            <div class="nhsuk-form-group">
+              <label class="nhsuk-label" for="dob">Date of Arrival in the UK (if born outside UK)</label>
+              <div class="dob-container">
+                  <input class="nhsuk-input" id="dob" name="dob" type="date" placeholder="DD/MM/YYYY" required>
+                  <span class="calendar-icon">📅</span>
+              </div>
+            </div>
+
+
+          </div>
+          <!---end 4th col--->
+
+          <script>
+              function adjustHeight(element) {
+                  element.style.height = 'auto';
+                  element.style.height = (element.scrollHeight) + 'px';
+              }
+          </script>
+
+          <div class="nhsuk-grid-column-full">
+            <div class="nhsuk-form-group">
+                <label class="nhsuk-label required" for="expanding-textarea">Description</label>
+                <textarea class="nhsuk-textarea" id="expanding-textarea" name="example" oninput="adjustHeight(this)" rows="3" aria-describedby="example-hint"></textarea>
+            </div>
+          </div>
+
+
+      <div style="float:right; padding-right:20px;">
+              <label class="attach-file">
+                    <div class="attach-file-icon">📎</div>
+                    <span>Add Attachments</span>
+                    <input type="file">
+              </label>
+          </div>
+
+
+        <!---  <script>
+              let fileArray = [];
+
+              function handleFileSelect(event) {
+                  const files = Array.from(event.target.files);
+                  fileArray = fileArray.concat(files);
+                  updateFileList();
+              }
+
+              function updateFileList() {
+                  const fileList = document.getElementById('file-list');
+                  fileList.innerHTML = ''; // Clear previous list
+
+                  fileArray.forEach((file, index) => {
+                      const li = document.createElement('li');
+                      li.innerHTML = ` ${file.name} <span class="delete-icon" onclick="deleteFile(${index})">X</span>`;
+                      fileList.appendChild(li);
+                  });
+              }
+
+              function deleteFile(index) {
+                  fileArray.splice(index, 1);
+                  updateFileList();
+              }
+          </script>
+
+          <div style="float:right; padding-right:20px;">
+            <label class="attach-icon">📎 Add Attachments
+                <input type="file" id="file-input" multiple onchange="handleFileSelect(event)">
+            </label>
+            <ul id="file-list" class="file-list"></ul>
+          </div> --->
+
+
+
+          <button class="nhsuk-button" data-module="nhsuk-button" data-prevent-double-click="true" type="submit" style="margin-left:20px;">
+            Submit
+          </button>
+
+
+
+
+        </div>
+        <!---end main grid--->
+
+
+      </div>
+    </div>
+  </div>
+</div>
+
+{% endblock %}
