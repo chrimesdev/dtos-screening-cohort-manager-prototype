@@ -5,12 +5,12 @@ Manager{% endblock %} {% block beforeContent %}
 
   <nav class="nhsuk-breadcrumb" aria-label="Breadcrumb">
     <ol class="nhsuk-breadcrumb__list">
-      <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="/v6A">Home</a></li>
+      <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="/v7">Home</a></li>
       <!---li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="#">Level two</a></li>
       <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="#">Level three</a></li--->
     </ol>
     <p class="nhsuk-breadcrumb__back">
-      <a class="nhsuk-breadcrumb__backlink" href="/v6A">
+      <a class="nhsuk-breadcrumb__backlink" href="/v7">
         <span class="nhsuk-u-visually-hidden">Back to</span>
         Home
       </a>
@@ -73,7 +73,7 @@ Manager{% endblock %} {% block beforeContent %}
                 <td role="cell" class="nhsuk-table__cell">
                   <span class="nhsuk-table-responsive__heading" aria-hidden="true"
                     >Exception ID </span
-                  ><a href="/v6A/participant-information-raised-1001">1001</a>
+                  ><a href="/v7/participant-information-raised-1001">1001</a>
                 </td>
                 <td role="cell" class="nhsuk-table__cell app-u-no-wrap">
                   <span class="nhsuk-table-responsive__heading" aria-hidden="true"
@@ -103,7 +103,7 @@ Manager{% endblock %} {% block beforeContent %}
                 <td role="cell" class="nhsuk-table__cell">
                   <span class="nhsuk-table-responsive__heading" aria-hidden="true"
                     >Exception ID </span
-                  ><a href="/v6A/participant-information-raised-1002">1002</a>
+                  ><a href="/v7/participant-information-raised-1002">1002</a>
                 </td>
                 <td role="cell" class="nhsuk-table__cell app-u-no-wrap">
                   <span class="nhsuk-table-responsive__heading" aria-hidden="true"
@@ -333,14 +333,32 @@ Manager{% endblock %} {% block beforeContent %}
       </div>
 
     <div class="nhsuk-grid-row">
-      <div class="nhsuk-grid-column-two-thirds">
+      <div class="nhsuk-grid-column-two-thirds ">
           <div class="pagination" style="float: right; width: 40%;">
               <span class="page-number active">1</span>
               <span class="page-number next-link">2</span>
               <a class="next-link" href="#"> Next → </a>
           </div>
       </div>
+    </div>
 
+      <hr>
+
+      <div class="nhsuk-grid-row">
+        <div class="nhsuk-grid-column-full ">
+          <div class="nhsuk-action-link nhsuk-u-margin-top-1">
+            <a class="nhsuk-action-link__link" href="#">
+              <svg class="nhsuk-icon nhsuk-icon__arrow-right-circle" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M0 0h24v24H0z" fill="none"></path>
+                <path d="M12 2a10 10 0 0 0-9.95 9h11.64L9.74 7.05a1 1 0 0 1 1.41-1.41l5.66 5.65a1 1 0 0 1 0 1.42l-5.66 5.65a1 1 0 0 1-1.41 0 1 1 0 0 1 0-1.41L13.69 13H2.05A10 10 0 1 0 12 2z"></path>
+              </svg>
+              <span class="nhsuk-action-link__text">Help us improve</span>
+            </a>
+          </div>
+          <p>Your feedback helps us make our service better.</p>
+          <p><a href="#">Take a short survey</a> to let us know about your experience of Cohort Manager.</p>
+        </div>
+      </div>
 
 
   <script>
