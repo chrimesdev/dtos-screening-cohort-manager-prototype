@@ -154,7 +154,7 @@ Manager{% endblock %} {% block beforeContent %}
             <tr  class="nhsuk-table__row">
               <td role="cell" class="nhsuk-table__cell">
                 <span class="nhsuk-table-responsive__heading" aria-hidden="true">Exception ID </span><a
-                  href="#">1024</a>
+                  href="/v7/participant-information-not-raised-1024">1024</a>
               </td>
               <td role="cell" class="nhsuk-table__cell app-u-no-wrap">
                 <span class="nhsuk-table-responsive__heading" aria-hidden="true">NHS number </span>643 634 1243
@@ -163,7 +163,7 @@ Manager{% endblock %} {% block beforeContent %}
                 <span class="nhsuk-table-responsive__heading" aria-hidden="true">Date exception created</span>
               </td>
               <td>
-                <span class="nhsuk-table-responsive__heading" aria-hidden="true">Short description </span>Possible confused NHS Number
+                <span class="nhsuk-table-responsive__heading" aria-hidden="true">Short description </span>Record is either missing from or is not recognised by Cohort Manager
               </td>
               <td class="nhsuk-table__cell">
                 <strong class="nhsuk-tag nhsuk-tag--grey">Not raised</strong>
@@ -304,13 +304,21 @@ Manager{% endblock %} {% block beforeContent %}
 
       <hr>
 
-        <div class="nhsuk-grid-row">
-          <div class="nhsuk-grid-column-full nhsuk-u-margin-top-1">
-              <h2>Help us improve</h2>
-            <p>Your feedback helps us make our service better.</p>
-            <p><a href="#">Take a short survey</a> to let us know about your experience of Cohort Manager.</p>
+      <div class="nhsuk-grid-row">
+        <div class="nhsuk-grid-column-full ">
+          <div class="nhsuk-action-link nhsuk-u-margin-top-1">
+            <a class="nhsuk-action-link__link" href="#">
+              <svg class="nhsuk-icon nhsuk-icon__arrow-right-circle" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M0 0h24v24H0z" fill="none"></path>
+                <path d="M12 2a10 10 0 0 0-9.95 9h11.64L9.74 7.05a1 1 0 0 1 1.41-1.41l5.66 5.65a1 1 0 0 1 0 1.42l-5.66 5.65a1 1 0 0 1-1.41 0 1 1 0 0 1 0-1.41L13.69 13H2.05A10 10 0 1 0 12 2z"></path>
+              </svg>
+              <span class="nhsuk-action-link__text">Help us improve</span>
+            </a>
           </div>
+          <p>Your feedback helps us make our service better.</p>
+          <p>Take a moment to <a href="#">let us know about your experience of Cohort Manager</a>.</p>
         </div>
+      </div>
 
         <script>
             const dateElement = document.getElementById("date");

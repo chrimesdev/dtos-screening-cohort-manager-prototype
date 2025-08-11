@@ -24,7 +24,7 @@ Manager{% endblock %} {% block beforeContent %}
 
 
 <div class="nhsuk-grid-row">
-  <div class="nhsuk-grid-column-full nhsuk-u-margin-bottom-7">
+  <div class="nhsuk-grid-column-full nhsuk-u-margin-bottom-3">
     <h1 class="nhsuk-label-wrapper">
       <div class="nhsuk-label nhsuk-label--xl" aria-label="Not-raised-breast-screening-exceptions">
       Not raised breast screening exceptions
@@ -41,12 +41,13 @@ Manager{% endblock %} {% block beforeContent %}
         <b>Sort by</b>
       </label>
       <select class="nhsuk-select" id="select-1" name="select-1">
-        <option value="1" selected>Date exceptions created (oldest first)</option>
-        <option value="2">Date exceptions created(newest first)</option>
+        <option value="1" selected>Status last updated (most recent first)</option>
+        <option value="2">Status last updated (oldest first)</option>
       </select>
       <button class="nhsuk-button" data-module="nhsuk-button" type="submit" style="padding: 4px 16px; font-size: 16px">
         Apply
       </button>
+
 
       <div class="nhsuk-header__content" id="content-header">
         <div class="nhsuk-header__search nhsuk-u-margin-bottom-5" style="float: right; margin-top: -70px;">
@@ -72,7 +73,6 @@ Manager{% endblock %} {% block beforeContent %}
 <p class="nhsuk-body" style="float: right; font-size: 1.1875rem; margin-right: 20px;">
   <b>Showing 10 of 20 results</b>
 </p>
-
 
 <div class="nhsuk-grid-row">
   <div class="nhsuk-grid-column-full">
