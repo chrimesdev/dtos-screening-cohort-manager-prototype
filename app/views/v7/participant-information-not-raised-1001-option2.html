@@ -1,16 +1,6 @@
 {% extends 'layout.html' %} {% block pageTitle %}Participant information not raised - 1001
 {% endblock %} {% block beforeContent %}
 
-<style>
-    .nhs-circle-blue {
-      width: 15px;
-      height: 15px;
-      background: #005eb8; /* NHS colour provided */
-      border-radius: 50%;
-      display: inline-block;
-      box-sizing: border-box;
-    }
-  </style>
 
 <nav class="nhsuk-breadcrumb" aria-label="Breadcrumb">
   <ol class="nhsuk-breadcrumb__list">
@@ -52,9 +42,7 @@
         <dl class="nhsuk-summary-list">
           <div class="nhsuk-summary-list__row">
             <dt class="nhsuk-summary-list__key">Raise to </dt>
-            <dd class="nhsuk-summary-list__value"> National Back Office (NBO)
-              <div class="nhs-circle-blue aria-hidden="true"></div>
-            </dd>
+            <dd class="nhsuk-summary-list__value"> National Back Office (NBO)</dd>
           </div>
 
           <div class="nhsuk-summary-list__row">
@@ -205,21 +193,19 @@
 
     <hr/>
 
-    <div class="nhsuk-grid-row">
-      <div class="nhsuk-grid-column-full ">
-        <div class="nhsuk-action-link nhsuk-u-margin-top-1">
-          <a class="nhsuk-action-link__link" href="#">
-            <svg class="nhsuk-icon nhsuk-icon__arrow-right-circle" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
-              <path d="M0 0h24v24H0z" fill="none"></path>
-              <path d="M12 2a10 10 0 0 0-9.95 9h11.64L9.74 7.05a1 1 0 0 1 1.41-1.41l5.66 5.65a1 1 0 0 1 0 1.42l-5.66 5.65a1 1 0 0 1-1.41 0 1 1 0 0 1 0-1.41L13.69 13H2.05A10 10 0 1 0 12 2z"></path>
-            </svg>
-            <span class="nhsuk-action-link__text">Help us improve</span>
-          </a>
-        </div>
-        <p>Your feedback helps us make our service better.</p>
-        <p>Take a moment to <a href="#">let us know about your experience of Cohort Manager</a>.</p>
+    <h2 class="nhsuk-u-padding-top-4">Help us improve</h2>
+    <p>Your feedback helps us make our service better. </p>
+      <div class="nhsuk-action-link nhsuk-u-margin-top-1">
+        <a class="nhsuk-action-link__link" href="#">
+          <svg class="nhsuk-icon nhsuk-icon__arrow-right-circle" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M0 0h24v24H0z" fill="none"></path>
+            <path d="M12 2a10 10 0 0 0-9.95 9h11.64L9.74 7.05a1 1 0 0 1 1.41-1.41l5.66 5.65a1 1 0 0 1 0 1.42l-5.66 5.65a1 1 0 0 1-1.41 0 1 1 0 0 1 0-1.41L13.69 13H2.05A10 10 0 1 0 12 2z"></path>
+          </svg>
+          <span class="nhsuk-action-link__text">Let us know about your experience of Cohort Manager</span>
+        </a>
       </div>
-    </div>
+    <p>If you need technical support, please continue to use our <a href="/v7/contact">contact us</a> page rather than this form. </p>
+
 
   </div>
   {% endblock %}
