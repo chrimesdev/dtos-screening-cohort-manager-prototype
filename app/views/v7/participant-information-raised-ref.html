@@ -1,5 +1,5 @@
-{% extends 'layout.html' %} {% block pageTitle %}Participant information -
-Cohort Manager{% endblock %} {% block beforeContent %}
+{% extends 'layout.html' %} {% block pageTitle %}Participant information raised-1001
+{% endblock %} {% block beforeContent %}
 
 
 <nav class="nhsuk-breadcrumb" aria-label="Breadcrumb">
@@ -23,6 +23,7 @@ Cohort Manager{% endblock %} {% block beforeContent %}
 </nav>
 
 {% endblock %} {% block content %}
+
 <div class="nhsuk-grid-row">
   <div class="nhsuk-grid-column-two-thirds nhsuk-u-margin-bottom-4">
     <h1 class="nhsuk-label-wrapper">
@@ -33,57 +34,64 @@ Cohort Manager{% endblock %} {% block beforeContent %}
   </div>
 </div>
 
-<div class="nhsuk-card nhsuk-u-margin-bottom-4">
-  <div class="nhsuk-card__content">
-    <h2 class="nhsuk-card__heading">Portal Instructions</h2>
 
-    <dl class="nhsuk-summary-list">
-      <div class="nhsuk-summary-list__row">
-        <dt class="nhsuk-summary-list__key">Raised to </dt>
-        <dd class="nhsuk-summary-list__value"> National Back Office (NBO)</dd>
-        <dd class="nhsuk-summary-list__actions">&nbsp;</dd>
+
+<div class="nhsuk-grid-row">
+  <div class="nhsuk-grid-column-full">
+
+    <!--- Portal Instructions--->
+
+    <div class="nhsuk-card nhsuk-u-margin-bottom-4">
+      <div class="nhsuk-card__content">
+        <h2 class="nhsuk-card__heading">Portal Instructions</h2>
+
+        <dl class="nhsuk-summary-list">
+          <div class="nhsuk-summary-list__row">
+            <dt class="nhsuk-summary-list__key">Raised to </dt>
+            <dd class="nhsuk-summary-list__value"> National Back Office (NBO)</dd>
+            <dd class="nhsuk-summary-list__actions">&nbsp;</dd>
+          </div>
+
+          <div class="nhsuk-summary-list__row">
+            <dt class="nhsuk-summary-list__key">Raised on </dt>
+            <dd class="nhsuk-summary-list__value"> <strong class="nhsuk-tag">Raised</strong> on <span id="today-date"></span></dd>
+            <dd class="nhsuk-summary-list__actions">&nbsp;</dd>
+          </div>
+
+          <div class="nhsuk-summary-list__row">
+            <dt class="nhsuk-summary-list__key">Portal form used</dt>
+            <dd class="nhsuk-summary-list__value"> Request to amend incorrect patient PDS record data</dd>
+            <dd class="nhsuk-summary-list__actions">&nbsp;</dd>
+          </div>
+
+          <div class="nhsuk-summary-list__row">
+            <dt class="nhsuk-summary-list__key">Local reference </br>(exception ID)</dt>
+            <dd class="nhsuk-summary-list__value" aria-label="local-referemce-1001">1001</dd>
+            <dd class="nhsuk-summary-list__actions">&nbsp;</dd>
+          </div>
+
+          <div class="nhsuk-summary-list__row">
+            <dt class="nhsuk-summary-list__key">ServiceNow Case ID</dt>
+            <dd class="nhsuk-summary-list__value" aria-label="ServiceNow-case-ID-CS1234567">CS1111111</dd>
+            <dd class="nhsuk-summary-list__actions">
+              <a href="/v7/participant-snow-1001-change#case"">
+                Change<span class="nhsuk-u-visually-hidden">ServiceNow case ID</span>
+              </a>
+            </dd>
+          </div>
+
+        </dl>
       </div>
-
-      <div class="nhsuk-summary-list__row">
-        <dt class="nhsuk-summary-list__key">Raised on </dt>
-        <dd class="nhsuk-summary-list__value"> <strong class="nhsuk-tag">Raised</strong> on <span id="today-date"></span>
-        </dd>
-        <dd class="nhsuk-summary-list__actions">&nbsp;</dd>
-      </div>
-
-      <div class="nhsuk-summary-list__row">
-        <dt class="nhsuk-summary-list__key">Portal form used</dt>
-        <dd class="nhsuk-summary-list__value">
-        Request to amend incorrect patient PDS record data
-        </dd>
-        <dd class="nhsuk-summary-list__actions">&nbsp;</dd>
-      </div>
-
-      <div class="nhsuk-summary-list__row">
-        <dt class="nhsuk-summary-list__key">ServiceNow case ID</dt>
-        <dd class="nhsuk-summary-list__value" aria-label="ServiceNow-case-ID-CS1234567">CS1111111</dd>
-        <dd class="nhsuk-summary-list__actions">
-          <a href="/v7/participant-information-not-raised-1001-change#case"">
-            Change<span class="nhsuk-u-visually-hidden">ServiceNow case ID</span>
-          </a>
-        </dd>
-      </div>
-
-    </dl>
-  </div>
-</div>
+    </div>
 
 
 
 <!--- main table--->
 
-<div class="nhsuk-grid-row">
-  <div class="nhsuk-grid-column-full">
 
     <div class="nhsuk-card nhsuk-u-margin-bottom-4">
       <div class="nhsuk-card__content">
 
-      <!---  <h3 class="nhsuk-do-dont-list__label">Request to amend incorrect patient PDS record data</h3>--->
         <h2 class="nhsuk-card__heading">Participant details</h2>
 
         <dl class="nhsuk-summary-list">
@@ -127,15 +135,6 @@ Cohort Manager{% endblock %} {% block beforeContent %}
             <dd class="nhsuk-summary-list__value">B86110</dd>
           </div>
 
-          <!---<div class="nhsuk-summary-list__row">
-            <dt class="nhsuk-summary-list__key">Registered practice address</dt>
-            <dd class="nhsuk-summary-list__value">
-              Anytown Medical Centre<br>
-              Anywhere<br>
-              Anytown<br>
-              AT1 1AA
-          </div>--->
-
         </dl>
 
     </div>
@@ -174,8 +173,6 @@ Cohort Manager{% endblock %} {% block beforeContent %}
       </div>
     </div>
 
-    <hr/>
-
     <h2 class="nhsuk-u-padding-top-4">Help us improve</h2>
     <p>Your feedback helps us make our service better. </p>
       <div class="nhsuk-action-link nhsuk-u-margin-top-1">
@@ -188,6 +185,7 @@ Cohort Manager{% endblock %} {% block beforeContent %}
         </a>
       </div>
     <p>If you need technical support, please continue to use our <a href="/v7/contact">contact us</a> page rather than this form. </p>
+
 
     <script>
         // Function to get the formatted date

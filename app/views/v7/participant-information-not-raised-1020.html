@@ -1,5 +1,5 @@
-{% extends 'layout.html' %} {% block pageTitle %}Participant information -
-Cohort Manager{% endblock %} {% block beforeContent %}
+{% extends 'layout.html' %} {% block pageTitle %}Participant information not raised- 1020
+{% endblock %} {% block beforeContent %}
 
 <nav class="nhsuk-breadcrumb" aria-label="Breadcrumb">
   <ol class="nhsuk-breadcrumb__list">
@@ -23,9 +23,7 @@ Cohort Manager{% endblock %} {% block beforeContent %}
       Exception information
       </div>
     </h1>
-    <div class="nhsuk-caption-xl" aria-label="local-referemce-1020" >
-    Local reference (exception ID): 1020
-    </div>
+
   </div>
 </div>
 
@@ -33,9 +31,38 @@ Cohort Manager{% endblock %} {% block beforeContent %}
 <div class="nhsuk-grid-row">
   <div class="nhsuk-grid-column-full">
 
-    <div class="nhsuk-card nhsuk-do-dont-list nhsuk-u-margin-bottom-4 nhsuk-u-margin-top-0">
+    <!--- Portal Instructions--->
 
-        <h3 class="nhsuk-do-dont-list__label">Portal form: Request to amend incorrect patient PDS record data</h3>
+    <div class="nhsuk-card nhsuk-u-margin-bottom-4">
+      <div class="nhsuk-card__content">
+        <h2 class="nhsuk-card__heading">Portal Instructions</h2>
+
+        <dl class="nhsuk-summary-list">
+          <div class="nhsuk-summary-list__row">
+            <dt class="nhsuk-summary-list__key">Raise to </dt>
+            <dd class="nhsuk-summary-list__value"> National Back Office (NBO)</dd>
+          </div>
+
+          <div class="nhsuk-summary-list__row">
+            <dt class="nhsuk-summary-list__key">Portal form</dt>
+            <dd class="nhsuk-summary-list__value">
+            Request to amend incorrect patient PDS record data
+            </dd>
+          </div>
+
+          <div class="nhsuk-summary-list__row">
+            <dt class="nhsuk-summary-list__key">Local reference (exception ID)</dt>
+            <dd class="nhsuk-summary-list__value" aria-label="local-reference-1001">1020</dd>
+          </div>
+
+        </dl>
+      </div>
+    </div>
+
+
+    <div class="nhsuk-card nhsuk-u-margin-bottom-4">
+      <div class="nhsuk-card__content">
+
         <h2 class="nhsuk-card__heading">Participant details</h2>
 
         <dl class="nhsuk-summary-list">
@@ -80,17 +107,8 @@ Cohort Manager{% endblock %} {% block beforeContent %}
             <dd class="nhsuk-summary-list__value">B66110</dd>
           </div>
 
-          <!---<div class="nhsuk-summary-list__row">
-            <dt class="nhsuk-summary-list__key">Registered practice address</dt>
-            <dd class="nhsuk-summary-list__value">
-              Anytown Medical Centre<br>
-              Anywhere<br>
-              Anytown<br>
-              AT1 1AA
-          </div>--->
-
         </dl>
-
+        </div>
     </div>
 
     <div class="nhsuk-card nhsuk-u-margin-bottom-4">
@@ -164,6 +182,18 @@ Cohort Manager{% endblock %} {% block beforeContent %}
       </div>
     </div>
 
+    <h2 class="nhsuk-u-padding-top-4">Help us improve</h2>
+    <p>Your feedback helps us make our service better. </p>
+      <div class="nhsuk-action-link nhsuk-u-margin-top-1">
+        <a class="nhsuk-action-link__link" href="#">
+          <svg class="nhsuk-icon nhsuk-icon__arrow-right-circle" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M0 0h24v24H0z" fill="none"></path>
+            <path d="M12 2a10 10 0 0 0-9.95 9h11.64L9.74 7.05a1 1 0 0 1 1.41-1.41l5.66 5.65a1 1 0 0 1 0 1.42l-5.66 5.65a1 1 0 0 1-1.41 0 1 1 0 0 1 0-1.41L13.69 13H2.05A10 10 0 1 0 12 2z"></path>
+          </svg>
+          <span class="nhsuk-action-link__text">Let us know about your experience of Cohort Manager</span>
+        </a>
+      </div>
+    <p>If you need technical support, please continue to use our <a href="/v7/contact">contact us</a> page rather than this form. </p>
 
   </div>
   {% endblock %}

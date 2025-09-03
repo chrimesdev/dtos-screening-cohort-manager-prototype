@@ -29,63 +29,70 @@ Cohort Manager{% endblock %} {% block beforeContent %}
       Exception information
       </div>
     </h1>
-    <div class="nhsuk-caption-xl" aria-label="local-referemce-1002" >
+    <!---div class="nhsuk-caption-xl" aria-label="local-referemce-1002" >
     Local reference (exception ID): 1002
-    </div>
+    </div--->
   </div>
 </div>
 
-<dl class="nhsuk-summary-list">
-  <div class="nhsuk-summary-list__row">
-    <dt class="nhsuk-summary-list__key">
-      Portal form used
-    </dt>
-    <dd class="nhsuk-summary-list__value">
-    Request to amend incorrect patient PDS record data
-    </dd>
-    <dd></dd>
 
-  </div>
-  <div class="nhsuk-summary-list__row">
-    <dt class="nhsuk-summary-list__key">
-      Exception status
-    </dt>
-    <dd class="nhsuk-summary-list__value">
-      <strong class="nhsuk-tag">Raised</strong> on <span id="today-date"></span>
-    </dd>
-    <dd></dd>
 
-  </div>
-  <div class="nhsuk-summary-list__row">
-    <dt class="nhsuk-summary-list__key">
-      ServiceNow case ID
-    </dt>
-    <dd class="nhsuk-summary-list__value">
-    CS1234567
-    <span style="margin-left:50px;"><a href="/v7/participant-information-not-raised-1002-change#case">
-      Change<span class="nhsuk-u-visually-hidden">ServiceNow case ID</span>
-    </a></span>
-    </dd>
-    <!---dd class="nhsuk-summary-list__actions">
-      <a href="/v7/participant-information-not-raised-1001-change">
-        Change<span class="nhsuk-u-visually-hidden">ServiceNow case ID</span>
-      </a>
-    </dd--->
-  </div>
+<div class="nhsuk-grid-row">
+  <div class="nhsuk-grid-column-full">
 
-</dl>
+    <!--- Portal Instructions--->
+
+    <div class="nhsuk-card nhsuk-u-margin-bottom-4">
+      <div class="nhsuk-card__content">
+        <h2 class="nhsuk-card__heading">Portal Instructions</h2>
+
+        <dl class="nhsuk-summary-list">
+          <div class="nhsuk-summary-list__row">
+            <dt class="nhsuk-summary-list__key">Raised to </dt>
+            <dd class="nhsuk-summary-list__value"> National Back Office (NBO)</dd>
+            <dd class="nhsuk-summary-list__actions">&nbsp;</dd>
+          </div>
+
+          <div class="nhsuk-summary-list__row">
+            <dt class="nhsuk-summary-list__key">Raised on </dt>
+            <dd class="nhsuk-summary-list__value"> <strong class="nhsuk-tag">Raised</strong> on <span id="today-date"></span></dd>
+            <dd class="nhsuk-summary-list__actions">&nbsp;</dd>
+          </div>
+
+          <div class="nhsuk-summary-list__row">
+            <dt class="nhsuk-summary-list__key">Portal form used</dt>
+            <dd class="nhsuk-summary-list__value"> Request to amend incorrect patient PDS record data</dd>
+            <dd class="nhsuk-summary-list__actions">&nbsp;</dd>
+          </div>
+
+          <div class="nhsuk-summary-list__row">
+            <dt class="nhsuk-summary-list__key">Local reference </br>(exception ID)</dt>
+            <dd class="nhsuk-summary-list__value" aria-label="local-referemce-1001">1001</dd>
+            <dd class="nhsuk-summary-list__actions">&nbsp;</dd>
+          </div>
+
+          <div class="nhsuk-summary-list__row">
+            <dt class="nhsuk-summary-list__key">ServiceNow Case ID</dt>
+            <dd class="nhsuk-summary-list__value" aria-label="ServiceNow-case-ID-CS1234567">CS1234567</dd>
+            <dd class="nhsuk-summary-list__actions">
+              <a href="#"">
+                Change<span class="nhsuk-u-visually-hidden">ServiceNow case ID</span>
+              </a>
+            </dd>
+          </div>
+
+        </dl>
+      </div>
+    </div>
 
 
 
 <!--- main table--->
 
-<div class="nhsuk-grid-row">
-  <div class="nhsuk-grid-column-full">
 
     <div class="nhsuk-card nhsuk-u-margin-bottom-4">
       <div class="nhsuk-card__content">
 
-      <!---  <h3 class="nhsuk-do-dont-list__label">Request to amend incorrect patient PDS record data</h3>--->
         <h2 class="nhsuk-card__heading">Participant details</h2>
 
         <dl class="nhsuk-summary-list">
@@ -128,15 +135,6 @@ Cohort Manager{% endblock %} {% block beforeContent %}
             <dt class="nhsuk-summary-list__key">Registered practice code</dt>
             <dd class="nhsuk-summary-list__value">B86110</dd>
           </div>
-
-          <!---<div class="nhsuk-summary-list__row">
-            <dt class="nhsuk-summary-list__key">Registered practice address</dt>
-            <dd class="nhsuk-summary-list__value">
-              Anytown Medical Centre<br>
-              Anywhere<br>
-              Anytown<br>
-              AT1 1AA
-          </div>--->
 
         </dl>
 
