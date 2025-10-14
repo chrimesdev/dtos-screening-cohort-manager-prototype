@@ -1,5 +1,4 @@
-{% extends 'layout.html' %} {% block pageTitle %}Closed Exceptions summary - Cohort
-Manager{% endblock %} {% block beforeContent %}
+{% extends 'layout.html' %} {% block pageTitle %}Search result for NHS number <> {% endblock %} {% block beforeContent %}
 
   <nav class="nhsuk-breadcrumb" aria-label="Breadcrumb">
     <ol class="nhsuk-breadcrumb__list">
@@ -17,37 +16,27 @@ Manager{% endblock %} {% block beforeContent %}
 
   {% endblock %} {% block content %}
   <div class="nhsuk-grid-row">
-    <div class="nhsuk-grid-column-full nhsuk-u-margin-bottom-7">
+    <div class="nhsuk-grid-column-full nhsuk-u-margin-bottom-4">
       <h1 class="nhsuk-label-wrapper">
-        <label class="nhsuk-label nhsuk-label--xl" aria-label="Closed breast screening exceptions">
-        Closed breast screening exceptions
+        <label class="nhsuk-label nhsuk-label--xl" aria-label="Search result">
+        Search result for 723 777 3456
         </label>
       </h1>
     </div>
   </div>
 
+<!--- Exceptions result begin --->
+
   <div class="nhsuk-grid-column-full">
-
-      <div class="nhsuk-form-group nhsuk-u-margin-bottom-0">
-        <label class="nhsuk-label" for="select-1">
-          <b>Sort by</b>
+      <div class="nhsuk-form-group nhsuk-u-margin-bottom-4">
+        <label class="nhsuk-label" style="float:left;">
+          <h2 class="nhsuk-heading-m">Exceptions</h2>
         </label>
-        <select class="nhsuk-select" id="select-1" name="select-1">
-          <option value="1" selected>Status last updated (most recent first)</option>
-          <option value="2">Status last updated (oldest first)</option>
-        </select>
-        <button class="nhsuk-button" data-module="nhsuk-button" type="submit" style="padding: 4px 16px; font-size: 16px">
-          Apply
-        </button>
-
-        <p class="nhsuk-body" style="float: right; font-size: 1.1875rem">
-          <b>Showing 5 of 5 results</b>
+        <p class="nhsuk-body" style="float:right; font-size:1.1875rem">
+          <b>Showing 5 of 7 results</b>
         </p>
-
       </div>
-
   </div>
-
 
 
   <div class="nhsuk-grid-row">
@@ -74,7 +63,7 @@ Manager{% endblock %} {% block beforeContent %}
                     href="#">1024</a>
                 </td>
                 <td role="cell" class="nhsuk-table__cell app-u-no-wrap">
-                  <span class="nhsuk-table-responsive__heading" aria-hidden="true">NHS number </span>643 634 1243
+                  <span class="nhsuk-table-responsive__heading" aria-hidden="true">NHS number </span>723 777 3456
                 </td>
                 <td role="cell" class="nhsuk-table__cell app-u-no-wrap date">
                   <span class="nhsuk-table-responsive__heading" aria-hidden="true">Date exception created</span>
@@ -98,7 +87,7 @@ Manager{% endblock %} {% block beforeContent %}
                     href="#">1040</a>
                 </td>
                 <td role="cell" class="nhsuk-table__cell app-u-no-wrap">
-                  <span class="nhsuk-table-responsive__heading" aria-hidden="true">NHS number </span>653 542 4353
+                  <span class="nhsuk-table-responsive__heading" aria-hidden="true">NHS number </span>723 777 3456
                 </td>
                 <td role="cell" class="nhsuk-table__cell app-u-no-wrap date">
                   <span class="nhsuk-table-responsive__heading" aria-hidden="true">Date exception created</span>
@@ -112,7 +101,7 @@ Manager{% endblock %} {% block beforeContent %}
                   >CS6543217
                 </td>
                 <td class="nhsuk-table__cell">
-                  <strong class="nhsuk-tag nhsuk-tag">Closed</strong><br> on <span class="date-today"></span>
+                  <strong class="nhsuk-tag nhsuk-tag">Raised</strong><br> on <span class="date-yesterday"></span>
                 </td>
               </tr>
 
@@ -123,9 +112,7 @@ Manager{% endblock %} {% block beforeContent %}
                   ><a href="#">1001</a>
                 </td>
                 <td role="cell" class="nhsuk-table__cell app-u-no-wrap">
-                  <span class="nhsuk-table-responsive__heading" aria-hidden="true"
-                    >NHS number </span
-                  >723 333 6891
+                  <span class="nhsuk-table-responsive__heading" aria-hidden="true">NHS number </span>723 777 3456
                 </td>
                 <td role="cell" class="nhsuk-table__cell app-u-no-wrap date-today-2">
                   <span class="nhsuk-table-responsive__heading" aria-hidden="true">Date exceptions created </span>
@@ -142,7 +129,7 @@ Manager{% endblock %} {% block beforeContent %}
                   >CS1234567
                 </td>
                 <td class="nhsuk-table__cell">
-                  <strong class="nhsuk-tag">Closed</strong><br> on <span class="date-yesterday"></span>
+                  <strong class="nhsuk-tag">Raised</strong><br> on <span class="date-today-2"></span>
                 </td>
               </tr>
 
@@ -155,7 +142,7 @@ Manager{% endblock %} {% block beforeContent %}
                 <td role="cell" class="nhsuk-table__cell app-u-no-wrap">
                   <span class="nhsuk-table-responsive__heading" aria-hidden="true"
                     >NHS number </span
-                  >623 444 8972
+                  >723 777 3456
                 </td>
                 <td role="cell" class="nhsuk-table__cell app-u-no-wrap date-today-2">
                   <span class="nhsuk-table-responsive__heading" aria-hidden="true">Date exceptions created </span>
@@ -170,7 +157,7 @@ Manager{% endblock %} {% block beforeContent %}
                   >CS1111111
                 </td>
                 <td class="nhsuk-table__cell">
-                    <strong class="nhsuk-tag">Closed</strong><br> on <span class="date-yesterday"></span>
+                    <strong class="nhsuk-tag nhsuk-tag--grey">Not raised</strong>
                 </td>
                 </tr>
 
@@ -183,7 +170,7 @@ Manager{% endblock %} {% block beforeContent %}
                 <td role="cell" class="nhsuk-table__cell app-u-no-wrap">
                   <span class="nhsuk-table-responsive__heading" aria-hidden="true"
                     >NHS number </span
-                  >543 555 9087
+                  >723 777 3456
                 </td>
                 <td role="cell" class="nhsuk-table__cell app-u-no-wrap date-today-2">
                   <span class="nhsuk-table-responsive__heading" aria-hidden="true"
@@ -199,7 +186,7 @@ Manager{% endblock %} {% block beforeContent %}
                   >CS9999990
                 </td>
                 <td class="nhsuk-table__cell">
-                <strong class="nhsuk-tag">Closed</strong><br> on <span class="date-yesterday"></span>
+                <strong class="nhsuk-tag nhsuk-tag--grey">Not raised</strong>
                 </td>
                 </tr>
 
@@ -209,7 +196,9 @@ Manager{% endblock %} {% block beforeContent %}
         </div>
       </div>
 
-      <!---div class="nhsuk-grid-row">
+    </div>
+
+      <div class="nhsuk-grid-row">
         <div class="nhsuk-grid-column-two-thirds">
             <div class="pagination" style="float: right; width: 40%;">
                 <span class="page-number active">1</span>
@@ -217,20 +206,112 @@ Manager{% endblock %} {% block beforeContent %}
                 <a class="next-link" href="/page/2"> Next → </a>
             </div>
         </div>
-      </div--->
+      </div>
 
-      <h2 class="nhsuk-u-padding-top-4">Help us improve</h2>
-      <p>Your feedback helps us make our service better. </p>
-        <div class="nhsuk-action-link nhsuk-u-margin-top-1">
-          <a class="nhsuk-action-link__link" href="#">
-            <svg class="nhsuk-icon nhsuk-icon__arrow-right-circle" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
-              <path d="M0 0h24v24H0z" fill="none"></path>
-              <path d="M12 2a10 10 0 0 0-9.95 9h11.64L9.74 7.05a1 1 0 0 1 1.41-1.41l5.66 5.65a1 1 0 0 1 0 1.42l-5.66 5.65a1 1 0 0 1-1.41 0 1 1 0 0 1 0-1.41L13.69 13H2.05A10 10 0 1 0 12 2z"></path>
-            </svg>
-            <span class="nhsuk-action-link__text">Let us know about your experience of Cohort Manager</span>
-          </a>
-        </div>
-      <p>If you need technical support, please continue to use our <a href="/v7/contact">contact us</a> page rather than this form. </p>
+</div>
+
+<!--- Exceptions result end --->
+
+<hr/>
+
+<!--- Reports result begin --->
+
+<div class="nhsuk-grid-column-full">
+    <div class="nhsuk-form-group nhsuk-u-margin-top-0">
+      <label class="nhsuk-label" style="float:left;">
+        <h2 class="nhsuk-heading-m">Reports</h2>
+      </label>
+      <p class="nhsuk-body" style="float:right; font-size:1.1875rem">
+        <b>Showing 3 of 3 results</b>
+      </p>
+    </div>
+</div>
+
+
+<div class="nhsuk-grid-row">
+  <div class="nhsuk-grid-column-full">
+    <div class="nhsuk-card nhsuk-u-margin-bottom-2">
+      <div class="nhsuk-card__content">
+        <table role="table" class="nhsuk-table-responsive">
+
+          <thead role="rowgroup" class="nhsuk-table__head">
+            <tr role="row">
+              <th role="columnheader" scope="col">Date</th>
+              <th role="columnheader" scope="col">Demographic change</th>
+              <th role="columnheader" scope="col">View/download</th>
+            </tr>
+          </thead>
+          <tbody class="nhsuk-table__body">
+
+            <tr role="row" class="nhsuk-table__row">
+              <td role="cell" class="nhsuk-table__cell app-u-no-wrap date-today">
+                <span class="nhsuk-table-responsive__heading" aria-hidden="true">Date </span>
+              </td>
+              <td>
+                <span class="nhsuk-table-responsive__heading" aria-hidden="true"
+                  >Demographic change
+                </span>
+                NHS number change
+              </td>
+              <td role="cell" class="nhsuk-table__cell app-u-no-wrap">
+                <span class="nhsuk-table-responsive__heading" aria-hidden="true"
+                  >View/download </span
+                ><a href="/v7/view-report-supersededNHS">view report</a>
+              </td>
+
+            </tr>
+
+            <tr role="row" class="nhsuk-table__row">
+              <td role="cell" class="nhsuk-table__cell app-u-no-wrap date-yesterday">
+                <span class="nhsuk-table-responsive__heading" aria-hidden="true">Date </span>
+              </td>
+              <td>
+                <span class="nhsuk-table-responsive__heading" aria-hidden="true"
+                  >Demographic change
+                </span>
+                Possible confusion
+              </td>
+              <td role="cell" class="nhsuk-table__cell app-u-no-wrap">
+                <span class="nhsuk-table-responsive__heading" aria-hidden="true"
+                  >View/download </span
+                ><a href="/v7/view-report-confusion">view report</a>
+              </td>
+
+            </tr>
+            <tr role="row" class="nhsuk-table__row">
+              <td role="cell" class="nhsuk-table__cell app-u-no-wrap date-today-2">
+                <span class="nhsuk-table-responsive__heading" aria-hidden="true">Date </span>
+              </td>
+              <td>
+                <span class="nhsuk-table-responsive__heading" aria-hidden="true"
+                  >Demographic change
+                </span>
+                Possible confusion
+              </td>
+              <td role="cell" class="nhsuk-table__cell app-u-no-wrap">
+                <span class="nhsuk-table-responsive__heading" aria-hidden="true"
+                  >View/download </span
+                ><a href="#">view report</a>
+              </td>
+
+            </tr>
+
+          </tbody>
+
+        </table>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+
+<!--- Reports result end --->
+
+<div class="fixed-box">
+  This is Option 1 <br>
+  <a href="/v7/search-result-op2">go to option2</a>
+  </div>
 
 
         <script>
@@ -289,8 +370,18 @@ Manager{% endblock %} {% block beforeContent %}
             .next-link:hover {
               text-decoration: underline;
             }
+
+            .fixed-box {
+               position: fixed;   /* makes it stay in place */
+               top: 150px;      /* distance from the bottom */
+               right: 0px;       /* distance from the right edge */
+               background-color: #ffeb3b;
+               color: black;
+               padding: 15px 20px;
+               border-radius: 8px;
+               box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+               z-index: 1000;     /* ensures it stays on top */
+             }
           </style>
 
     {% endblock %}
-  </div>
-  </div>
