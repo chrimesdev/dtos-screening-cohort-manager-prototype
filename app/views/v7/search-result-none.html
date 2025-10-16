@@ -1,0 +1,152 @@
+{% extends 'layout.html' %} {% block pageTitle %}Search result for 723 333 6891{% endblock %} {% block beforeContent %}
+
+  <nav class="nhsuk-breadcrumb" aria-label="Breadcrumb">
+    <ol class="nhsuk-breadcrumb__list">
+      <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="/v7">Home</a></li>
+      <!---li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="#">Level two</a></li>
+      <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="#">Level three</a></li--->
+    </ol>
+    <p class="nhsuk-breadcrumb__back">
+      <a class="nhsuk-breadcrumb__backlink" href="/v7">
+        <span class="nhsuk-u-visually-hidden">Back to</span>
+        Home
+      </a>
+    </p>
+  </nav>
+
+  {% endblock %} {% block content %}
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-full nhsuk-u-margin-bottom-4">
+      <h1 class="nhsuk-label-wrapper">
+        <label class="nhsuk-label nhsuk-label--xl" aria-label="Search result">
+        Search result for 723 333 6891
+        </label>
+      </h1>
+    </div>
+  </div>
+
+<!--- Exceptions result begin --->
+
+  <div class="nhsuk-grid-column-full">
+      <div class="nhsuk-form-group nhsuk-u-margin-bottom-4">
+        <label class="nhsuk-label" style="float:left;">
+          <h2 class="nhsuk-heading-m">Exceptions</h2>
+        </label>
+      </div>
+  </div>
+
+
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-full">
+      <div class="nhsuk-card nhsuk-u-margin-bottom-2">
+
+          <div class="nhsuk-card__content">
+            <p class="nhsuk-card__heading"> placeholder for no exceptions avaiable for NHS number <>
+            </p>
+            <p></p>
+          </div>
+
+      </div>
+    </div>
+  </div>
+
+<!--- Exceptions result end --->
+
+<hr/>
+
+<!--- Reports result begin --->
+
+<div class="nhsuk-grid-column-full">
+    <div class="nhsuk-form-group nhsuk-u-margin-top-0">
+      <label class="nhsuk-label" style="float:left;">
+        <h2 class="nhsuk-heading-m">Reports</h2>
+      </label>
+    </div>
+</div>
+
+<div class="nhsuk-grid-row">
+  <div class="nhsuk-grid-column-full">
+    <div class="nhsuk-card nhsuk-u-margin-bottom-0">
+
+        <div class="nhsuk-card__content">
+          <p class="nhsuk-card__heading"> placeholder for no reports avaiable for NHS number <>
+          </p>
+          <p></p>
+        </div>
+
+    </div>
+  </div>
+</div>
+
+
+        <script>
+          // Utility function to get a formatted date string
+          function getFormattedDate(offset) {
+            const date = new Date();
+            date.setDate(date.getDate() - offset);
+            const options = { year: 'numeric', month: 'long', day: '2-digit' };
+            return date.toLocaleDateString('en-GB', options); // Format: DD-month-YYYY
+          }
+
+          // Function to populate dates
+          function populateDates() {
+            const today = getFormattedDate(0);
+            const yesterday = getFormattedDate(1);
+            const dayBeforeYesterday = getFormattedDate(2);
+
+            // Replace content for each type of date
+            document.querySelectorAll('.date-today').forEach(el => el.textContent = today);
+            document.querySelectorAll('.date-yesterday').forEach(el => el.textContent = yesterday);
+            document.querySelectorAll('.date-today-2').forEach(el => el.textContent = dayBeforeYesterday);
+          }
+
+          // Run when page loads
+          window.onload = populateDates;
+        </script>
+
+        <style>
+            .pagination {
+              display: flex;
+              gap: 20px;
+              align-items: center;
+              font-family: sans-serif;
+              margin-top:30px;
+              margin-left: 10px;
+            }
+            .page-number {
+              padding: 8px 12px;
+              border: 1px solid #ccc;
+              border-radius: 4px;
+            }
+            .page-number.active {
+              background-color: #005eb8;
+              color: white;
+              pointer-events: none;
+              cursor: default;
+            }
+            .next-link {
+              display: flex;
+              align-items: center;
+              gap: 4px;
+              text-decoration: none;
+              color: #005eb8;
+              font-weight: bold;
+            }
+            .next-link:hover {
+              text-decoration: underline;
+            }
+
+            .fixed-box {
+               position: fixed;   /* makes it stay in place */
+               top: 150px;      /* distance from the bottom */
+               right: 0px;       /* distance from the right edge */
+               background-color: #ffeb3b;
+               color: black;
+               padding: 15px 20px;
+               border-radius: 8px;
+               box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+               z-index: 1000;     /* ensures it stays on top */
+             }
+          </style>
+
+    {% endblock %}
