@@ -1,18 +1,17 @@
 {% extends 'layout.html' %} {% block pageTitle %}Search results for 723 333 6891{% endblock %} {% block beforeContent %}
 
-  <nav class="nhsuk-breadcrumb" aria-label="Breadcrumb">
-    <ol class="nhsuk-breadcrumb__list">
-      <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="/v7">Home</a></li>
-      <!---li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="#">Level two</a></li>
-      <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="#">Level three</a></li--->
-    </ol>
-    <p class="nhsuk-breadcrumb__back">
-      <a class="nhsuk-breadcrumb__backlink" href="/v7">
-        <span class="nhsuk-u-visually-hidden">Back to</span>
-        Home
-      </a>
-    </p>
-  </nav>
+<nav class="nhsuk-breadcrumb" aria-label="Breadcrumb">
+  <ol class="nhsuk-breadcrumb__list">
+    <li class="nhsuk-breadcrumb__item">
+      <a class="nhsuk-breadcrumb__link" href="/v7">Home</a>
+    </li>
+  </ol>
+
+    <a class="nhsuk-back-link" href="/v7">
+      <span class="nhsuk-u-visually-hidden">Back to</span>
+      Home
+    </a>
+</nav>
 
   {% endblock %} {% block content %}
   <div class="nhsuk-grid-row">
@@ -28,7 +27,7 @@
 <!--- Exceptions result begin --->
 
   <div class="nhsuk-grid-column-full">
-      <div class="nhsuk-form-group nhsuk-u-margin-bottom-4">
+      <div class="nhsuk-form-group nhsuk-u-margin-bottom-2">
         <label class="nhsuk-label" style="float:left;">
           <h2 class="nhsuk-heading-m">Exceptions</h2>
         </label>
@@ -89,7 +88,7 @@
               <tr role="row" class="nhsuk-table__row">
                 <td role="cell" class="nhsuk-table__cell">
                   <span class="nhsuk-table-responsive__heading" aria-hidden="true">Exception ID </span><a
-                    href="#">1024</a>
+                    href="/v7/participant-information-raised-1001">1001</a>
                 </td>
                 <td role="cell" class="nhsuk-table__cell app-u-no-wrap">
                   <span class="nhsuk-table-responsive__heading" aria-hidden="true">NHS number </span>723 333 6891
@@ -98,7 +97,8 @@
                   <span class="nhsuk-table-responsive__heading" aria-hidden="true">Date exception created</span>
                 </td>
                 <td>
-                  <span class="nhsuk-table-responsive__heading" aria-hidden="true">Short description </span>Possible confused NHS Number
+                  <span class="nhsuk-table-responsive__heading" aria-hidden="true">Short description </span>
+                  The following fields have missing or conflicting information: GP practice code, reason for removal
                 </td>
                 <td role="cell" class="nhsuk-table__cell app-u-no-wrap">
                   <span class="nhsuk-table-responsive__heading" aria-hidden="true"
@@ -106,7 +106,7 @@
                   >CS7654321
                 </td>
                 <td class="nhsuk-table__cell">
-                  <strong class="nhsuk-tag nhsuk-tag">Closed</strong><br> on <span class="date-today"></span>
+                  <strong class="nhsuk-tag nhsuk-tag">Raised</strong><br> on <span class="date-today"></span>
                 </td>
               </tr>
 
@@ -138,7 +138,7 @@
                 <td role="cell" class="nhsuk-table__cell">
                   <span class="nhsuk-table-responsive__heading" aria-hidden="true"
                     >Exception ID </span
-                  ><a href="#">1001</a>
+                  ><a href="#">1024</a>
                 </td>
                 <td role="cell" class="nhsuk-table__cell app-u-no-wrap">
                   <span class="nhsuk-table-responsive__heading" aria-hidden="true">NHS number </span>723 333 6891
@@ -150,7 +150,7 @@
                   <span class="nhsuk-table-responsive__heading" aria-hidden="true"
                     >Short description
                   </span>
-                  The following fields have missing or conflicting information: GP practice code, reason for removal
+                  Possible confused NHS Number
                 </td>
                 <td role="cell" class="nhsuk-table__cell app-u-no-wrap">
                   <span class="nhsuk-table-responsive__heading" aria-hidden="true"
@@ -179,7 +179,7 @@
 <!--- Reports result begin --->
 
 <div class="nhsuk-grid-column-full">
-    <div class="nhsuk-form-group nhsuk-u-margin-top-0">
+    <div class="nhsuk-form-group nhsuk-u-margin-bottom-2">
       <label class="nhsuk-label" style="float:left;">
         <h2 class="nhsuk-heading-m">Reports</h2>
       </label>

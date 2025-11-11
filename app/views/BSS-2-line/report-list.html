@@ -1,6 +1,18 @@
 {% extends 'layout.html' %} {% block pageTitle %}Report list {% endblock %} {% block beforeContent %}
 
 
+  <nav class="nhsuk-breadcrumb" aria-label="Breadcrumb">
+    <ol class="nhsuk-breadcrumb__list">
+      <li class="nhsuk-breadcrumb__item">
+        <a class="nhsuk-breadcrumb__link" href="/v7">Home</a>
+      </li>
+    </ol>
+
+      <a class="nhsuk-back-link" href="/v7">
+        <span class="nhsuk-u-visually-hidden">Back to</span>
+        Home
+      </a>
+  </nav>
 
   {% endblock %}
 
@@ -33,22 +45,6 @@
           Apply
         </button>
 
-        <!---div class="nhsuk-header__content" id="content-header">
-          <div class="nhsuk-header__search nhsuk-u-margin-bottom-5" style="float: right; margin-top: -70px;">
-            <div class="nhsuk-header__search-wrap" id="wrap-search">
-              <form class="nhsuk-header__search-form" id="search" action=" " method="get" role="search">
-                <label class="nhsuk-u-visually-hidden" for="search-field">Search the NHS website</label>
-                <input class="nhsuk-search__input" id="search-field" name="search-field" type="search" placeholder="Search" autocomplete="on">
-                <button class="nhsuk-search__submit" type="submit" style="background-color: #d8dde0;">
-                  <svg class="nhsuk-icon nhsuk-icon__search" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
-                    <path d="M19.71 18.29l-4.11-4.1a7 7 0 1 0-1.41 1.41l4.1 4.11a1 1 0 0 0 1.42 0 1 1 0 0 0 0-1.42zM5 10a5 5 0 1 1 5 5 5 5 0 0 1-5-5z"></path>
-                  </svg>
-                  <span class="nhsuk-u-visually-hidden">Search</span>
-                </button>
-              </form>
-            </div>
-          </div>
-        </div--->
         <p class="nhsuk-body" style="float: right; font-size: 1.1875rem; margin-right: 20px;">
           <b>Showing 10 of 12 results</b>
         </p>
@@ -56,9 +52,7 @@
 
   </div>
 
-<!--- page results--->
-<!---if search is required--->
-<!--- end page results--->
+
 
 
   <div class="nhsuk-grid-row">
@@ -89,7 +83,7 @@
                 <td role="cell" class="nhsuk-table__cell app-u-no-wrap">
                   <span class="nhsuk-table-responsive__heading" aria-hidden="true"
                     >View/download </span
-                  ><a href="/BSS-2-line/view-report">view report</a>
+                  ><a href="#">view report</a>
                 </td>
                 <td role="cell" class="nhsuk-table__cell app-u-no-wrap">
                   <span class="nhsuk-tag nhsuk-tag--grey" aria-hidden="true"
@@ -110,7 +104,7 @@
                 <td role="cell" class="nhsuk-table__cell app-u-no-wrap">
                   <span class="nhsuk-table-responsive__heading" aria-hidden="true"
                     >View/download </span
-                  ><a href="/BSS-2-line/view-report-complete">view report</a>
+                  ><a href="#">view report</a>
                 </td>
                 <td role="cell" class="nhsuk-table__cell app-u-no-wrap">
                   <span class="nhsuk-tag" aria-hidden="true"

@@ -1,11 +1,11 @@
 // Import NHS.UK frontend library
-@import "node_modules/nhsuk-frontend/packages/nhsuk";
+@import "nhsuk-frontend/dist/nhsuk";
 
 // Components that are not in the NHS.UK frontend library
-@import "components/account-header";
-@import "components/list-border";
-@import "components/pagination";
-@import "components/related-nav";
+//@import "components/account-header";
+//@import "components/list-border";
+//@import "components/pagination";
+//@import "components/related-nav";
 
 ///////////////////////////////////////////
 // Add your custom CSS/Sass styles below...

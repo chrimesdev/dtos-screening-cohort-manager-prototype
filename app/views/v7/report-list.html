@@ -1,20 +1,20 @@
 {% extends 'layout.html' %} {% block pageTitle %}Report list {% endblock %} {% block beforeContent %}
 
-  {% endblock %}
 
-  {% block content %}
 
-  <nav class="nhsuk-breadcrumb nhsuk-u-margin-bottom-4" aria-label="Breadcrumb">
+  <nav class="nhsuk-breadcrumb" aria-label="Breadcrumb">
     <ol class="nhsuk-breadcrumb__list">
-      <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="/v7">Home</a></li>
+      <li class="nhsuk-breadcrumb__item">
+        <a class="nhsuk-breadcrumb__link" href="/v7">Home</a>
+      </li>
     </ol>
-    <p class="nhsuk-breadcrumb__back">
-      <a class="nhsuk-breadcrumb__backlink" href="/v7">
+
+      <a class="nhsuk-back-link" href="/v7">
         <span class="nhsuk-u-visually-hidden">Back to</span>
         Home
       </a>
-    </p>
   </nav>
+  {% endblock %} {% block content %}
 
   <div class="nhsuk-grid-row">
     <div class="nhsuk-grid-column-full nhsuk-u-margin-bottom-7">

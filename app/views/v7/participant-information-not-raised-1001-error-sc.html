@@ -1,21 +1,21 @@
 {% extends 'layout.html' %} {% block pageTitle %}Participant information -
 Cohort Manager{% endblock %} {% block beforeContent %}
 
-
 <nav class="nhsuk-breadcrumb" aria-label="Breadcrumb">
   <ol class="nhsuk-breadcrumb__list">
-    <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="/v7">Home</a></li>
-    <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="/v7/exceptions-summary-nbo">Not raised breast screening exceptions</a></li>
-  <!--- li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="#">Level three</a></li--->
+    <li class="nhsuk-breadcrumb__list-item">
+      <a class="nhsuk-breadcrumb__link" href="/v7">Home</a>
+    </li>
+    <li class="nhsuk-breadcrumb__list-item">
+      <a class="nhsuk-breadcrumb__link" href="/v7/exceptions-summary-nbo">Not raised breast screening exceptions</a>
+    </li>
   </ol>
-  <p class="nhsuk-breadcrumb__back">
-    <a class="nhsuk-breadcrumb__backlink" href="/v7/exceptions-summary-nbo">
+
+    <a class="nhsuk-back-link" href="/v7">
       <span class="nhsuk-u-visually-hidden">Back to</span>
       Not raised breast screening exceptions
     </a>
-  </p>
 </nav>
-
 {% endblock %} {% block content %}
 <div class="nhsuk-grid-row">
   <div class="nhsuk-grid-column-two-thirds nhsuk-u-margin-bottom-7">
@@ -49,9 +49,45 @@ Cohort Manager{% endblock %} {% block beforeContent %}
 <div class="nhsuk-grid-row">
   <div class="nhsuk-grid-column-full">
 
-<div class="nhsuk-card nhsuk-do-dont-list nhsuk-u-margin-bottom-4 nhsuk-u-margin-top-0">
 
-    <h3 class="nhsuk-do-dont-list__label">Portal form: Request to amend incorrect patient PDS record data</h3>
+        <!--- Portal Instructions--->
+
+        <div class="nhsuk-card nhsuk-u-margin-bottom-4">
+          <div class="nhsuk-card__content">
+            <h2 class="nhsuk-card__heading">Portal Instructions</h2>
+
+            <dl class="nhsuk-summary-list">
+              <div class="nhsuk-summary-list__row">
+                <dt class="nhsuk-summary-list__key">Raise to </dt>
+                <dd class="nhsuk-summary-list__value"> National Back Office (NBO)</dd>
+              </div>
+
+                <!---div class="nhsuk-summary-list__row">
+                  <dt class="nhsuk-summary-list__key">Exception Status </dt>
+                  <dd class="nhsuk-summary-list__value"><strong class="nhsuk-tag nhsuk-tag--grey">Not raised</strong></dd>
+                </div--->
+
+              <div class="nhsuk-summary-list__row">
+                <dt class="nhsuk-summary-list__key">Portal form</dt>
+                <dd class="nhsuk-summary-list__value">
+                Request to amend incorrect patient PDS record data
+                </dd>
+              </div>
+
+              <div class="nhsuk-summary-list__row">
+                <dt class="nhsuk-summary-list__key ">Local reference (exception ID)</dt>
+                <dd class="nhsuk-summary-list__value" aria-label="local-reference-1001">1001</dd>
+              </div>
+
+            </dl>
+          </div>
+        </div>
+
+      <!---main table--->
+
+        <div class="nhsuk-card nhsuk-u-margin-bottom-4">
+          <div class="nhsuk-card__content">
+
       <h2 class="nhsuk-card__heading">Participant details</h2>
 
       <dl class="nhsuk-summary-list">
@@ -94,18 +130,9 @@ Cohort Manager{% endblock %} {% block beforeContent %}
           <dt class="nhsuk-summary-list__key">Registered practice code</dt>
           <dd class="nhsuk-summary-list__value">B86110</dd>
         </div>
-
-        <!---<div class="nhsuk-summary-list__row">
-          <dt class="nhsuk-summary-list__key">Registered practice address</dt>
-          <dd class="nhsuk-summary-list__value">
-            Anytown Medical Centre<br>
-            Anywhere<br>
-            Anytown<br>
-            AT1 1AA
-        </div>--->
-
+        
       </dl>
-
+</div>
 </div>
 
 

@@ -1,49 +1,18 @@
 {% extends 'layout.html' %} {% block pageTitle %}Not Raised Exceptions summary - Cohort
 Manager{% endblock %} {% block beforeContent %}
 
-<style>
-    .pagination {
-      display: flex;
-      gap: 20px;
-      align-items: center;
-      font-family: sans-serif;
-      margin-top:30px;
-      margin-left: 10px;
-    }
-    .page-number {
-      padding: 8px 12px;
-      border: 1px solid #ccc;
-      border-radius: 4px;
-    }
-    .page-number.active {
-      background-color: #005eb8;
-      color: white;
-      pointer-events: none;
-      cursor: default;
-    }
-    .next-link {
-      display: flex;
-      align-items: center;
-      gap: 4px;
-      text-decoration: none;
-      color: #005eb8;
-      font-weight: bold;
-    }
-    .next-link:hover {
-      text-decoration: underline;
-    }
-  </style>
 
 <nav class="nhsuk-breadcrumb" aria-label="Breadcrumb">
   <ol class="nhsuk-breadcrumb__list">
-    <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="/v7">Home</a></li>
+    <li class="nhsuk-breadcrumb__item">
+      <a class="nhsuk-breadcrumb__link" href="/v7">Home</a>
+    </li>
   </ol>
-  <p class="nhsuk-breadcrumb__back">
-    <a class="nhsuk-breadcrumb__backlink" href="/v7">
+
+    <a class="nhsuk-back-link" href="/v7">
       <span class="nhsuk-u-visually-hidden">Back to</span>
       Home
     </a>
-  </p>
 </nav>
 
 {% endblock %} {% block content %}
@@ -81,16 +50,18 @@ Manager{% endblock %} {% block beforeContent %}
 
 <div class="nhsuk-grid-row">
   <div class="nhsuk-grid-column-full">
+
     <div class="nhsuk-card nhsuk-u-margin-bottom-2">
       <div class="nhsuk-card__content">
-        <table role="table" class="nhsuk-table-responsive">
-          <thead role="rowgroup" class="nhsuk-table__head">
+
+        <table class="nhsuk-table-responsive" role="table">
+          <thead class="nhsuk-table__head" role="rowgroup">
             <tr role="row">
-              <th role="columnheader" scope="col">Local reference<br/>Exception ID</th>
-              <th role="columnheader" scope="col">NHS number</th>
-              <th role="columnheader" scope="col">Date exception <br/>created</th>
-              <th role="columnheader" scope="col">Short description</th>
-              <th role="columnheader" scope="col">Exception status</th>
+              <th scope="col" class="nhsuk-table__header">Local reference<br/>(exception ID)</th>
+              <th scope="col" class="nhsuk-table__header">NHS number</th>
+              <th scope="col" class="nhsuk-table__header">Date exception <br/>created</th>
+              <th scope="col" class="nhsuk-table__header">Short description</th>
+              <th scope="col" class="nhsuk-table__header">Exception status</th>
             </tr>
           </thead>
           <tbody class="nhsuk-table__body">
@@ -328,4 +299,39 @@ Manager{% endblock %} {% block beforeContent %}
 
   </div>
 </div>
-{% endblock %}
+
+
+<style>
+    .pagination {
+      display: flex;
+      gap: 20px;
+      align-items: center;
+      font-family: sans-serif;
+      margin-top:30px;
+      margin-left: 10px;
+    }
+    .page-number {
+      padding: 8px 12px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+    .page-number.active {
+      background-color: #005eb8;
+      color: white;
+      pointer-events: none;
+      cursor: default;
+    }
+    .next-link {
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      text-decoration: none;
+      color: #005eb8;
+      font-weight: bold;
+    }
+    .next-link:hover {
+      text-decoration: underline;
+    }
+  </style>
+
+  {% endblock %}

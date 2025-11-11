@@ -2,23 +2,19 @@
 Cohort Manager{% endblock %} {% block beforeContent %}
 
 <nav class="nhsuk-breadcrumb" aria-label="Breadcrumb">
-  <div class="nhsuk-width-container">
-    <ol class="nhsuk-breadcrumb__list">
-      <li class="nhsuk-breadcrumb__item">
-        <a class="nhsuk-breadcrumb__link" href="/v7">Home</a>
-      </li>
-      <li class="nhsuk-breadcrumb__item">
-        <a class="nhsuk-breadcrumb__link" href="/v7/exceptions-summary">Raised breast screening exceptions</a>
-      </li>
-    </ol>
-    <p class="nhsuk-breadcrumb__back">
-      <a class="nhsuk-breadcrumb__backlink" href="/v7/exceptions-summary"">
-        <span class="nhsuk-u-visually-hidden">Back to</span>
-        Raised breast screening exceptions
-      </a>
-    </p>
+  <ol class="nhsuk-breadcrumb__list">
+    <li class="nhsuk-breadcrumb__list-item">
+      <a class="nhsuk-breadcrumb__link" href="/v7">Home</a>
+    </li>
+    <li class="nhsuk-breadcrumb__list-item">
+      <a class="nhsuk-breadcrumb__link" href="/v7/exceptions-summary">Raised breast screening exceptions</a>
+    </li>
+  </ol>
 
-  </div>
+    <a class="nhsuk-back-link" href="/v7">
+      <span class="nhsuk-u-visually-hidden">Back to</span>
+      Raised breast screening exceptions
+    </a>
 </nav>
 
 {% endblock %} {% block content %}
@@ -29,12 +25,8 @@ Cohort Manager{% endblock %} {% block beforeContent %}
       Exception information
       </div>
     </h1>
-    <!---div class="nhsuk-caption-xl" aria-label="local-referemce-1002" >
-    Local reference (exception ID): 1002
-    </div--->
   </div>
 </div>
-
 
 
 <div class="nhsuk-grid-row">
@@ -75,7 +67,7 @@ Cohort Manager{% endblock %} {% block beforeContent %}
             <dt class="nhsuk-summary-list__key">ServiceNow Case ID</dt>
             <dd class="nhsuk-summary-list__value" aria-label="ServiceNow-case-ID-CS1234567">CS1234567</dd>
             <dd class="nhsuk-summary-list__actions">
-              <a href="#"">
+              <a href="/v7/participant-snow-1002-change#case">
                 Change<span class="nhsuk-u-visually-hidden">ServiceNow case ID</span>
               </a>
             </dd>
