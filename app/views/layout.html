@@ -45,6 +45,20 @@
       </a>
 </div>
 
+<search class="nhsuk-header__search">
+      <form class="nhsuk-header__search-form" id="search" action="/v7/search-result-op1" method="get">
+        <label class="nhsuk-u-visually-hidden" for="search-field">Search the NHS website</label>
+        <input class="nhsuk-header__search-input nhsuk-input" id="search-field" name="q" type="search" placeholder="Search" autocomplete="off">
+        <button class="nhsuk-header__search-submit" type="submit">
+          <svg class="nhsuk-icon nhsuk-icon--search" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16" height="16" focusable="false" role="img" aria-label="Search">
+            <title>Search</title>
+            <path d="m20.7 19.3-4.1-4.1a7 7 0 1 0-1.4 1.4l4 4.1a1 1 0 0 0 1.5 0c.4-.4.4-1 0-1.4ZM6 11a5 5 0 1 1 10 0 5 5 0 0 1-10 0Z" />
+          </svg>
+
+        </button>
+      </form>
+    </search>
+
     <nav class="nhsuk-header__account" aria-label="Account">
       <ul class="nhsuk-header__account-list">
         <li class="nhsuk-header__account-item">
@@ -71,13 +85,14 @@
         </li>
       </ul>
     </nav>
+
   </div>
 </header>
 {% endblock %}
 
 <!-- Edit the footer -->
 <!-- Footer code examples can be found at https://service-manual.nhs.uk/design-system/components/footer -->
-{% block footer %} 
+{% block footer %}
 <footer class="nhsuk-footer" role="contentinfo">
   <div class="nhsuk-width-container">
     <div class="nhsuk-footer__meta">

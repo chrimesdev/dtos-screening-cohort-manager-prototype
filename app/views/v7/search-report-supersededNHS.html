@@ -1,0 +1,120 @@
+{% extends 'layout.html' %} {% block pageTitle %}view report{% endblock %} {% block beforeContent %}
+
+<nav class="nhsuk-breadcrumb" aria-label="Breadcrumb">
+  <ol class="nhsuk-breadcrumb__list">
+    <li class="nhsuk-breadcrumb__list-item">
+      <a class="nhsuk-breadcrumb__link" href="/v7">Home</a>
+    </li>
+    <li class="nhsuk-breadcrumb__list-item">
+      <a class="nhsuk-breadcrumb__link" href="/v7/report-list">Reports</a>
+    </li>
+  </ol>
+
+    <a class="nhsuk-back-link" href="/v7">
+      <span class="nhsuk-u-visually-hidden">Back to</span>
+      Reports
+    </a>
+</nav>
+
+  {% endblock %}
+
+  {% block content %}
+
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-two-thirds nhsuk-u-margin-bottom-7">
+      <h1 class="nhsuk-label-wrapper">
+        <div class="nhsuk-label nhsuk-label--xl" aria-label="NHS number change">
+        NHS number change
+        </div>
+      </h1>
+      <div class="nhsuk-caption-xl date-today" aria-label="date" >
+
+      </div>
+    </div>
+  </div>
+
+<div class="nhsuk-grid-row">
+  <div class="nhsuk-grid-column-full">
+    <div class="nhsuk-card nhsuk-u-margin-bottom-2">
+      <div class="nhsuk-card__content">
+
+          <table role="table" class="nhsuk-table-responsive">
+            <thead role="rowgroup" class="nhsuk-table__head">
+              <tr role="row">
+                <th role="columnheader" scope="col">Patient name</th>
+                <th role="columnheader" scope="col">Date of Birth</th>
+                <th role="columnheader" scope="col">Old NHS number</th>
+                <th role="columnheader" scope="col">New NHS number</th>
+              </tr>
+            </thead>
+            <tbody class="nhsuk-table__body">
+              <tr role="row" class="nhsuk-table__row">
+
+                <td class="nhsuk-table__cell">
+                  <span class="nhsuk-table-responsive__heading" aria-hidden="true">Patient name</span>
+                  Alex Cooper
+                </td>
+                <td role="cell" class="nhsuk-table__cell">05 Aug 1975</td>
+                <td role="cell" class="nhsuk-table__cell app-u-no-wrap">
+                  <span class="nhsuk-table-responsive__heading" aria-hidden="true">Old NHS number</span>
+                  999 999 9010
+                </td>
+                <td role="cell" class="nhsuk-table__cell app-u-no-wrap">
+                  <span class="nhsuk-table-responsive__heading" aria-hidden="true">New NHS number</span>
+                  723 777 3456
+                </td>
+              </tr>
+
+            </tbody>
+          </table>
+
+
+
+      </div>
+    </div>
+  </div>
+</div>
+
+<h2 class="nhsuk-u-padding-top-4">Help us improve</h2>
+<p>Your feedback helps us make our service better. </p>
+  <div class="nhsuk-action-link nhsuk-u-margin-top-1">
+    <a class="nhsuk-action-link__link" href="#">
+      <svg class="nhsuk-icon nhsuk-icon__arrow-right-circle" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
+        <path d="M0 0h24v24H0z" fill="none"></path>
+        <path d="M12 2a10 10 0 0 0-9.95 9h11.64L9.74 7.05a1 1 0 0 1 1.41-1.41l5.66 5.65a1 1 0 0 1 0 1.42l-5.66 5.65a1 1 0 0 1-1.41 0 1 1 0 0 1 0-1.41L13.69 13H2.05A10 10 0 1 0 12 2z"></path>
+      </svg>
+      <span class="nhsuk-action-link__text">Let us know about your experience of Cohort Manager</span>
+    </a>
+  </div>
+<p>If you need technical support, please continue to use our <a href="/v7/contact">contact us</a> page rather than this form. </p>
+
+
+        <script>
+          // Utility function to get a formatted date string
+          function getFormattedDate(offset) {
+            const date = new Date();
+            date.setDate(date.getDate() - offset);
+            const options = { year: 'numeric', month: 'long', day: '2-digit' };
+            return date.toLocaleDateString('en-GB', options); // Format: DD-month-YYYY
+          }
+
+          // Function to populate dates
+          function populateDates() {
+            const today = getFormattedDate(0);
+            const yesterday = getFormattedDate(1);
+            const dayBeforeYesterday = getFormattedDate(2);
+
+            // Replace content for each type of date
+            document.querySelectorAll('.date-today').forEach(el => el.textContent = today);
+            document.querySelectorAll('.date-yesterday').forEach(el => el.textContent = yesterday);
+            document.querySelectorAll('.date-today-2').forEach(el => el.textContent = dayBeforeYesterday);
+          }
+
+          // Run when page loads
+          window.onload = populateDates;
+        </script>
+
+
+    {% endblock %}
+  </div>
+  </div>
